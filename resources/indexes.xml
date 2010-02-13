@@ -1,14 +1,14 @@
 <list>
   <com.datasync.processor.Index>
-    <className>com.datasync.models.Example</className>
+    <className>com.datasync.models.custo.TblCabecalhoCondutor</className>
     <id>1</id>
   </com.datasync.processor.Index>
   <com.datasync.processor.Index>
-    <className>com.datasync.models.Example</className>
+    <className>com.datasync.models.custo.TblCabecalhoEmbarcacao</className>
     <id>2</id>
   </com.datasync.processor.Index>
   <com.datasync.processor.Index>
-    <className>com.datasync.models.Example</className>
+    <className>com.datasync.models.custo.TblCabecalhoCondutor</className>
     <id>3</id>
   </com.datasync.processor.Index>
 </list>

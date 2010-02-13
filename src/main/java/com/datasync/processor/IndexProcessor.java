@@ -81,7 +81,7 @@ public class IndexProcessor {
 	
 	public void save(IndexableEntity indexableEntity){
 		List<Index> lista = getList();
-		lista.add(new Index(indexableEntity.getClass().getName(), indexableEntity.getIndexId()));
+		lista.add(new Index(indexableEntity.getFullClassName(), indexableEntity.getIndexId()));
 
 		XStream xstream = new XStream(new DomDriver());
 		try {
