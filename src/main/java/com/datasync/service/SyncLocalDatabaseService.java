@@ -46,8 +46,6 @@ public class SyncLocalDatabaseService implements IService {
 		return query;
 	}
 
-	
-
 	@SuppressWarnings("unchecked")
 	private void sync(IndexProcessor processor, List<IndexableEntity> resultList){
 		

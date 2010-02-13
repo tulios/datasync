@@ -33,7 +33,7 @@ public class TblCabecalhoCondutor extends IndexableEntity {
 	@Override
 	@Transient
 	public String getIdColumnName() {
-		return "IdFormulario";
+		return "idFormulario";
 	}
 
 	@Override

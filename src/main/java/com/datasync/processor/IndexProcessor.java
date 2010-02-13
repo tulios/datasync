@@ -32,7 +32,7 @@ public class IndexProcessor {
 		fos.close();
 	}
 
-	private File getFile(){
+	public File getFile(){
 		return new File(INDEX_FILE);
 	}
 	

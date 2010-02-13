@@ -31,7 +31,7 @@ public class TblCabecalhoEmbarcacao extends IndexableEntity {
 	
 	@Override
 	public String getIdColumnName() {
-		return "IdFormulario";
+		return "idFormulario";
 	}
 
 	@Override
