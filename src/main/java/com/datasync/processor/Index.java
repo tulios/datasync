@@ -31,14 +31,21 @@ public class Index implements Comparable<Index>{
 	
 	@Override
 	public int compareTo(Index index) {
-		return new String(this.getId()).compareTo(new String(index.getId()));
+		String objKey = index.getId() + index.getClassName();
+		String key = getId() + getClassName();
+		
+		return key.compareTo(objKey);
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Index){
 			Index index = (Index) obj;
-			if (index.getId().equals(getId())){
+			
+			String objKey = index.getId() + index.getClassName();
+			String key = getId() + getClassName();
+			
+			if (objKey.equals(key)){
 				return true;
 			}
 			return false;
@@ -48,7 +55,7 @@ public class Index implements Comparable<Index>{
 
 	@Override
 	public int hashCode() {
-		return (""+getId()).hashCode();
+		return (getId()+getClassName()).hashCode();
 	}
 	
 }

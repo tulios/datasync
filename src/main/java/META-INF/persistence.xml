@@ -10,39 +10,31 @@
 			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/datasync" />
 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="validate" />
 			<property name="hibernate.connection.username" value="postgres" />
 			<property name="hibernate.connection.password" value="postgres" />
-
-			<!--
-				<property name="hibernate.show_sql" value="true"/> <property
-				name="hibernate.format_sql" value="true"/>
-			-->
 		</properties>
 	</persistence-unit>
 
-	<!-- 
+	<!--
 	<persistence-unit name="datasync-server" transaction-type="RESOURCE_LOCAL">
 		<properties>
 			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/datasync_two" />
 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="validate" />
 			<property name="hibernate.connection.username" value="postgres" />
 			<property name="hibernate.connection.password" value="postgres" />
 		</properties>
 	</persistence-unit>
-	-->
-
+	 -->
+	
 	<persistence-unit name="datasync-server" transaction-type="RESOURCE_LOCAL">
 		<properties>
 			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.211.55.3:1433/datasync" />
 			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="validate" />
 			<property name="hibernate.connection.username" value="datasync_user" />
 			<property name="hibernate.connection.password" value="123456" />
 		</properties>
 	</persistence-unit>
-	
+	 	
 </persistence>

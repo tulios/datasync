@@ -17,11 +17,6 @@ import com.datasync.service.runner.ServiceRunner;
 public class TestTblCabecalhoCondutor extends Teste{
 
 	@Test
-	public void sqlServerConnectionTest(){
-		open();
-	}
-	
-	@Test
 	public void verificaSincronismo() throws Exception{
 		open();
 		

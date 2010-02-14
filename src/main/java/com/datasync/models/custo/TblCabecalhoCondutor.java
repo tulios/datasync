@@ -18,7 +18,7 @@ public class TblCabecalhoCondutor extends IndexableEntity {
 	private String idFormulario;
 	@Column(name = "Municipio")
 	private String municipio;
-	@Column(name = "UF")
+	@Column(name = "UF", length = 2)
 	private String uf;
 	@Column(name = "Pesquisador")
 	private String pesquisador;

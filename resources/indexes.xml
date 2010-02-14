@@ -3,4 +3,8 @@
     <className>com.datasync.models.custo.TblCabecalhoCondutor</className>
     <id>1</id>
   </com.datasync.processor.Index>
+  <com.datasync.processor.Index>
+    <className>com.datasync.models.custo.TblIdCondutor</className>
+    <id>1</id>
+  </com.datasync.processor.Index>
 </list>

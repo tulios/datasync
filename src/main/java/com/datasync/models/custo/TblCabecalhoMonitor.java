@@ -8,10 +8,10 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 
 @Entity
-@Table(name = "TblCabecalhoEmbarcacao")
+@Table(name = "TblCabecalhoMonitor")
 @SuppressWarnings("serial")
-public class TblCabecalhoEmbarcacao extends IndexableEntity {
-
+public class TblCabecalhoMonitor extends IndexableEntity {
+	
 	@Id
 	@Column(name = "IdFormulario")
 	private String idFormulario;
@@ -26,9 +26,9 @@ public class TblCabecalhoEmbarcacao extends IndexableEntity {
 	@Column(name = "Responsavel")
 	private String responsavel;
 
-	public TblCabecalhoEmbarcacao(){
+	public TblCabecalhoMonitor(){
 	}
-	
+
 	@Override
 	public String getIdColumnName() {
 		return "idFormulario";
@@ -86,5 +86,6 @@ public class TblCabecalhoEmbarcacao extends IndexableEntity {
 	public void setResponsavel(String responsavel) {
 		this.responsavel = responsavel;
 	}
+
 
 }
