@@ -28,6 +28,7 @@
   <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-entitymanager/3.3.2.GA/hibernate-entitymanager-3.3.2.GA.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-tools/3.2.3.GA/hibernate-tools-3.2.3.GA.jar"/>
   <classpathentry kind="var" path="M2_REPO/javassist/javassist/3.4.GA/javassist-3.4.GA.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/samba/jcifs/jcifs/1.2.6/jcifs-1.2.6.jar"/>
   <classpathentry kind="var" path="M2_REPO/net/sourceforge/jtds/jtds/1.2.4/jtds-1.2.4.jar" sourcepath="M2_REPO/net/sourceforge/jtds/jtds/1.2.4/jtds-1.2.4-sources.jar">
     <attributes>
       <attribute value="jar:file:/Users/tulios/.m2/repository/net/sourceforge/jtds/jtds/1.2.4/jtds-1.2.4-javadoc.jar!/" name="javadoc_location"/>

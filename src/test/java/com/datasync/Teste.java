@@ -50,7 +50,7 @@ public class Teste {
 		serverEm.getTransaction().begin();
 		
 		localEm.createNativeQuery("truncate TblCabecalhoCondutor").executeUpdate();
-		serverEm.createNativeQuery("truncate TblCabecalhoCondutor").executeUpdate();
+		serverEm.createNativeQuery("delete from TblCabecalhoCondutor").executeUpdate();
 		
 		serverEm.getTransaction().commit();
 		localEm.getTransaction().commit();
