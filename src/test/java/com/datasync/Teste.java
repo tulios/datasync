@@ -69,9 +69,15 @@ public class Teste {
 		localEm.createNativeQuery("delete from TblCabecalhoEmbarcacao").executeUpdate();
 		serverEm.createNativeQuery("delete from TblCabecalhoEmbarcacao").executeUpdate();
 
+		localEm.createNativeQuery("delete from TblIdMecanico").executeUpdate();
+		serverEm.createNativeQuery("delete from TblIdMecanico").executeUpdate();
+		
 		localEm.createNativeQuery("delete from TblCabecalhoMecanico").executeUpdate();
 		serverEm.createNativeQuery("delete from TblCabecalhoMecanico").executeUpdate();
 
+		localEm.createNativeQuery("delete from TblIdMonitor").executeUpdate();
+		serverEm.createNativeQuery("delete from TblIdMonitor").executeUpdate();
+		
 		localEm.createNativeQuery("delete from TblCabecalhoMonitor").executeUpdate();
 		serverEm.createNativeQuery("delete from TblCabecalhoMonitor").executeUpdate();
 	}

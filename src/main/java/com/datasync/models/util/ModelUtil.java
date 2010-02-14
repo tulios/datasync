@@ -10,6 +10,8 @@ import com.datasync.models.custo.TblCabecalhoMecanico;
 import com.datasync.models.custo.TblCabecalhoMonitor;
 import com.datasync.models.custo.TblIdCondutor;
 import com.datasync.models.custo.TblIdEmbarcacao;
+import com.datasync.models.custo.TblIdMecanico;
+import com.datasync.models.custo.TblIdMonitor;
 
 public class ModelUtil {
 
@@ -24,7 +26,10 @@ public class ModelUtil {
 			indexables.add(new TblIdEmbarcacao());
 			
 			indexables.add(new TblCabecalhoMecanico());
+			indexables.add(new TblIdMecanico());
+			
 			indexables.add(new TblCabecalhoMonitor());
+			indexables.add(new TblIdMonitor());
 			return indexables;
 		}
 		
