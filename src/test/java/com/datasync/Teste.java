@@ -63,6 +63,9 @@ public class Teste {
 		localEm.createNativeQuery("delete from TblCabecalhoCondutor").executeUpdate();
 		serverEm.createNativeQuery("delete from TblCabecalhoCondutor").executeUpdate();
 
+		localEm.createNativeQuery("delete from TblIdEmbarcacao").executeUpdate();
+		serverEm.createNativeQuery("delete from TblIdEmbarcacao").executeUpdate();
+		
 		localEm.createNativeQuery("delete from TblCabecalhoEmbarcacao").executeUpdate();
 		serverEm.createNativeQuery("delete from TblCabecalhoEmbarcacao").executeUpdate();
 

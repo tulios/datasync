@@ -1,10 +1,10 @@
 <list>
   <com.datasync.processor.Index>
-    <className>com.datasync.models.custo.TblCabecalhoCondutor</className>
-    <id>1</id>
+    <className>com.datasync.models.custo.TblIdEmbarcacao</className>
+    <id>1#10</id>
   </com.datasync.processor.Index>
   <com.datasync.processor.Index>
-    <className>com.datasync.models.custo.TblIdCondutor</className>
+    <className>com.datasync.models.custo.TblCabecalhoEmbarcacao</className>
     <id>1</id>
   </com.datasync.processor.Index>
 </list>

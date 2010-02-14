@@ -25,7 +25,7 @@ public class TestTblIdCondutor extends Teste {
 		indexables.add(new TblCabecalhoCondutor());
 		indexables.add(new TblIdCondutor());
 
-		Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblIdCondutor t").getSingleResult();
+		Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblCabecalhoCondutor t").getSingleResult();
 		assertEquals(0, local.intValue());
 
 		Number server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblIdCondutor t").getSingleResult();
