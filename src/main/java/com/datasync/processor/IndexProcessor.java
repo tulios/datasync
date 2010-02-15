@@ -10,13 +10,17 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
+import com.datasync.Main;
 import com.datasync.models.IndexableEntity;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 public class IndexProcessor {
 
-	public static final String INDEX_DIR = "resources";
+	private static Logger log = Logger.getLogger(IndexProcessor.class);
+	
 	public static final String INDEX_FILE = "resources/indexes.xml";
 
 	private void saveXML(XStream xstream, List<Index> lista) throws IOException{
@@ -36,16 +40,6 @@ public class IndexProcessor {
 		return new File(INDEX_FILE);
 	}
 	
-	private File getDir(){
-		return new File(INDEX_DIR);
-	}
-	
-	private void createDir(){
-		if (!getDir().exists()){
-			getDir().mkdirs();
-		}
-	}
-
 	@SuppressWarnings("unchecked")
 	public List<Index> getList(){
 		XStream xstream = new XStream(new DomDriver());
@@ -53,7 +47,7 @@ public class IndexProcessor {
 
 		try {
 			if (!getFile().exists()){
-				createDir();
+				Main.createDir();
 				saveXML(xstream, lista);
 				return lista;
 			}
@@ -62,6 +56,7 @@ public class IndexProcessor {
 			lista = (List<Index>) xstream.fromXML(fis);
 
 		} catch (IOException e) {
+			log.error(e.getMessage());
 			e.printStackTrace();
 		}
 
@@ -87,6 +82,7 @@ public class IndexProcessor {
 		try {
 			saveXML(xstream, lista);
 		} catch (IOException e) {
+			log.error(e.getMessage());
 			e.printStackTrace();
 		}
 	}

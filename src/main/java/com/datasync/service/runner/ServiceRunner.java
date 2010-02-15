@@ -3,11 +3,15 @@ package com.datasync.service.runner;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import org.apache.log4j.Logger;
+
 import com.datasync.jpa.JPAUtil;
 import com.datasync.service.IService;
 import com.datasync.ui.MainFrame;
 
 public class ServiceRunner {
+	
+	private static Logger log = Logger.getLogger(ServiceRunner.class);
 
 	public void run(IService service) throws Exception {
 		MainFrame.getInstance().setMensagem("Iniciando conex‹o...");
@@ -25,9 +29,10 @@ public class ServiceRunner {
 
 		try {
 			service.setEntityManagers(localEm, serverEm);
-			System.out.println("Running: " + service.getClass().getName());
+			log.debug("Running: " + service.getClass().getName());
 			service.execute();
 		} catch (Exception e) {
+			log.error(e.getMessage());
 			e.printStackTrace();
 		}
 

@@ -6,18 +6,12 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
-
-import com.datasync.models.IndexableEntity;
-import com.datasync.models.util.ModelUtil;
-import com.datasync.service.SyncLocalDatabaseService;
-import com.datasync.service.runner.ServiceRunner;
 
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame {
@@ -36,7 +30,11 @@ public class MainFrame extends JFrame {
 		create();
 		this.pack();
 		this.setResizable(false);
-		this.setVisible(true);
+	}
+	
+	public static void start(){
+		MainFrame.getInstance();
+		MainFrame.getInstance().setVisible(true);
 	}
 	
 	public static MainFrame getInstance(){
@@ -85,6 +83,7 @@ public class MainFrame extends JFrame {
 		
 		cons.gridx = 1;
 		cons.gridy = 0;
+		cons.gridwidth = 1;
 		cons.anchor = GridBagConstraints.LINE_END;
 		
 		painel.add(sync, cons);
@@ -92,6 +91,7 @@ public class MainFrame extends JFrame {
 		mensagem = new JLabel("Parado.");
 		cons.gridx = 0;
 		cons.gridy = 1;
+		cons.gridwidth = 2;
 		cons.anchor = GridBagConstraints.LINE_START;
 		
 		painel.add(mensagem, cons);
@@ -109,36 +109,6 @@ public class MainFrame extends JFrame {
 		cons.anchor = GridBagConstraints.CENTER;
 		
 		painel.add(progressBar, cons);
-	}
-}
-
-class Processar extends Thread {
-	
-	private List<IndexableEntity> indexables;
-	
-	public Processar() {
-		indexables = ModelUtil.getIndexables("custo");
-	}
-	
-	@Override
-	public void run() {
-    	if (indexables == null || indexables.size() == 0){
-    		System.exit(-1);
-    	}
-    	
-    	try {
-    		MainFrame.getInstance().setTitle("Data Sync - NÌO FECHE ESTE PROGRAMA!");
-    		
-    		ServiceRunner runner = new ServiceRunner();
-			runner.run(new SyncLocalDatabaseService(indexables));
-			
-			MainFrame.getInstance().setTitle("Data Sync");
-			MainFrame.getInstance().setMensagem("Sincronizado!");
-			MainFrame.getInstance().habilitarSync();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 }
 

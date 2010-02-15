@@ -24,8 +24,8 @@
 			<property name="hibernate.connection.password" value="postgres" />
 		</properties>
 	</persistence-unit>
-	 
-	<!-- 
+
+	<!-- 	 
 	<persistence-unit name="datasync-server" transaction-type="RESOURCE_LOCAL">
 		<properties>
 			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.211.55.3:1433/datasync" />
@@ -35,6 +35,6 @@
 			<property name="hibernate.connection.password" value="123456" />
 		</properties>
 	</persistence-unit>
-	 --> 	
+	 -->
 	 	
 </persistence>

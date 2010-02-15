@@ -11,6 +11,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.swing.SwingUtilities;
 
+import org.apache.log4j.Logger;
+
 import com.datasync.Main;
 import com.datasync.models.IndexableEntity;
 import com.datasync.processor.IndexProcessor;
@@ -18,6 +20,8 @@ import com.datasync.ui.MainFrame;
 
 public class SyncLocalDatabaseService implements IService {
 
+	private static Logger log = Logger.getLogger(SyncLocalDatabaseService.class);
+	
 	private EntityManager localEm;
 	private EntityManager serverEm;
 
@@ -114,15 +118,13 @@ public class SyncLocalDatabaseService implements IService {
 
 			if (searchResult != null && searchResult.size() > 0){
 				processor.save(entity);
-				System.out.println("Registro " + entity.getIndexId() + " ja existe.");
 
 			}else{
-				System.out.println("Saving id: " + entity.getIndexId());
+				log.debug("Saving id: " + entity.getIndexId());
 				//Caso nao exista, salva la
 				serverEm.persist(entity);
 				// Salva no xml para marcar como ja realizado
 				processor.save(entity);
-				System.out.println("saved");
 			}
 			
 			index++;
@@ -148,7 +150,7 @@ public class SyncLocalDatabaseService implements IService {
 
 		for(IndexableEntity indexable : indexables){
 			MainFrame.getInstance().setMensagem("Sincronizando " + indexable.getShortClassName());
-			System.out.println("-> " + indexable.getFullClassName());
+			log.debug("-> " + indexable.getFullClassName());
 			
 			// Para manter a barra em 0% enquanto não começa o processo
 			atualizarProgressBar(0, 1);
@@ -156,15 +158,13 @@ public class SyncLocalDatabaseService implements IService {
 			Query query  = createQuery(processor, indexable);
 			List<IndexableEntity> resultList = query.getResultList();
 
-			System.out.println("ResultList: " + resultList.size());
+			log.debug("ResultList: " + resultList.size());
 			if (resultList.size() > 0){
 				sync(processor, resultList);
 				
 			}else{
 				MainFrame.getInstance().setMensagem(indexable.getShortClassName() + " já está sincronizado");
 				atualizarProgressBar(1, 1);
-				
-				System.out.println("Nothing to save");
 			}
 		}
 		

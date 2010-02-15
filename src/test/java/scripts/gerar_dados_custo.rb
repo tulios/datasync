@@ -1,4 +1,4 @@
-QUANTIDADE = 100
+QUANTIDADE = 50
 
 hash = {
   :TblCabecalhoCondutor => {
