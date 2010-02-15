@@ -126,7 +126,7 @@ public class SyncLocalDatabaseService implements IService {
 			}
 			
 			index++;
-			atualizarProgressBar(index, indexables.size());
+			atualizarProgressBar(index, resultList.size());
 		}
 
 	}
@@ -136,7 +136,6 @@ public class SyncLocalDatabaseService implements IService {
 			@Override
 			public void run() {
 				int percent = Main.getPorcentagemAtual(index, total);
-				System.out.println("% " + percent);
 				MainFrame.getInstance().setProgressBarValue(percent);
 			}
 		});
@@ -150,7 +149,9 @@ public class SyncLocalDatabaseService implements IService {
 		for(IndexableEntity indexable : indexables){
 			MainFrame.getInstance().setMensagem("Sincronizando " + indexable.getShortClassName());
 			System.out.println("-> " + indexable.getFullClassName());
-			atualizarProgressBar(0, indexables.size());
+			
+			// Para manter a barra em 0% enquanto não começa o processo
+			atualizarProgressBar(0, 1);
 			
 			Query query  = createQuery(processor, indexable);
 			List<IndexableEntity> resultList = query.getResultList();
@@ -158,7 +159,7 @@ public class SyncLocalDatabaseService implements IService {
 			System.out.println("ResultList: " + resultList.size());
 			if (resultList.size() > 0){
 				sync(processor, resultList);
-
+				
 			}else{
 				MainFrame.getInstance().setMensagem(indexable.getShortClassName() + " já está sincronizado");
 				atualizarProgressBar(1, 1);

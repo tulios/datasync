@@ -35,6 +35,7 @@ public class MainFrame extends JFrame {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		create();
 		this.pack();
+		this.setResizable(false);
 		this.setVisible(true);
 	}
 	
@@ -126,9 +127,12 @@ class Processar extends Thread {
     	}
     	
     	try {
+    		MainFrame.getInstance().setTitle("Data Sync - NÌO FECHE ESTE PROGRAMA!");
+    		
     		ServiceRunner runner = new ServiceRunner();
 			runner.run(new SyncLocalDatabaseService(indexables));
 			
+			MainFrame.getInstance().setTitle("Data Sync");
 			MainFrame.getInstance().setMensagem("Sincronizado!");
 			MainFrame.getInstance().habilitarSync();
 			
