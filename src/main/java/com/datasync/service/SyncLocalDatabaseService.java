@@ -1,5 +1,6 @@
 package com.datasync.service;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -8,9 +9,12 @@ import java.util.Set;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.swing.SwingUtilities;
 
+import com.datasync.Main;
 import com.datasync.models.IndexableEntity;
 import com.datasync.processor.IndexProcessor;
+import com.datasync.ui.MainFrame;
 
 public class SyncLocalDatabaseService implements IService {
 
@@ -82,8 +86,9 @@ public class SyncLocalDatabaseService implements IService {
 	}
 
 	@SuppressWarnings("unchecked")
-	private void sync(IndexProcessor processor, List<IndexableEntity> resultList){
+	private void sync(IndexProcessor processor, List<IndexableEntity> resultList) throws Exception {
 
+		int index = 0;
 		for(IndexableEntity entity: resultList){
 
 			String entityName = entity.getShortClassName();
@@ -119,18 +124,34 @@ public class SyncLocalDatabaseService implements IService {
 				processor.save(entity);
 				System.out.println("saved");
 			}
+			
+			index++;
+			atualizarProgressBar(index, indexables.size());
 		}
 
 	}
 
+	private void atualizarProgressBar(final int index, final int total) throws InterruptedException, InvocationTargetException{
+		SwingUtilities.invokeAndWait(new Runnable() {
+			@Override
+			public void run() {
+				int percent = Main.getPorcentagemAtual(index, total);
+				System.out.println("% " + percent);
+				MainFrame.getInstance().setProgressBarValue(percent);
+			}
+		});
+	}
+	
 	@Override
 	@SuppressWarnings("unchecked")
 	public void execute() throws Exception {
 		IndexProcessor processor = new IndexProcessor();
 
 		for(IndexableEntity indexable : indexables){
-
+			MainFrame.getInstance().setMensagem("Sincronizando " + indexable.getShortClassName());
 			System.out.println("-> " + indexable.getFullClassName());
+			atualizarProgressBar(0, indexables.size());
+			
 			Query query  = createQuery(processor, indexable);
 			List<IndexableEntity> resultList = query.getResultList();
 
@@ -139,10 +160,15 @@ public class SyncLocalDatabaseService implements IService {
 				sync(processor, resultList);
 
 			}else{
+				MainFrame.getInstance().setMensagem(indexable.getShortClassName() + " j‡ est‡ sincronizado");
+				atualizarProgressBar(1, 1);
+				
 				System.out.println("Nothing to save");
 			}
 		}
-
+		
+		// Para manter a barra em 100% quando tudo acabar
+		atualizarProgressBar(1, 1);
 	}
 
 }

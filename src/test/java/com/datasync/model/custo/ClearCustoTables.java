@@ -1,3 +1,4 @@
+package com.datasync.model.custo;
 import org.junit.Test;
 
 import com.datasync.Teste;
