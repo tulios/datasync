@@ -57,8 +57,20 @@ public class Config {
 		return null;
 	}
 
+	public boolean isEnabled(){
+		return properties != null && properties.getProperty("enabled").equals("true");
+	}
+	
+	public Map<String, String> toLocalJPAMap(){
+		return toJPAMap(Config.LOCAL);
+	}
+	
+	public Map<String, String> toServerJPAMap(){
+		return toJPAMap(Config.SERVER);
+	}
+	
 	public Map<String, String> toJPAMap(String tipo){
-		if (tipo != null && properties != null && properties.getProperty("enabled").equals("true")){
+		if (tipo != null && isEnabled()){
 			Map<String, String> map = new HashMap<String, String>();
 
 			if (tipo.equals(Config.LOCAL)){

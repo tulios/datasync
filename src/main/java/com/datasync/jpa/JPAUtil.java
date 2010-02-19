@@ -1,7 +1,5 @@
 package com.datasync.jpa;
 
-import java.util.Map;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -14,17 +12,12 @@ public class JPAUtil {
 	private EntityManagerFactory emfServer;
 
 	private JPAUtil(){
-		Map<String, String> localConfig = Config.getInstance().toJPAMap(Config.LOCAL);
-		if (localConfig != null){
-			emfLocal = Persistence.createEntityManagerFactory("datasync-local", localConfig);
+		if (Config.getInstance().isEnabled()){
+			emfLocal = Persistence.createEntityManagerFactory("datasync-local", Config.getInstance().toLocalJPAMap());
+			emfServer = Persistence.createEntityManagerFactory("datasync-server", Config.getInstance().toServerJPAMap());
+			
 		}else{
 			emfLocal = Persistence.createEntityManagerFactory("datasync-local");
-		}
-
-		Map<String, String> serverConfig = Config.getInstance().toJPAMap(Config.SERVER);
-		if (serverConfig != null){
-			emfServer = Persistence.createEntityManagerFactory("datasync-server", serverConfig);
-		}else{
 			emfServer = Persistence.createEntityManagerFactory("datasync-server");
 		}
 	}

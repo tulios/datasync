@@ -49,6 +49,7 @@ public class TestTblCabecalhoCondutor extends Teste{
     	ServiceRunner runner = new ServiceRunner();
     	runner.run(new SyncLocalDatabaseService(indexables));
     	
+    	processor = new IndexProcessor();
     	assertEquals(1, processor.getIdsList(c.getFullClassName()).size());
     	
     	open();

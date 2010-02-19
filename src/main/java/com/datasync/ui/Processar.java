@@ -2,6 +2,8 @@ package com.datasync.ui;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.util.ModelUtil;
 import com.datasync.service.SyncLocalDatabaseService;
@@ -11,6 +13,8 @@ public class Processar extends Thread {
 
 	private List<IndexableEntity> indexables;
 
+	private static Logger log = Logger.getLogger(Processar.class);
+	
 	public Processar() {
 		indexables = ModelUtil.getIndexables("custo");
 	}
@@ -25,6 +29,7 @@ public class Processar extends Thread {
 		String mili = "" + time;
 		if (mili.length() > 1) {
 			mili = mili.substring(0, 2);
+			
 		}else if (mili.length() > 2){
 			mili = mili.substring(0, 3);
 		}
@@ -53,6 +58,7 @@ public class Processar extends Thread {
 			MainFrame.getInstance().habilitarSync();
 
 		} catch (Exception e) {
+			log.error(e.getMessage());
 			e.printStackTrace();
 		}
 	}

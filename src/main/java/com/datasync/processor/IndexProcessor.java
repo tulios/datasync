@@ -23,6 +23,8 @@ public class IndexProcessor {
 	
 	public static final String INDEX_FILE = "resources/indexes.xml";
 
+	private List<Index> lista;
+	
 	private void saveXML(XStream xstream, List<Index> lista) throws IOException{
 		//Elimina os repetidos
 		Set<Index> set = new HashSet<Index>(lista);
@@ -39,65 +41,71 @@ public class IndexProcessor {
 	public File getFile(){
 		return new File(INDEX_FILE);
 	}
+
+	public List<Index> getList(){
+		return getList(false);
+	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Index> getList(){
-		XStream xstream = new XStream(new DomDriver());
-		List<Index> lista = new ArrayList<Index>();
-
-		try {
-			if (!getFile().exists()){
-				Main.createDir();
-				saveXML(xstream, lista);
-				return lista;
+	public List<Index> getList(boolean reload){
+		if (lista == null || reload){
+			XStream xstream = new XStream(new DomDriver());
+			lista = new ArrayList<Index>();
+	
+			try {
+				if (!getFile().exists()){
+					Main.createDir();
+					saveXML(xstream, lista);
+					return lista;
+				}
+	
+				FileInputStream fis = new FileInputStream(getFile());
+				lista = (List<Index>) xstream.fromXML(fis);
+	
+			} catch (IOException e) {
+				log.error(e.getMessage());
+				e.printStackTrace();
 			}
-
-			FileInputStream fis = new FileInputStream(getFile());
-			lista = (List<Index>) xstream.fromXML(fis);
-
-		} catch (IOException e) {
-			log.error(e.getMessage());
-			e.printStackTrace();
 		}
 
 		return lista;
 	}
 
 	public List<String> getIdsList(String className){
-		List<Index> list = getList();
+		return getIdsList(className, false);
+	}
+	
+	public List<String> getIdsList(String className, boolean reload){
 		List<String> ids = new ArrayList<String>();
+		List<Index> list = getList(reload);
+		
 		for(Index index : list){
 			if (index.getClassName().equals(className)){
 				ids.add(index.getId());
 			}
 		}
+		
+		Collections.sort(ids);
 		return ids;
 	}
 	
 	public void save(IndexableEntity indexableEntity){
-		List<Index> lista = getList();
+		if (lista == null){
+			lista = new ArrayList<Index>();
+		}
 		lista.add(new Index(indexableEntity.getFullClassName(), indexableEntity.getIndexId()));
-
+	}
+	
+	public void commit(){
 		XStream xstream = new XStream(new DomDriver());
 		try {
-			saveXML(xstream, lista);
+			saveXML(xstream, getList());
+			//Forca a recarga para atualizar a 'lista'
+			getList(true);
 		} catch (IOException e) {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
-	}
-	
-	public Index getLast(String className){
-		List<Index> partialList = new ArrayList<Index>();
-		
-		for(Index index : getList()){
-			if (index.getClassName().equals(className)){
-				partialList.add(index);
-			}
-		}
-		
-		Collections.sort(partialList);
-		return partialList.get(partialList.size() - 1);
 	}
 
 }

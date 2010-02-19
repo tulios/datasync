@@ -86,6 +86,7 @@ public class TestTblIdEmbarcacao extends Teste {
 		ServiceRunner runner = new ServiceRunner();
 		runner.run(new SyncLocalDatabaseService(indexables));
 
+		processor = new IndexProcessor();
 		assertEquals(1, processor.getIdsList(eId.getFullClassName()).size());
 
 		open();

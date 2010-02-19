@@ -168,6 +168,7 @@ public class SyncLocalDatabaseService implements IService {
 			}
 		}
 		
+		processor.commit();
 		// Para manter a barra em 100% quando tudo acabar
 		atualizarProgressBar(1, 1);
 	}

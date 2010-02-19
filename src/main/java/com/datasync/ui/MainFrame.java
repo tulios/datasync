@@ -27,7 +27,7 @@ public class MainFrame extends JFrame {
 	private MainFrame(){
 		super("Data Sync");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		create();
+		createComponents();
 		this.pack();
 		this.setResizable(false);
 	}
@@ -61,11 +61,10 @@ public class MainFrame extends JFrame {
 	
 	private void clickSync(ActionEvent event){
 		sync.setEnabled(false);
-		Processar p = new Processar();
-		p.start();
+		new Processar().start();
 	}
 	
-	private void create(){
+	private void createComponents(){
 		painel = new JPanel();
 		painel.setLayout(new GridBagLayout());
 		this.add(painel);

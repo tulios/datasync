@@ -69,6 +69,7 @@ public class TestTblIdCondutor extends Teste {
 		ServiceRunner runner = new ServiceRunner();
 		runner.run(new SyncLocalDatabaseService(indexables));
 
+		processor = new IndexProcessor();
 		assertEquals(1, processor.getIdsList(cId.getFullClassName()).size());
 
 		open();
