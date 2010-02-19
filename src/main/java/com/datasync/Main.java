@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Properties;
 
 import javax.swing.UIManager;
 
@@ -20,9 +19,9 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		createDir();
 		createDefaultLogFile();
-		
+
 		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		
+
 		PropertyConfigurator.configure(Main.LOG4J);
 		MainFrame.start();
 	}
@@ -47,17 +46,24 @@ public class Main {
 
 	private static void createDefaultLogFile(){
 		if (!getLog4j().exists()){
-			Properties prop = new Properties();
-			prop.put("log4j.rootLogger", "DEBUG, A1");
-			prop.put("log4j.appender.A1", "org.apache.log4j.FileAppender");
-			prop.put("log4j.appender.A1.layout", "org.apache.log4j.PatternLayout");
-			prop.put("log4j.appender.A1.layout.ConversionPattern", "%d [%t] %-5p %c - %m%n");
-			prop.put("log4j.appender.A1.file", "resources/datasync.log");
+			StringBuilder str = new StringBuilder();
+			str.append("log4j.rootLogger=DEBUG, A1\n");
+			str.append("log4j.appender.A1=org.apache.log4j.FileAppender\n");
+			str.append("\n");
+			str.append("log4j.appender.A1.layout=org.apache.log4j.PatternLayout\n");
+			str.append("log4j.appender.A1.layout.ConversionPattern=%d [%t] %-5p %c - %m%n\n");
+			str.append("log4j.appender.A1.file=resources/datasync.log\n");
+			str.append("\n");
+			str.append("# Definicao dos pacotes\n");
+			str.append("log4j.logger.org.hibernate=ERROR\n");
+			str.append("log4j.logger.com.datasync=INFO\n");
 
-			prop.put("log4j.logger.org.hibernate", "ERROR");
-			prop.put("log4j.logger.com.datasync", "INFO");
 			try {
-				prop.store(new FileOutputStream(new File(Main.LOG4J)), "Log4J properties");
+				FileOutputStream fos = new FileOutputStream(new File(Main.LOG4J));
+				fos.write(str.toString().getBytes());
+				fos.flush();
+				fos.close();
+
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
