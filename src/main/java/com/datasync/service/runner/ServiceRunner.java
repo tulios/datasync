@@ -15,7 +15,6 @@ public class ServiceRunner {
 
 	public void run(IService service) throws Exception {
 		try{
-			
 			MainFrame.getInstance().setMensagem("Iniciando conex‹o...");
 			
 			EntityManager localEm = JPAUtil.getInstance().getLocalEntityManager();

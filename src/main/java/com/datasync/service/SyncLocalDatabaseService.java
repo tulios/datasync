@@ -35,7 +35,6 @@ public class SyncLocalDatabaseService implements IService {
 		this.indexables = indexables;
 	}
 
-	@Override
 	public void setEntityManagers(EntityManager localEm, EntityManager serverEm) {
 		this.localEm = localEm;
 		this.serverEm = serverEm;
@@ -152,7 +151,7 @@ public class SyncLocalDatabaseService implements IService {
 			MainFrame.getInstance().setMensagem("Sincronizando " + indexable.getShortClassName());
 			log.debug("-> " + indexable.getFullClassName());
 			
-			// Para manter a barra em 0% enquanto não começa o processo
+			// Para manter a barra em 0% enquanto n√£o come√ßa o processo
 			atualizarProgressBar(0, 1);
 			
 			Query query  = createQuery(processor, indexable);
@@ -163,7 +162,7 @@ public class SyncLocalDatabaseService implements IService {
 				sync(processor, resultList);
 				
 			}else{
-				MainFrame.getInstance().setMensagem(indexable.getShortClassName() + " já está sincronizado");
+				MainFrame.getInstance().setMensagem(indexable.getShortClassName() + " j√° est√° sincronizado");
 				atualizarProgressBar(1, 1);
 			}
 		}
