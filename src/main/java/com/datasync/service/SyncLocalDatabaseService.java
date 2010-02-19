@@ -162,7 +162,7 @@ public class SyncLocalDatabaseService implements IService {
 				sync(processor, resultList);
 				
 			}else{
-				MainFrame.getInstance().setMensagem(indexable.getShortClassName() + " j√° est√° sincronizado");
+				MainFrame.getInstance().setMensagem(indexable.getShortClassName() + " já está sincronizado");
 				atualizarProgressBar(1, 1);
 			}
 		}
