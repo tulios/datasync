@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import javax.swing.UIManager;
+
 import org.apache.log4j.PropertyConfigurator;
 
 import com.datasync.ui.MainFrame;
@@ -18,6 +20,9 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		createDir();
 		createDefaultLogFile();
+		
+		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		
 		PropertyConfigurator.configure(Main.LOG4J);
 		MainFrame.start();
 	}

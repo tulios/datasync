@@ -5,6 +5,40 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
 						http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
 
+	<!-- 
+	<persistence-unit name="datasync-local" transaction-type="RESOURCE_LOCAL">
+		<properties>
+			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://192.168.10.68:1056/bd_barco" />
+			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
+			<property name="hibernate.connection.username" value="barco" />
+			<property name="hibernate.connection.password" value="barco" />
+		</properties>
+	</persistence-unit>
+	-->
+	
+	<!-- 
+	<persistence-unit name="datasync-server" transaction-type="RESOURCE_LOCAL">
+		<properties>
+			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://192.168.10.68:1054/bd_barcovld" />
+			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
+			<property name="hibernate.connection.username" value="barcovld" />
+			<property name="hibernate.connection.password" value="barcovld" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="datasync-local" transaction-type="RESOURCE_LOCAL">
+		<properties>
+			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://localhost:1197/bd_barco" />
+			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
+			<property name="hibernate.connection.username" value="barco" />
+			<property name="hibernate.connection.password" value="barco" />
+		</properties>
+	</persistence-unit>
+	 -->
+	 
 	<persistence-unit name="datasync-local" transaction-type="RESOURCE_LOCAL">
 		<properties>
 			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/datasync" />
@@ -24,7 +58,7 @@
 			<property name="hibernate.connection.password" value="postgres" />
 		</properties>
 	</persistence-unit>
-
+	
 	<!-- 	 
 	<persistence-unit name="datasync-server" transaction-type="RESOURCE_LOCAL">
 		<properties>
