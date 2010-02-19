@@ -14,12 +14,12 @@ public class ServiceRunner {
 	private static Logger log = Logger.getLogger(ServiceRunner.class);
 
 	public void run(IService service) throws Exception {
-		MainFrame.getInstance().setMensagem("Iniciando conexão...");
+		MainFrame.getInstance().setMensagem("Iniciando conex√£o...");
 		
 		EntityManager localEm = JPAUtil.getInstance().getLocalEntityManager();
 		EntityManager serverEm = JPAUtil.getInstance().getServerEntityManager();
 		
-		MainFrame.getInstance().setMensagem("Conectado, iniciando sincronização...");
+		MainFrame.getInstance().setMensagem("Conectado, iniciando sincroniza√ß√£o...");
 		
 		EntityTransaction txLocal = localEm.getTransaction();
 		EntityTransaction txServer = serverEm.getTransaction();
