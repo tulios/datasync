@@ -9,6 +9,7 @@ import javax.swing.UIManager;
 
 import org.apache.log4j.PropertyConfigurator;
 
+import com.datasync.jpa.Config;
 import com.datasync.ui.MainFrame;
 
 public class Main {
@@ -19,10 +20,12 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		createDir();
 		createDefaultLogFile();
-
+		createDefaultConfigFile();
+		
 		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
 		PropertyConfigurator.configure(Main.LOG4J);
+		Config.start();
 		MainFrame.start();
 	}
 
@@ -59,7 +62,46 @@ public class Main {
 			str.append("log4j.logger.com.datasync=INFO\n");
 
 			try {
-				FileOutputStream fos = new FileOutputStream(new File(Main.LOG4J));
+				FileOutputStream fos = new FileOutputStream(getLog4j());
+				fos.write(str.toString().getBytes());
+				fos.flush();
+				fos.close();
+
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	private static void createDefaultConfigFile(){
+		if (!Config.getConfigFile().exists()){
+			StringBuilder str = new StringBuilder();
+			str.append("enabled=false\n");
+			str.append("connection_url=jdbc:postgresql://\n");
+			str.append("#connection_url=jdbc:jtds:sqlserver://\n");
+			
+			str.append("driver_class=org.postgresql.Driver\n");
+			str.append("#driver_class=net.sourceforge.jtds.jdbc.Driver\n");
+			
+			str.append("dialect=org.hibernate.dialect.PostgreSQLDialect\n");
+			str.append("#dialect=org.hibernate.dialect.SQLServerDialect\n");
+			str.append("\n");
+			str.append("#ip_local=\n");
+			str.append("#porta_local=\n");
+			str.append("#banco_local=\n");
+			str.append("#usuario_local=\n");
+			str.append("#senha_local=\n");
+			str.append("\n");
+			str.append("#ip_server=\n");
+			str.append("#porta_server=\n");
+			str.append("#banco_server=\n");
+			str.append("#usuario_server=\n");
+			str.append("#senha_server=\n");
+			
+			try {
+				FileOutputStream fos = new FileOutputStream(Config.getConfigFile());
 				fos.write(str.toString().getBytes());
 				fos.flush();
 				fos.close();
