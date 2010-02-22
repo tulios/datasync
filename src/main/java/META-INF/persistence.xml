@@ -5,6 +5,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
 						http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
 	 
+	<!--  
 	<persistence-unit name="datasync-local" transaction-type="RESOURCE_LOCAL">
 		<properties>
 			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/BD_CUSTO" />
@@ -24,17 +25,26 @@
 			<property name="hibernate.connection.password" value="postgres" />
 		</properties>
 	</persistence-unit>
+	 -->
 	
-	<!-- 	 
-	<persistence-unit name="datasync-server" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="datasync-local" transaction-type="RESOURCE_LOCAL">
 		<properties>
-			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.211.55.3:1433/BD_CUSTO" />
+			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.211.55.3:1433/BD_BARCO" />
 			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
 			<property name="hibernate.connection.username" value="datasync_user" />
 			<property name="hibernate.connection.password" value="123456" />
 		</properties>
 	</persistence-unit>
-	 -->
+	
+	<persistence-unit name="datasync-server" transaction-type="RESOURCE_LOCAL">
+		<properties>
+			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.211.55.3:1433/BD_BARCO2" />
+			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
+			<property name="hibernate.connection.username" value="datasync_user" />
+			<property name="hibernate.connection.password" value="123456" />
+		</properties>
+	</persistence-unit>
 	 	
 </persistence>
