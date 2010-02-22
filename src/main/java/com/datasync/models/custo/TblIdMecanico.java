@@ -29,6 +29,8 @@ public class TblIdMecanico extends IndexableEntity {
 	private String tempoExperiencia;
 	@Column(name = "Salario")
 	private String salario;
+	@Column(name = "Observacao")
+	private String observacao;
 	
 	public TblIdMecanico(){
 	}
@@ -107,6 +109,14 @@ public class TblIdMecanico extends IndexableEntity {
 		this.salario = salario;
 	}
 
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
+	
 }
 
 

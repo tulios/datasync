@@ -32,9 +32,7 @@ hash = {
     :Pesquisador  => 20,
     :DataColeta   => 10,
     :Responsavel  => 50
-  }
-}
-",
+  },                           
   :TblIdCondutor => {
     :IdFormulario     => 9,
     :Nome             => 50,
@@ -43,16 +41,17 @@ hash = {
     :DataNasc         => 10,
     :Escolaridade     => 14,
     :EstadoCivil      => 10,
-    :NumeroEmbarcacao => 15,
+    :IdEmbarcacao     => 15,
     :Habilitacao      => 30,
     :Categoria        => 30,
     :TempoExperiencia => 22,
     :Salario          => 8,
-    :CondutorReserva  => 3
+    :CondutorReserva  => 3,
+    :Observacao       => 500
   },
-  :TblIdEmbarcacao => {
+  :TblIdEmbarcacao => {            
     :IdFormulario          =>   9,
-    :NumeroEmbarcacao      =>   15,
+    :IdEmbarcacao          =>   15,
     :NomeEmbarcacao        =>   40,
     :UfEmbarcacao          =>   2,
     :AnoFabricacao         =>   4,
@@ -76,13 +75,16 @@ hash = {
     :MesLetivoSeca         =>   2,
     :QuantidadeRota        =>   2,
     :RotaOD                =>   100,
+    :RotaOD1               =>   100,
+    :RotaOD2               =>   100,
     :AlunosMatutino        =>   3,
     :AlunosVespertino      =>   3,
     :AlunosNoturno         =>   3,
     :ValorCusto            =>   10,
-    :ValorUnidade          =>   20
+    :ValorUnidade          =>   20,
+    :Observacao            =>   500
   },
-  :TblIdMecanico => {
+  :TblIdMecanico => {   
     :IdFormulario     =>   9,
     :Nome             =>   50,
     :Identidade       =>   15,
@@ -90,9 +92,10 @@ hash = {
     :DataNasc         =>   10,
     :Escolaridade     =>   14,
     :TempoExperiencia =>   10,
-    :Salario          =>   8
+    :Salario          =>   8,
+    :Observacao       =>   500
   },
-  :TblIdMonitor => {
+  :TblIdMonitor => {        
     :IdFormulario     =>   9,
     :Nome             =>   50,
     :Identidade       =>   15,
@@ -100,12 +103,13 @@ hash = {
     :DataNasc         =>   10,
     :Escolaridade     =>   14,
     :EstadoCivil      =>   10,
-    :NumeroEmbarcacao =>   15,
+    :IdEmbarcacao     =>   15,
     :TempoExperiencia =>   22,
-    :Salario          =>   8
+    :Salario          =>   8,
+    :Observacao       =>   500
   }
 }                    
-"
+
 def columns(hash)
   str = []
   hash.keys.each do |key|
@@ -119,6 +123,12 @@ def next_value
   @@value += 1
   @@value
 end                      
+           
+@@IdEmbarcacaoValue = 0
+def next_IdEmbarcacao_value
+  @@IdEmbarcacaoValue += 1
+  @@IdEmbarcacaoValue
+end           
                                                         
 def values(hash)
   str = []     
@@ -126,6 +136,8 @@ def values(hash)
   hash.keys.each do |key|
     if value.to_s.length > hash[key]
       str << "'a'"
+    elsif key == :IdEmbarcacao
+      str << "'#{next_IdEmbarcacao_value}'"
     else
       str << "'#{value}'"
     end

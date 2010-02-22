@@ -15,95 +15,72 @@ public class TblIdEmbarcacao extends IndexableEntity {
 	@Id
 	@Column(name = "IdFormulario")
 	private String idFormulario;
-	
-	@Column(name = "NumeroEmbarcacao")
-	private String numeroEmbarcacao;
-	
-	@Column(name = "AlunosMatutino", length=3)
-	private String alunosmatutino;
-
-	@Column(name = "AlunosNoturno", length=3)
-	private String alunosnoturno;
-
-	@Column(name = "AlunosVespertino", length=3)
-	private String alunosvespertino;
-
-	@Column(name = "AnoFabricacao", length=4)
-	private String anofabricacao;
-
-	@Column(name = "CapacidadeIndicada", length=3)
-	private String capacidadeindicada;
-
-	@Column(name = "CapacidadeInformada", length=3)
-	private String capacidadeinformada;
-
-	@Column(name = "DataAquisicao", length=10)
-	private String dataaquisicao;
-
-	@Column(name = "EmbarcacaoReserva", length=3)
-	private String embarcacaoreserva;
-
-	@Column(name = "MesLetivoChuva", length=2)
-	private String mesletivochuva;
-
-	@Column(name = "MesLetivoSeca", length=2)
-	private String mesletivoseca;
-
-	@Column(name = "NomeEmbarcacao", length=40)
+	@Column(name = "IdEmbarcacao")
+	private String idEmbarcacao;
+	@Column(name = "NomeEmbarcacao")
 	private String nomeembarcacao;
-
-	@Column(name = "PosicaoMotor", length=2)
-	private String posicaomotor;
-
-	@Column(name = "PotenciaMotor", length=5)
-	private String potenciamotor;
-
-	@Column(name = "PropriedadeEmbarcacao", length=25)
-	private String propriedadeembarcacao;
-
-	@Column(name = "PropriedadeOutros", length=20)
-	private String propriedadeoutros;
-
-	@Column(name = "QuantidadeRota", length=2)
-	private String quantidaderota;
-
-	@Column(name = "QuantMotor", length=2)
-	private String quantmotor;
-
-	@Column(name = "RotaOD", length=100)
-	private String rotaod;
-
-	@Column(name = "SituacaoEmbarcacao", length=3)
-	private String situacaoembarcacao;
-
-	@Column(name = "TempoChuva", length=10)
-	private String tempochuva;
-
-	@Column(name = "TempoSeca", length=10)
-	private String temposeca;
-
-	@Column(name = "TipoCombustivel", length=15)
-	private String tipocombustivel;
-
-	@Column(name = "TipoEmbarcacao", length=1)
-	private String tipoembarcacao;
-
-	@Column(name = "TipoMaterial", length=10)
-	private String tipomaterial;
-
-	@Column(name = "UfEmbarcacao", length=2)
+	@Column(name = "UfEmbarcacao")
 	private String ufembarcacao;
-
-	@Column(name = "ValorCusto", length=10)
-	private String valorcusto;
-
-	@Column(name = "ValorEmbarcacao", length=10)
+	@Column(name = "AnoFabricacao")
+	private String anofabricacao;
+	@Column(name = "TipoMaterial")
+	private String tipomaterial;
+	@Column(name = "TipoEmbarcacao")
+	private String tipoembarcacao;
+	@Column(name = "PosicaoMotor")
+	private String posicaomotor;
+	@Column(name = "QuantMotor")
+	private String quantmotor;
+	@Column(name = "PotenciaMotor")
+	private String potenciamotor;
+	@Column(name = "TipoCombustivel")
+	private String tipocombustivel;
+	@Column(name = "CapacidadeIndicada")
+	private String capacidadeindicada;
+	@Column(name = "CapacidadeInformada")
+	private String capacidadeinformada;
+	@Column(name = "SituacaoEmbarcacao")
+	private String situacaoembarcacao;
+	@Column(name = "EmbarcacaoReserva")
+	private String embarcacaoreserva;
+	@Column(name = "PropriedadeEmbarcacao")
+	private String propriedadeembarcacao;
+	@Column(name = "PropriedadeOutros")
+	private String propriedadeoutros;
+	@Column(name = "ValorEmbarcacao")
 	private String valorembarcacao;
-
-	@Column(name = "ValorUnidade", length=20)
+	@Column(name = "DataAquisicao")
+	private String dataaquisicao;
+	@Column(name = "TempoChuva")
+	private String tempochuva;
+	@Column(name = "TempoSeca")
+	private String temposeca;
+	@Column(name = "MesLetivoChuva")
+	private String mesletivochuva;
+	@Column(name = "MesLetivoSeca")
+	private String mesletivoseca;
+	@Column(name = "QuantidadeRota")
+	private String quantidaderota;
+	@Column(name = "RotaOD")
+	private String rotaod;
+	@Column(name = "RotaOD1")
+	private String rotaOD1;
+	@Column(name = "RotaOD2")
+	private String rotaOD2;
+	@Column(name = "AlunosMatutino")
+	private String alunosmatutino;
+	@Column(name = "AlunosVespertino")
+	private String alunosvespertino;
+	@Column(name = "AlunosNoturno")
+	private String alunosnoturno;
+	@Column(name = "ValorCusto")
+	private String valorcusto;
+	@Column(name = "ValorUnidade")
 	private String valorunidade;
+	@Column(name = "Observacao")
+	private String observacao;
 
-    public TblIdEmbarcacao() {
+	public TblIdEmbarcacao() {
     }
 
     @Override
@@ -118,12 +95,12 @@ public class TblIdEmbarcacao extends IndexableEntity {
     
     @Override
     public String getCompoundIdColumnName() {
-    	return "numeroEmbarcacao";
+    	return "idEmbarcacao";
     }
     
     @Override
     public String getIndexId() {
-    	return getIdFormulario()+"#"+getNumeroEmbarcacao();
+    	return getIdFormulario()+"#"+getIdEmbarcacao();
     }
     
 	public String getIdFormulario() {
@@ -134,12 +111,12 @@ public class TblIdEmbarcacao extends IndexableEntity {
 		this.idFormulario = idFormulario;
 	}
 
-	public String getNumeroEmbarcacao() {
-		return numeroEmbarcacao;
+	public String getIdEmbarcacao() {
+		return idEmbarcacao;
 	}
 
-	public void setNumeroEmbarcacao(String numeroEmbarcacao) {
-		this.numeroEmbarcacao = numeroEmbarcacao;
+	public void setIdEmbarcacao(String idEmbarcacao) {
+		this.idEmbarcacao = idEmbarcacao;
 	}
 
 	public String getAlunosmatutino() {
@@ -364,6 +341,30 @@ public class TblIdEmbarcacao extends IndexableEntity {
 
 	public void setValorunidade(String valorunidade) {
 		this.valorunidade = valorunidade;
+	}
+
+	public String getRotaOD1() {
+		return rotaOD1;
+	}
+
+	public void setRotaOD1(String rotaOD1) {
+		this.rotaOD1 = rotaOD1;
+	}
+
+	public String getRotaOD2() {
+		return rotaOD2;
+	}
+
+	public void setRotaOD2(String rotaOD2) {
+		this.rotaOD2 = rotaOD2;
+	}
+
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
 	}
 
 }

@@ -27,12 +27,14 @@ public class TblIdMonitor extends IndexableEntity {
 	private String escolaridade;
 	@Column(name = "EstadoCivil")
 	private String estadoCivil;
-	@Column(name = "NumeroEmbarcacao")
-	private String numeroEmbarcacao;
+	@Column(name = "IdEmbarcacao")
+	private String idEmbarcacao;
 	@Column(name = "TempoExperiencia")
 	private String tempoExperiencia;
 	@Column(name = "Salario")
 	private String salario;
+	@Column(name = "Observacao")
+	private String observacao;
 	
 	public TblIdMonitor(){
 	}
@@ -119,12 +121,20 @@ public class TblIdMonitor extends IndexableEntity {
 		this.estadoCivil = estadoCivil;
 	}
 
-	public String getNumeroEmbarcacao() {
-		return numeroEmbarcacao;
+	public String getIdEmbarcacao() {
+		return idEmbarcacao;
 	}
 
-	public void setNumeroEmbarcacao(String numeroEmbarcacao) {
-		this.numeroEmbarcacao = numeroEmbarcacao;
+	public void setIdEmbarcacao(String idEmbarcacao) {
+		this.idEmbarcacao = idEmbarcacao;
+	}
+
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
 	}
 
 }

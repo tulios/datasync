@@ -48,7 +48,7 @@ public class TestTblIdMonitor extends Teste {
 		mId.setDataNasc("15-12-1987");
 		mId.setEscolaridade("superior");
 		mId.setEstadoCivil("Solteiro");
-		mId.setNumeroEmbarcacao("10");
+		mId.setIdEmbarcacao("10");
 		mId.setTempoExperiencia("4 anos");
 		mId.setSalario("6.500");
 		getLocalEm().persist(mId);

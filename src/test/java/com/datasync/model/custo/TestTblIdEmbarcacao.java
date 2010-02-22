@@ -42,7 +42,7 @@ public class TestTblIdEmbarcacao extends Teste {
 		
 		TblIdEmbarcacao eId = new TblIdEmbarcacao();
 		eId.setIdFormulario("1");
-		eId.setNumeroEmbarcacao("10");
+		eId.setIdEmbarcacao("10");
 		eId.setAlunosmatutino("10");
 		eId.setAlunosnoturno("10");
 		eId.setAlunosvespertino("10");
@@ -61,6 +61,8 @@ public class TestTblIdEmbarcacao extends Teste {
 		eId.setQuantidaderota("10");
 		eId.setQuantmotor("10");
 		eId.setRotaod("10");
+		eId.setRotaOD1("11");
+		eId.setRotaOD2("12");
 		eId.setSituacaoembarcacao("Boa");
 		eId.setTempochuva("10");
 		eId.setTemposeca("10");

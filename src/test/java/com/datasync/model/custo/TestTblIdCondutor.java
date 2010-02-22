@@ -48,12 +48,13 @@ public class TestTblIdCondutor extends Teste {
 		cId.setDataNasc("15-12-1987");
 		cId.setEscolaridade("Superior");
 		cId.setEstadoCivil("Solteiro");
-		cId.setNumeroEmbarcacao("10");
+		cId.setIdEmbarcacao("10");
 		cId.setHabilitacao("12345678900");
 		cId.setCategoria("Categoria 1");
 		cId.setTempoExperiencia("4 anos");
 		cId.setSalario("6.500");
 		cId.setCondutorReserva("123");
+		cId.setObservacao("Observacao");
 		getLocalEm().persist(cId);
 
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblCabecalhoCondutor t").getSingleResult();
