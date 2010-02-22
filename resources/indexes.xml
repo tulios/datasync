@@ -4,7 +4,7 @@
     <id>1</id>
   </com.datasync.processor.Index>
   <com.datasync.processor.Index>
-    <className>com.datasync.models.barco.TblCaracterizacaoCondutor</className>
+    <className>com.datasync.models.barco.TblIdentificacaoCondutor</className>
     <id>1</id>
   </com.datasync.processor.Index>
 </list>
