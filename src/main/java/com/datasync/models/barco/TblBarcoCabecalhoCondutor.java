@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 
 @Entity
-@Table(name = "TblCabecalhoCondutor")
+@Table(name = "tblCabecalhoCondutor")
 @SuppressWarnings("serial")
 public class TblBarcoCabecalhoCondutor extends IndexableEntity {
 
