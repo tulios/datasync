@@ -61,6 +61,10 @@ public class Config {
 		return properties != null && properties.getProperty("enabled").equals("true");
 	}
 	
+	public String getModelo(){
+		return getProperty("modelo");
+	}
+	
 	public Map<String, String> toLocalJPAMap(){
 		return toJPAMap(Config.LOCAL);
 	}
