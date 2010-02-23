@@ -7,6 +7,7 @@ import com.datasync.models.IndexableEntity;
 import com.datasync.models.barco.TblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.TblCaracterizacaoCondutor;
 import com.datasync.models.barco.TblIdentificacaoCondutor;
+import com.datasync.models.barco.TblInformacaoCondutor;
 import com.datasync.models.custo.TblCabecalhoCondutor;
 import com.datasync.models.custo.TblCabecalhoEmbarcacao;
 import com.datasync.models.custo.TblCabecalhoMecanico;
@@ -42,6 +43,7 @@ public class ModelUtil {
 			indexables.add(new TblBarcoCabecalhoCondutor());
 			indexables.add(new TblCaracterizacaoCondutor());
 			indexables.add(new TblIdentificacaoCondutor());
+			indexables.add(new TblInformacaoCondutor());
 		}
 		
 		return indexables;
