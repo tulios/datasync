@@ -1,10 +1,10 @@
 package com.datasync.model.custo;
 import org.junit.Test;
 
-import com.datasync.Teste;
+import com.datasync.model.TesteCusto;
 
 
-public class ClearCustoTables extends Teste {
+public class ClearCustoTables extends TesteCusto {
 
 	@Test
 	public void clear(){

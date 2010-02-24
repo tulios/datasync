@@ -7,14 +7,14 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.datasync.Teste;
+import com.datasync.model.TesteCusto;
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.custo.TblCabecalhoMonitor;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncLocalDatabaseService;
 import com.datasync.service.runner.ServiceRunner;
 
-public class TestTblCabecalhoMonitor extends Teste {
+public class TestTblCabecalhoMonitor extends TesteCusto {
 
 	@Test
 	public void verificaSincronismo() throws Exception{

@@ -148,7 +148,7 @@ end
 sql = []
 hash.keys.each do |key|
   
-  for x in (1..QUANTIDADE) do
+  for x in (1..QUANTIDADE) do  
     sql << "insert into #{key} #{columns(hash[key])} values #{values(hash[key])};"
   end
   sql << "\n"

@@ -1,44 +1,47 @@
-package com.datasync.model.custo;
+package com.datasync.model.barco;
 
 import static org.junit.Assert.assertEquals;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Test;
 
-import com.datasync.model.TesteCusto;
+import com.datasync.model.TesteBarco;
 import com.datasync.models.IndexableEntity;
-import com.datasync.models.custo.TblCabecalhoCondutor;
+import com.datasync.models.barco.TblBarcoCabecalhoCondutor;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncLocalDatabaseService;
 import com.datasync.service.runner.ServiceRunner;
 
-public class TestTblCabecalhoCondutor extends TesteCusto{
+public class TesteTblBarcoCabecalhoCondutor extends TesteBarco {
 
 	@Test
 	public void verificaSincronismo() throws Exception{
 		open();
 		
 		List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
-		indexables.add(new TblCabecalhoCondutor());
+		indexables.add(new TblBarcoCabecalhoCondutor());
     	
-		Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblCabecalhoCondutor t").getSingleResult();
+		Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblBarcoCabecalhoCondutor t").getSingleResult();
 		assertEquals(0, local.intValue());
 		
-		Number server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblCabecalhoCondutor t").getSingleResult();
+		Number server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblBarcoCabecalhoCondutor t").getSingleResult();
 		assertEquals(0, server.intValue());
 		
-		TblCabecalhoCondutor c = new TblCabecalhoCondutor();
+		TblBarcoCabecalhoCondutor c = new TblBarcoCabecalhoCondutor();
 		c.setIdFormulario("1");
-		c.setPesquisador("Tœlio");
-		c.setMunicipio("Bras’lia");
-		c.setUf("DF");
-		c.setResponsavel("Tœlio");
-		c.setDataColeta("10-10-2010");
+		c.setIdPesquisador(1);
+		c.setIdMunicipio(1);
+		c.setRota("100");
+		c.setData(new Timestamp(new Date().getTime()));
+		c.setHorarioInicio("10");
+		c.setHorarioTermino("10");
 		getLocalEm().persist(c);
 		
-		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblCabecalhoCondutor t").getSingleResult();
+		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblBarcoCabecalhoCondutor t").getSingleResult();
 		assertEquals(1, local.intValue());
 		
 		IndexProcessor processor = new IndexProcessor();
@@ -53,19 +56,9 @@ public class TestTblCabecalhoCondutor extends TesteCusto{
     	assertEquals(1, processor.getIdsList(c.getFullClassName()).size());
     	
     	open();
-    	server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblCabecalhoCondutor t").getSingleResult();
+    	server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblBarcoCabecalhoCondutor t").getSingleResult();
 		assertEquals(1, server.intValue());
 		close();
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-

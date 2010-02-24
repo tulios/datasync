@@ -79,6 +79,7 @@ public class Main {
 		if (!Config.getConfigFile().exists()){
 			StringBuilder str = new StringBuilder();
 			str.append("enabled=false\n");
+			str.append("modelo=custo\n");
 			str.append("connection_url=jdbc:postgresql://\n");
 			str.append("#connection_url=jdbc:jtds:sqlserver://\n");
 			

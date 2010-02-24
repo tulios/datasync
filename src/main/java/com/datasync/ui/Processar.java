@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import com.datasync.jpa.Config;
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.util.ModelUtil;
 import com.datasync.service.SyncLocalDatabaseService;
@@ -16,7 +17,7 @@ public class Processar extends Thread {
 	private static Logger log = Logger.getLogger(Processar.class);
 	
 	public Processar() {
-		indexables = ModelUtil.getIndexables("custo");
+		indexables = ModelUtil.getIndexables(Config.getInstance().getModelo());
 	}
 
 	private String formatTime(long time){
