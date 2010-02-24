@@ -10,12 +10,9 @@ public class TesteBarco extends Teste{
 	@Before
 	public void zerarBanco(){
 		open();
-
 		clearBarco();
-
-		serverEm.getTransaction().commit();
-		localEm.getTransaction().commit();
-
+		insertDefaultData();
+		close();
 		new IndexProcessor().getFile().delete();
 	}  
 
@@ -31,6 +28,39 @@ public class TesteBarco extends Teste{
 		
 		localEm.createNativeQuery("delete from TblCabecalhoCondutor").executeUpdate();
 		serverEm.createNativeQuery("delete from TblCabecalhoCondutor").executeUpdate();
+		
+		//Tabelas Comuns
+		
+		localEm.createNativeQuery("delete from tblMunicipio").executeUpdate();
+		serverEm.createNativeQuery("delete from tblMunicipio").executeUpdate();
+		
+		localEm.createNativeQuery("delete from tblTipoEscolaridade").executeUpdate();
+		serverEm.createNativeQuery("delete from tblTipoEscolaridade").executeUpdate();
+	}
+	
+	private void insertDefaultData(){
+		localEm.createNativeQuery("insert into tblMunicipio (IdMunicipio, NomeMunicipio, UF) values (1, 'Brasília', 'DF');").executeUpdate();
+		serverEm.createNativeQuery("insert into tblMunicipio (IdMunicipio, NomeMunicipio, UF) values (1, 'Brasília', 'DF');").executeUpdate();
+		
+		localEm.createNativeQuery("insert into tblTipoEscolaridade values (1,'Ensino Fundamental 1ª série');").executeUpdate();
+		serverEm.createNativeQuery("insert into tblTipoEscolaridade values (1,'Ensino Fundamental 1ª série');").executeUpdate();
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

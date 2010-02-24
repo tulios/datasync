@@ -51,12 +51,6 @@ public class TesteTblInformacaoCondutor extends TesteBarco {
 		i.setNaoSabeTempo(true);
 		i.setQuantidadeRotaAtendida(50);
 		i.setQuaisRotasAtendidas("Varias");
-		i.setQuaisOutrosContratos("outros");
-		i.setFrequenciaFiscalizacao(10);
-		i.setQualOutroFiscalizacao("outros");
-		i.setPercursoMaisTempo(20);
-		i.setQuantoTempo("10h");
-		i.setPorqueMaisTempo("por que sim");
 		i.setDiferencaTempo("10");
 		i.setQualDiferencaTempo("20");
 		getLocalEm().persist(i);

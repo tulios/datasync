@@ -27,18 +27,6 @@ public class TblInformacaoCondutor extends IndexableEntity {
 	private int quantidadeRotaAtendida;
 	@Column(name = "QuaisRotasAtendidas")
 	private String quaisRotasAtendidas;
-	@Column(name = "QuaisOutrosContratos")
-	private String quaisOutrosContratos;
-	@Column(name = "FrequenciaFiscalizacao")
-	private int frequenciaFiscalizacao;
-	@Column(name = "QualOutroFiscalizacao", length = 10)
-	private String qualOutroFiscalizacao;
-	@Column(name = "PercursoMaisTempo")
-	private int percursoMaisTempo;
-	@Column(name = "QuantoTempo")
-	private String quantoTempo;
-	@Column(name = "PorqueMaisTempo")
-	private String porqueMaisTempo;
 	@Column(name = "DiferencaTempo", length = 3)
 	private String diferencaTempo;
 	@Column(name = "QualDiferencaTempo")
@@ -111,54 +99,6 @@ public class TblInformacaoCondutor extends IndexableEntity {
 
 	public void setQuaisRotasAtendidas(String quaisRotasAtendidas) {
 		this.quaisRotasAtendidas = quaisRotasAtendidas;
-	}
-
-	public String getQuaisOutrosContratos() {
-		return quaisOutrosContratos;
-	}
-
-	public void setQuaisOutrosContratos(String quaisOutrosContratos) {
-		this.quaisOutrosContratos = quaisOutrosContratos;
-	}
-
-	public int getFrequenciaFiscalizacao() {
-		return frequenciaFiscalizacao;
-	}
-
-	public void setFrequenciaFiscalizacao(int frequenciaFiscalizacao) {
-		this.frequenciaFiscalizacao = frequenciaFiscalizacao;
-	}
-
-	public String getQualOutroFiscalizacao() {
-		return qualOutroFiscalizacao;
-	}
-
-	public void setQualOutroFiscalizacao(String qualOutroFiscalizacao) {
-		this.qualOutroFiscalizacao = qualOutroFiscalizacao;
-	}
-
-	public int getPercursoMaisTempo() {
-		return percursoMaisTempo;
-	}
-
-	public void setPercursoMaisTempo(int percursoMaisTempo) {
-		this.percursoMaisTempo = percursoMaisTempo;
-	}
-
-	public String getQuantoTempo() {
-		return quantoTempo;
-	}
-
-	public void setQuantoTempo(String quantoTempo) {
-		this.quantoTempo = quantoTempo;
-	}
-
-	public String getPorqueMaisTempo() {
-		return porqueMaisTempo;
-	}
-
-	public void setPorqueMaisTempo(String porqueMaisTempo) {
-		this.porqueMaisTempo = porqueMaisTempo;
 	}
 
 	public String getDiferencaTempo() {
