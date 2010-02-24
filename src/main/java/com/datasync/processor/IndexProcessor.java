@@ -81,7 +81,7 @@ public class IndexProcessor {
 		
 		for(Index index : list){
 			if (index.getClassName().equals(className)){
-				ids.add(index.getId());
+				ids.add(index.getId() + "");
 			}
 		}
 		

@@ -107,7 +107,13 @@ public class SyncLocalDatabaseService implements IService {
 																			    compoundName + " = :compoundId");
 				String[] ids = entity.getIndexId().split("#");
 				search.setParameter("id", ids[0]);
-				search.setParameter("compoundId", ids[1]);
+				
+				try{
+					int number = Integer.parseInt(ids[1]);
+					search.setParameter("compoundId", number);
+				}catch(NumberFormatException e){
+					search.setParameter("compoundId", ids[1]);
+				}
 				
 			}else{
 				search = serverEm.createQuery("from " + entityName +" where " + columnName + " = :id");

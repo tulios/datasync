@@ -17,6 +17,9 @@ public class TesteBarco extends Teste{
 	}  
 
 	private void clearBarco(){
+		localEm.createNativeQuery("delete from TblInformacaoCondutorDonoBarco").executeUpdate();
+		serverEm.createNativeQuery("delete from TblInformacaoCondutorDonoBarco").executeUpdate();
+		
 		localEm.createNativeQuery("delete from TblInformacaoCondutorFrequencia").executeUpdate();
 		serverEm.createNativeQuery("delete from TblInformacaoCondutorFrequencia").executeUpdate();
 		
@@ -42,6 +45,9 @@ public class TesteBarco extends Teste{
 		
 		localEm.createNativeQuery("delete from tblTipoFrequencia").executeUpdate();
 		serverEm.createNativeQuery("delete from tblTipoFrequencia").executeUpdate();
+		
+		localEm.createNativeQuery("delete from tblTipoDonoBarco").executeUpdate();
+		serverEm.createNativeQuery("delete from tblTipoDonoBarco").executeUpdate();
 	}
 	
 	private void insertDefaultData(){
@@ -53,6 +59,12 @@ public class TesteBarco extends Teste{
 		
 		localEm.createNativeQuery("insert into tblTipoFrequencia values (1,'Desc Frequencia');").executeUpdate();
 		serverEm.createNativeQuery("insert into tblTipoFrequencia values (1,'Desc Frequencia');").executeUpdate();
+		
+		localEm.createNativeQuery("insert into tblTipoDonoBarco values (1,'Da Prefeitura');").executeUpdate();
+		serverEm.createNativeQuery("insert into tblTipoDonoBarco values (1,'Da Prefeitura');").executeUpdate();
+		
+		//localEm.createNativeQuery("").executeUpdate();
+		//serverEm.createNativeQuery("").executeUpdate();
 	}
 	
 }
