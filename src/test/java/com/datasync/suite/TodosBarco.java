@@ -8,6 +8,7 @@ import com.datasync.model.barco.TesteTblBarcoCabecalhoCondutor;
 import com.datasync.model.barco.TesteTblCaracterizacaoCondutor;
 import com.datasync.model.barco.TesteTblIdentificacaoCondutor;
 import com.datasync.model.barco.TesteTblInformacaoCondutor;
+import com.datasync.model.barco.TesteTblInformacaoCondutorAvisoAluno;
 import com.datasync.model.barco.TesteTblInformacaoCondutorDonoBarco;
 import com.datasync.model.barco.TesteTblInformacaoCondutorFrequencia;
 
@@ -17,6 +18,7 @@ import com.datasync.model.barco.TesteTblInformacaoCondutorFrequencia;
 	TesteTblCaracterizacaoCondutor.class,
 	TesteTblIdentificacaoCondutor.class,
 	TesteTblInformacaoCondutor.class,
+	TesteTblInformacaoCondutorAvisoAluno.class,
 	TesteTblInformacaoCondutorDonoBarco.class,
 	TesteTblInformacaoCondutorFrequencia.class
 })
