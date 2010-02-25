@@ -15,6 +15,8 @@ import com.datasync.model.barco.TesteTblInformacaoCondutorEscolheBarco;
 import com.datasync.model.barco.TesteTblInformacaoCondutorEstrago;
 import com.datasync.model.barco.TesteTblInformacaoCondutorFrequencia;
 import com.datasync.model.barco.TesteTblInformacaoCondutorGuardaBarco;
+import com.datasync.model.barco.TesteTblInformacaoCondutorMotivoQuebra;
+import com.datasync.model.barco.TesteTblInformacaoCondutorOutroAcompanhante;
 
 @RunWith(value=Suite.class)
 @SuiteClasses({  
@@ -28,7 +30,9 @@ import com.datasync.model.barco.TesteTblInformacaoCondutorGuardaBarco;
 	TesteTblInformacaoCondutorEscolheBarco.class,
 	TesteTblInformacaoCondutorEstrago.class,
 	TesteTblInformacaoCondutorFrequencia.class,
-	TesteTblInformacaoCondutorGuardaBarco.class
+	TesteTblInformacaoCondutorGuardaBarco.class,
+	TesteTblInformacaoCondutorMotivoQuebra.class,
+	TesteTblInformacaoCondutorOutroAcompanhante.class
 })
 public class TodosBarco {
 }
