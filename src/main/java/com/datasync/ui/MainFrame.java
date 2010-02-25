@@ -8,10 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
+
+import com.datasync.ProcessarBackup;
+import com.datasync.ProcessarSincronizacao;
 
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame {
@@ -21,8 +25,10 @@ public class MainFrame extends JFrame {
 	// Componentes
 	private JPanel painel;
 	private JButton sync;
+	private JButton backup;
 	private JLabel mensagem;
 	private JProgressBar progressBar;
+	private JFileChooser fileChooser;
 	
 	private MainFrame(){
 		super("Data Sync");
@@ -50,6 +56,10 @@ public class MainFrame extends JFrame {
 		this.validate();
 	}
 	
+	public void setProgressBarIndetermined(boolean indetermined){
+		progressBar.setIndeterminate(indetermined);
+	}
+	
 	public void setMensagem(String text){
 		mensagem.setText(text);
 		this.validate();
@@ -61,7 +71,20 @@ public class MainFrame extends JFrame {
 	
 	private void clickSync(ActionEvent event){
 		sync.setEnabled(false);
-		new Processar().start();
+		new ProcessarSincronizacao().start();
+	}
+	
+	private void clickBackup(ActionEvent event){
+		backup.setEnabled(false);
+		int result = fileChooser.showSaveDialog(this);
+		
+		if(result == JFileChooser.APPROVE_OPTION) {
+			System.out.println("Diretório selecionado =>"+fileChooser.getSelectedFile());
+			new ProcessarBackup(fileChooser.getSelectedFile().toString()).start();
+		}
+		else {
+			backup.setEnabled(true);
+		}
 	}
 	
 	private void createComponents(){
@@ -80,12 +103,29 @@ public class MainFrame extends JFrame {
 			}
 		});
 		
-		cons.gridx = 1;
+		cons.gridx = 0;
 		cons.gridy = 0;
 		cons.gridwidth = 1;
 		cons.anchor = GridBagConstraints.LINE_END;
 		
 		painel.add(sync, cons);
+		
+		//Cria o botão de backup
+		backup = new JButton("Backup");
+		backup.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				clickBackup(e);
+			}
+		});
+		
+		cons.gridx = 1;
+		cons.gridy = 0;
+		cons.gridwidth = 1;
+		cons.anchor = GridBagConstraints.LINE_END;
+		
+		painel.add(backup, cons);
+		//Fim da criação do botão de backup
 		
 		mensagem = new JLabel("Parado.");
 		cons.gridx = 0;
@@ -102,6 +142,9 @@ public class MainFrame extends JFrame {
 		progressBar.setStringPainted(true);
 		progressBar.setPreferredSize(new Dimension(430, 40));
 		
+		fileChooser = new JFileChooser();
+		fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+
 		cons.gridx = 0;
 		cons.gridy = 2;
 		cons.gridwidth = 2;
