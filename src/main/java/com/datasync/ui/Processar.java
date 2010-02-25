@@ -1,25 +1,15 @@
 package com.datasync.ui;
 
-import java.util.List;
-
 import org.apache.log4j.Logger;
 
-import com.datasync.jpa.Config;
-import com.datasync.models.IndexableEntity;
-import com.datasync.models.util.ModelUtil;
-import com.datasync.service.SyncLocalDatabaseService;
+import com.datasync.service.IService;
 import com.datasync.service.runner.ServiceRunner;
 
-public class Processar extends Thread {
-
-	private List<IndexableEntity> indexables;
+public abstract class Processar extends Thread {
 
 	private static Logger log = Logger.getLogger(Processar.class);
+	protected IService service;
 	
-	public Processar() {
-		indexables = ModelUtil.getIndexables(Config.getInstance().getModelo());
-	}
-
 	private String formatTime(long time){
 		long minutos = (time/1000)/60;
 		time -= minutos * (1000 * 60);
@@ -40,22 +30,18 @@ public class Processar extends Thread {
 	
 	@Override
 	public void run() {
-		if (indexables == null || indexables.size() == 0){
-			System.exit(-1);
-		}
-
 		try {
-			MainFrame.getInstance().setTitle("Data Sync - NÃO FECHE ESTE PROGRAMA!");
+			MainFrame.getInstance().setTitle("Data Sync - N√ÉO FECHE ESTE PROGRAMA!");
 
 			long start = System.currentTimeMillis();
 			
 			ServiceRunner runner = new ServiceRunner();
-			runner.run(new SyncLocalDatabaseService(indexables));
+			runner.run(this.service);
 
 			long time = System.currentTimeMillis() - start;
 			
 			MainFrame.getInstance().setTitle("Data Sync");
-			MainFrame.getInstance().setMensagem("Sincronizado! Tempo gasto: " + formatTime(time));
+			MainFrame.getInstance().setMensagem("Tarefa concluida! Tempo gasto: " + formatTime(time));
 			MainFrame.getInstance().habilitarSync();
 
 		} catch (Exception e) {
