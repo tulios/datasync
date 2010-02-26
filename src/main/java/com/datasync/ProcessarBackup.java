@@ -6,6 +6,6 @@ import com.datasync.ui.Processar;
 public class ProcessarBackup extends Processar {
 
 	public ProcessarBackup(String directory){
-		this.service = new BackupLocalDatabaseService(directory+"\\backup.bak");
+		this.service = new BackupLocalDatabaseService(directory);
 	}
 }

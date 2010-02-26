@@ -1,1 +1,10 @@
-
+<list>
+  <com.datasync.processor.Index>
+    <className>com.datasync.models.custo.TblCabecalhoMonitor</className>
+    <id>1</id>
+  </com.datasync.processor.Index>
+  <com.datasync.processor.Index>
+    <className>com.datasync.models.custo.TblIdMonitor</className>
+    <id>1</id>
+  </com.datasync.processor.Index>
+</list>

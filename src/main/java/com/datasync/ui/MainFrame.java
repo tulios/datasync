@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
@@ -65,8 +66,9 @@ public class MainFrame extends JFrame {
 		this.validate();
 	}
 	
-	public void habilitarSync(){
+	public void habilitarBotoes(){
 		sync.setEnabled(true);
+		backup.setEnabled(true);
 	}
 	
 	private void clickSync(ActionEvent event){
@@ -79,11 +81,7 @@ public class MainFrame extends JFrame {
 		int result = fileChooser.showSaveDialog(this);
 		
 		if(result == JFileChooser.APPROVE_OPTION) {
-			System.out.println("Diretório selecionado =>"+fileChooser.getSelectedFile());
 			new ProcessarBackup(fileChooser.getSelectedFile().toString()).start();
-		}
-		else {
-			backup.setEnabled(true);
 		}
 	}
 	
@@ -151,6 +149,14 @@ public class MainFrame extends JFrame {
 		cons.anchor = GridBagConstraints.CENTER;
 		
 		painel.add(progressBar, cons);
+	}
+	
+	public void apresentarErro(String mensagem){
+		this.apresentarErro("Erro ao executar operação", mensagem);
+	}
+	
+	public void apresentarErro(String titulo, String mensagem) {
+		JOptionPane.showMessageDialog(this, mensagem, titulo, JOptionPane.ERROR_MESSAGE);
 	}
 }
 
