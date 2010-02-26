@@ -36,13 +36,23 @@ public abstract class Processar extends Thread {
 			long start = System.currentTimeMillis();
 			
 			ServiceRunner runner = new ServiceRunner();
-			runner.run(this.service);
+			boolean res = runner.run(this.service);
 
 			long time = System.currentTimeMillis() - start;
 			
 			MainFrame.getInstance().setTitle("Data Sync");
-			MainFrame.getInstance().setMensagem("Tarefa concluida! Tempo gasto: " + formatTime(time));
-			MainFrame.getInstance().habilitarSync();
+			
+			String mensagem;
+			
+			if(res){
+				mensagem = "Tarefa concluida! Tempo gasto: " + formatTime(time);
+			}
+			else {
+				mensagem = "A tarefa falhou.";
+			}
+			
+			MainFrame.getInstance().setMensagem(mensagem);
+			MainFrame.getInstance().habilitarBotoes();
 
 		} catch (Exception e) {
 			log.error(e.getMessage());

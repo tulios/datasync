@@ -46,7 +46,6 @@
 				<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.0.0.104:1433/BD_CUSTO2" />
 				<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
 				<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
-				<property name="hibernate.hbm2ddl.auto" value="create" />
 				<property name="hibernate.connection.username" value="datasync_user" />
 				<property name="hibernate.connection.password" value="123456" />
 			</properties>
