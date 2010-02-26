@@ -17,6 +17,9 @@ public class TesteBarco extends Teste{
 	}  
 
 	private void clearBarco(){
+		localEm.createNativeQuery("delete from TblNovaLanchaCondutor").executeUpdate();
+		serverEm.createNativeQuery("delete from TblNovaLanchaCondutor").executeUpdate();
+		
 		localEm.createNativeQuery("delete from TblInformacaoCondutorOutroAcompanhante").executeUpdate();
 		serverEm.createNativeQuery("delete from TblInformacaoCondutorOutroAcompanhante").executeUpdate();
 		

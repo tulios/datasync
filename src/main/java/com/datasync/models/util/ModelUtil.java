@@ -17,6 +17,7 @@ import com.datasync.models.barco.TblInformacaoCondutorFrequencia;
 import com.datasync.models.barco.TblInformacaoCondutorGuardaBarco;
 import com.datasync.models.barco.TblInformacaoCondutorMotivoQuebra;
 import com.datasync.models.barco.TblInformacaoCondutorOutroAcompanhante;
+import com.datasync.models.barco.TblNovaLanchaCondutor;
 import com.datasync.models.custo.TblCabecalhoCondutor;
 import com.datasync.models.custo.TblCabecalhoEmbarcacao;
 import com.datasync.models.custo.TblCabecalhoMecanico;
@@ -62,6 +63,8 @@ public class ModelUtil {
 			indexables.add(new TblInformacaoCondutorGuardaBarco());
 			indexables.add(new TblInformacaoCondutorMotivoQuebra());
 			indexables.add(new TblInformacaoCondutorOutroAcompanhante());
+			
+			indexables.add(new TblNovaLanchaCondutor());
 		}
 		
 		return indexables;
