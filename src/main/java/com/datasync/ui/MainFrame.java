@@ -14,12 +14,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
+import org.apache.log4j.Logger;
+
 import com.datasync.ProcessarBackup;
 import com.datasync.ProcessarSincronizacao;
 
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame {
 
+	private static Logger log = Logger.getLogger(MainFrame.class);
 	private static MainFrame instance;
 	
 	// Componentes
@@ -79,7 +82,7 @@ public class MainFrame extends JFrame {
 		int result = fileChooser.showSaveDialog(this);
 		
 		if(result == JFileChooser.APPROVE_OPTION) {
-			System.out.println("Diretório selecionado =>"+fileChooser.getSelectedFile());
+			log.debug("Diretório selecionado =>"+fileChooser.getSelectedFile());
 			new ProcessarBackup(fileChooser.getSelectedFile().toString()).start();
 		}
 		else {

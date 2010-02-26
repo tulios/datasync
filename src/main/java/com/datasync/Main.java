@@ -78,28 +78,28 @@ public class Main {
 	private static void createDefaultConfigFile(){
 		if (!Config.getConfigFile().exists()){
 			StringBuilder str = new StringBuilder();
-			str.append("# Esta opção habilita ou desabilita o uso desse arquivo.\n");
-			str.append("# Os valores possíveis são: true e false\n");
+			str.append("# Esta op√ß√£o habilita ou desabilita o uso desse arquivo.\n");
+			str.append("# Os valores poss√≠veis s√£o: true e false\n");
 			str.append("enabled=false\n\n");
 			
-			str.append("# Esta opção define o grupo de tabelas que serão sincronizadas\n");
-			str.append("# Os valores possíveis são: custo, barco\n");
+			str.append("# Esta op√ß√£o define o grupo de tabelas que ser√£o sincronizadas\n");
+			str.append("# Os valores poss√≠veis s√£o: custo, barco\n");
 			str.append("modelo=custo\n\n");
 			
-			str.append("# Esta opção configura o cabeçalho da URL de conexão\n");
+			str.append("# Esta op√ß√£o configura o cabe√ßalho da URL de conex√£o\n");
 			str.append("#connection_url=jdbc:postgresql://\n");
 			str.append("connection_url=jdbc:jtds:sqlserver://\n");
 			
-			str.append("# Esta opção configura a classe de acesso do driver do banco de dados\n");
+			str.append("# Esta op√ß√£o configura a classe de acesso do driver do banco de dados\n");
 			str.append("#driver_class=org.postgresql.Driver\n");
 			str.append("driver_class=net.sourceforge.jtds.jdbc.Driver\n");
 			
-			str.append("# Esta opção configura o dialeto de conversação com o banco de dados\n");
+			str.append("# Esta op√ß√£o configura o dialeto de conversa√ß√£o com o banco de dados\n");
 			str.append("#dialect=org.hibernate.dialect.PostgreSQLDialect\n");
 			str.append("dialect=org.hibernate.dialect.SQLServerDialect\n");
 			
 			str.append("\n");
-			str.append("# Este grupo de opções configuram o acesso ao banco de dados local\n");
+			str.append("# Este grupo de op√ß√µes configuram o acesso ao banco de dados local\n");
 			str.append("#ip_local=\n");
 			str.append("#porta_local=\n");
 			str.append("#banco_local=\n");
@@ -107,7 +107,7 @@ public class Main {
 			str.append("#senha_local=\n");
 			
 			str.append("\n");
-			str.append("# Este grupo de opções configuram o acesso ao banco de dados remoto\n");
+			str.append("# Este grupo de op√ß√µes configuram o acesso ao banco de dados remoto\n");
 			str.append("#ip_server=\n");
 			str.append("#porta_server=\n");
 			str.append("#banco_server=\n");
