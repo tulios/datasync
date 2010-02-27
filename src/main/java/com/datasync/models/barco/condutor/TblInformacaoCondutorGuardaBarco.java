@@ -1,4 +1,4 @@
-package com.datasync.models.barco;
+package com.datasync.models.barco.condutor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,19 +8,19 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 
 @Entity
-@Table(name = "TblInformacaoCondutorEstrago")
+@Table(name = "TblInformacaoCondutorGuardaBarco")
 @SuppressWarnings("serial")
-public class TblInformacaoCondutorEstrago extends IndexableEntity {
+public class TblInformacaoCondutorGuardaBarco extends IndexableEntity {
 
 	@Id
 	@Column(name = "IdFormulario")
 	private String idFormulario;
-	@Column(name = "IdTipoEstrago")
-	private int idTipoEstrago;
-	@Column(name = "QuaisOutros")
-	private String quaisOutros;
+	@Column(name = "IdTipoGuardaBarco")
+	private int idTipoGuardaBarco;
+	@Column(name = "OndeOutro")
+	private String ondeOutro;
 
-	public TblInformacaoCondutorEstrago() {
+	public TblInformacaoCondutorGuardaBarco() {
 	}
 	
 	@Override
@@ -30,7 +30,7 @@ public class TblInformacaoCondutorEstrago extends IndexableEntity {
 	
 	@Override
 	public String getIndexId() {
-		return getIdFormulario()+"#"+getIdTipoEstrago();
+		return getIdFormulario()+"#"+getIdTipoGuardaBarco();
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class TblInformacaoCondutorEstrago extends IndexableEntity {
     
     @Override
     public String getCompoundIdColumnName() {
-    	return "idTipoEstrago";
+    	return "idTipoGuardaBarco";
     }
 
 	public String getIdFormulario() {
@@ -51,20 +51,20 @@ public class TblInformacaoCondutorEstrago extends IndexableEntity {
 		this.idFormulario = idFormulario;
 	}
 
-	public int getIdTipoEstrago() {
-		return idTipoEstrago;
+	public int getIdTipoGuardaBarco() {
+		return idTipoGuardaBarco;
 	}
 
-	public void setIdTipoEstrago(int idTipoEstrago) {
-		this.idTipoEstrago = idTipoEstrago;
+	public void setIdTipoGuardaBarco(int idTipoGuardaBarco) {
+		this.idTipoGuardaBarco = idTipoGuardaBarco;
 	}
 
-	public String getQuaisOutros() {
-		return quaisOutros;
+	public String getOndeOutro() {
+		return ondeOutro;
 	}
 
-	public void setQuaisOutros(String quaisOutros) {
-		this.quaisOutros = quaisOutros;
+	public void setOndeOutro(String ondeOutro) {
+		this.ondeOutro = ondeOutro;
 	}
     
 }

@@ -1,4 +1,4 @@
-package com.datasync.models.barco;
+package com.datasync.models.barco.condutor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,29 +8,29 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 
 @Entity
-@Table(name = "TblInformacaoCondutorContrato")
+@Table(name = "tblInformacaoCondutorDonoBarco")
 @SuppressWarnings("serial")
-public class TblInformacaoCondutorContrato extends IndexableEntity {
+public class TblInformacaoCondutorDonoBarco extends IndexableEntity {
 
 	@Id
 	@Column(name = "IdFormulario")
 	private String idFormulario;
-	@Column(name = "IdTipoContrato")
-	private int idTipoContrato;
-	@Column(name = "Valor")
-	private double valor;
+	@Column(name = "IdTipoDonoBarco")
+	private int idTipoDonoBarco;
+	@Column(name = "Quem")
+	private String quem;
 	
-	public TblInformacaoCondutorContrato(){
+	public TblInformacaoCondutorDonoBarco(){
 	}
 	
 	@Override
 	public String getIdColumnName() {
 		return "idFormulario";
 	}
-	
+
 	@Override
 	public String getIndexId() {
-		return getIdFormulario()+"#"+getIdTipoContrato();
+		return getIdFormulario()+"#"+getIdTipoDonoBarco();
 	}
 
 	@Override
@@ -40,9 +40,9 @@ public class TblInformacaoCondutorContrato extends IndexableEntity {
     
     @Override
     public String getCompoundIdColumnName() {
-    	return "idTipoContrato";
+    	return "idTipoDonoBarco";
     }
-
+    
 	public String getIdFormulario() {
 		return idFormulario;
 	}
@@ -51,20 +51,20 @@ public class TblInformacaoCondutorContrato extends IndexableEntity {
 		this.idFormulario = idFormulario;
 	}
 
-	public int getIdTipoContrato() {
-		return idTipoContrato;
+	public int getIdTipoDonoBarco() {
+		return idTipoDonoBarco;
 	}
 
-	public void setIdTipoContrato(int idTipoContrato) {
-		this.idTipoContrato = idTipoContrato;
+	public void setIdTipoDonoBarco(int idTipoDonoBarco) {
+		this.idTipoDonoBarco = idTipoDonoBarco;
 	}
 
-	public double getValor() {
-		return valor;
+	public String getQuem() {
+		return quem;
 	}
 
-	public void setValor(double valor) {
-		this.valor = valor;
+	public void setQuem(String quem) {
+		this.quem = quem;
 	}
 
 }

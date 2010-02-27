@@ -1,4 +1,4 @@
-package com.datasync.models.barco;
+package com.datasync.models.barco.condutor;
 
 import java.sql.Timestamp;
 

@@ -4,25 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.datasync.models.IndexableEntity;
-import com.datasync.models.barco.TblBarcoCabecalhoCondutor;
-import com.datasync.models.barco.TblCaracterizacaoCondutor;
-import com.datasync.models.barco.TblIdentificacaoCondutor;
-import com.datasync.models.barco.TblInformacaoCondutor;
-import com.datasync.models.barco.TblInformacaoCondutorAvisoAluno;
-import com.datasync.models.barco.TblInformacaoCondutorContrato;
-import com.datasync.models.barco.TblInformacaoCondutorDonoBarco;
-import com.datasync.models.barco.TblInformacaoCondutorEscolheBarco;
-import com.datasync.models.barco.TblInformacaoCondutorEstrago;
-import com.datasync.models.barco.TblInformacaoCondutorFrequencia;
-import com.datasync.models.barco.TblInformacaoCondutorGuardaBarco;
-import com.datasync.models.barco.TblInformacaoCondutorMotivoQuebra;
-import com.datasync.models.barco.TblInformacaoCondutorOutroAcompanhante;
-import com.datasync.models.barco.TblInformacaoCondutorPagaManutencao;
-import com.datasync.models.barco.TblInformacaoCondutorPercursoTempo;
-import com.datasync.models.barco.TblInformacaoCondutorQuandoManutencao;
-import com.datasync.models.barco.TblInformacaoCondutorRealizaManutencao;
-import com.datasync.models.barco.TblInformacaoCondutorRealizaReparo;
-import com.datasync.models.barco.TblNovaLanchaCondutor;
+import com.datasync.models.barco.condutor.TblBarcoCabecalhoCondutor;
+import com.datasync.models.barco.condutor.TblCaracterizacaoCondutor;
+import com.datasync.models.barco.condutor.TblIdentificacaoCondutor;
+import com.datasync.models.barco.condutor.TblInformacaoCondutor;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorAvisoAluno;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorContrato;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorDonoBarco;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorEscolheBarco;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorEstrago;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorFrequencia;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorGuardaBarco;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorMotivoQuebra;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorOutroAcompanhante;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorPagaManutencao;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorPercursoTempo;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorQuandoManutencao;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorRealizaManutencao;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorRealizaReparo;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorServico;
+import com.datasync.models.barco.condutor.TblNovaLanchaCondutor;
 import com.datasync.models.custo.TblCabecalhoCondutor;
 import com.datasync.models.custo.TblCabecalhoEmbarcacao;
 import com.datasync.models.custo.TblCabecalhoMecanico;
@@ -55,6 +56,7 @@ public class ModelUtil {
 			return indexables;
 			
 		}else if (packageName.equalsIgnoreCase(BARCO)){
+			//Condutor
 			indexables.add(new TblBarcoCabecalhoCondutor());
 			indexables.add(new TblCaracterizacaoCondutor());
 			indexables.add(new TblIdentificacaoCondutor());
@@ -73,6 +75,7 @@ public class ModelUtil {
 			indexables.add(new TblInformacaoCondutorQuandoManutencao());
 			indexables.add(new TblInformacaoCondutorRealizaManutencao());
 			indexables.add(new TblInformacaoCondutorRealizaReparo());
+			indexables.add(new TblInformacaoCondutorServico());
 			
 			indexables.add(new TblNovaLanchaCondutor());
 		}

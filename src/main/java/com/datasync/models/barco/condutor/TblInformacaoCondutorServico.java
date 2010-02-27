@@ -1,4 +1,4 @@
-package com.datasync.models.barco;
+package com.datasync.models.barco.condutor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,18 +8,21 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 
 @Entity
-@Table(name = "TblInformacaoCondutorPagaManutencao")
+@Table(name = "TblInformacaoCondutorServico")
 @SuppressWarnings("serial")
-public class TblInformacaoCondutorPagaManutencao extends IndexableEntity {
-	
+public class TblInformacaoCondutorServico extends IndexableEntity {
+
 	@Id
 	@Column(name = "IdFormulario")
 	private String idFormulario;
-	@Column(name = "IdTipoPagaManutencao")
-	private int idTipoPagaManutencao;
+	@Column(name = "IdTipoServico")
+	private int idTipoServico;
+	@Column(name = "QualOutro")
 	private String qualOutro;
+	@Column(name = "Frequencia")
+	private String frequencia;
 	
-	public TblInformacaoCondutorPagaManutencao(){
+	public TblInformacaoCondutorServico(){
 	}
 	
 	@Override
@@ -29,7 +32,7 @@ public class TblInformacaoCondutorPagaManutencao extends IndexableEntity {
 	
 	@Override
 	public String getIndexId() {
-		return getIdFormulario()+"#"+getIdTipoPagaManutencao();
+		return getIdFormulario()+"#"+getIdTipoServico();
 	}
 
 	@Override
@@ -39,7 +42,7 @@ public class TblInformacaoCondutorPagaManutencao extends IndexableEntity {
     
     @Override
     public String getCompoundIdColumnName() {
-    	return "idTipoPagaManutencao";
+    	return "idTipoServico";
     }
 
 	public String getIdFormulario() {
@@ -50,12 +53,12 @@ public class TblInformacaoCondutorPagaManutencao extends IndexableEntity {
 		this.idFormulario = idFormulario;
 	}
 
-	public int getIdTipoPagaManutencao() {
-		return idTipoPagaManutencao;
+	public int getIdTipoServico() {
+		return idTipoServico;
 	}
 
-	public void setIdTipoPagaManutencao(int idTipoPagaManutencao) {
-		this.idTipoPagaManutencao = idTipoPagaManutencao;
+	public void setIdTipoServico(int idTipoServico) {
+		this.idTipoServico = idTipoServico;
 	}
 
 	public String getQualOutro() {
@@ -65,5 +68,13 @@ public class TblInformacaoCondutorPagaManutencao extends IndexableEntity {
 	public void setQualOutro(String qualOutro) {
 		this.qualOutro = qualOutro;
 	}
-	
+
+	public String getFrequencia() {
+		return frequencia;
+	}
+
+	public void setFrequencia(String frequencia) {
+		this.frequencia = frequencia;
+	}
+    
 }

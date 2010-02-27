@@ -1,4 +1,4 @@
-package com.datasync.models.barco;
+package com.datasync.models.barco.condutor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,29 +8,29 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 
 @Entity
-@Table(name = "tblInformacaoCondutorDonoBarco")
+@Table(name = "TblInformacaoCondutorEstrago")
 @SuppressWarnings("serial")
-public class TblInformacaoCondutorDonoBarco extends IndexableEntity {
+public class TblInformacaoCondutorEstrago extends IndexableEntity {
 
 	@Id
 	@Column(name = "IdFormulario")
 	private String idFormulario;
-	@Column(name = "IdTipoDonoBarco")
-	private int idTipoDonoBarco;
-	@Column(name = "Quem")
-	private String quem;
-	
-	public TblInformacaoCondutorDonoBarco(){
+	@Column(name = "IdTipoEstrago")
+	private int idTipoEstrago;
+	@Column(name = "QuaisOutros")
+	private String quaisOutros;
+
+	public TblInformacaoCondutorEstrago() {
 	}
 	
 	@Override
 	public String getIdColumnName() {
 		return "idFormulario";
 	}
-
+	
 	@Override
 	public String getIndexId() {
-		return getIdFormulario()+"#"+getIdTipoDonoBarco();
+		return getIdFormulario()+"#"+getIdTipoEstrago();
 	}
 
 	@Override
@@ -40,9 +40,9 @@ public class TblInformacaoCondutorDonoBarco extends IndexableEntity {
     
     @Override
     public String getCompoundIdColumnName() {
-    	return "idTipoDonoBarco";
+    	return "idTipoEstrago";
     }
-    
+
 	public String getIdFormulario() {
 		return idFormulario;
 	}
@@ -51,20 +51,20 @@ public class TblInformacaoCondutorDonoBarco extends IndexableEntity {
 		this.idFormulario = idFormulario;
 	}
 
-	public int getIdTipoDonoBarco() {
-		return idTipoDonoBarco;
+	public int getIdTipoEstrago() {
+		return idTipoEstrago;
 	}
 
-	public void setIdTipoDonoBarco(int idTipoDonoBarco) {
-		this.idTipoDonoBarco = idTipoDonoBarco;
+	public void setIdTipoEstrago(int idTipoEstrago) {
+		this.idTipoEstrago = idTipoEstrago;
 	}
 
-	public String getQuem() {
-		return quem;
+	public String getQuaisOutros() {
+		return quaisOutros;
 	}
 
-	public void setQuem(String quem) {
-		this.quem = quem;
+	public void setQuaisOutros(String quaisOutros) {
+		this.quaisOutros = quaisOutros;
 	}
-
+    
 }

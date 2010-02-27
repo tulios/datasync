@@ -11,9 +11,9 @@ import org.junit.Test;
 
 import com.datasync.model.TesteBarco;
 import com.datasync.models.IndexableEntity;
-import com.datasync.models.barco.TblBarcoCabecalhoCondutor;
-import com.datasync.models.barco.TblInformacaoCondutor;
-import com.datasync.models.barco.TblInformacaoCondutorQuandoManutencao;
+import com.datasync.models.barco.condutor.TblBarcoCabecalhoCondutor;
+import com.datasync.models.barco.condutor.TblInformacaoCondutor;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorQuandoManutencao;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncLocalDatabaseService;
 import com.datasync.service.runner.ServiceRunner;

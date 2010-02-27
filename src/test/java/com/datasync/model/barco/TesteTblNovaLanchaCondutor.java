@@ -11,8 +11,8 @@ import org.junit.Test;
 
 import com.datasync.model.TesteBarco;
 import com.datasync.models.IndexableEntity;
-import com.datasync.models.barco.TblBarcoCabecalhoCondutor;
-import com.datasync.models.barco.TblNovaLanchaCondutor;
+import com.datasync.models.barco.condutor.TblBarcoCabecalhoCondutor;
+import com.datasync.models.barco.condutor.TblNovaLanchaCondutor;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncLocalDatabaseService;
 import com.datasync.service.runner.ServiceRunner;
@@ -77,7 +77,7 @@ public class TesteTblNovaLanchaCondutor extends TesteBarco {
 		c.setPorqueManutencaoNecessaria("Por que sim");
 		c.setLanchaSegura("Sim");
 		c.setPorqueLanchaSegura("Por que sim");
-		c.setQualSolucao("Solução");
+		c.setQualSolucao("SoluÔøΩÔøΩo");
 		getLocalEm().persist(c);
 		
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblNovaLanchaCondutor t").getSingleResult();

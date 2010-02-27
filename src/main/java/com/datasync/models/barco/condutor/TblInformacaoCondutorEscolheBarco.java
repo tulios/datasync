@@ -1,4 +1,4 @@
-package com.datasync.models.barco;
+package com.datasync.models.barco.condutor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,21 +8,19 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 
 @Entity
-@Table(name = "TblInformacaoCondutorOutroAcompanhante")
+@Table(name = "TblInformacaoCondutorEscolheBarco")
 @SuppressWarnings("serial")
-public class TblInformacaoCondutorOutroAcompanhante extends IndexableEntity {
+public class TblInformacaoCondutorEscolheBarco extends IndexableEntity {
 
 	@Id
 	@Column(name = "IdFormulario")
 	private String idFormulario;
-	@Column(name = "IdTipoOutroAcompanhante")
-	private int idTipoOutroAcompanhante;
-	@Column(name = "OutroAcompanhante")
-	private String outroAcompanhante;
+	@Column(name = "IdTipoEscolheBarco")
+	private int idTipoEscolheBarco;
 	@Column(name = "QuemOutro")
 	private String quemOutro;
 	
-	public TblInformacaoCondutorOutroAcompanhante() {
+	public TblInformacaoCondutorEscolheBarco() {
 	}
 	
 	@Override
@@ -32,7 +30,7 @@ public class TblInformacaoCondutorOutroAcompanhante extends IndexableEntity {
 	
 	@Override
 	public String getIndexId() {
-		return getIdFormulario()+"#"+getIdTipoOutroAcompanhante();
+		return getIdFormulario()+"#"+getIdTipoEscolheBarco();
 	}
 
 	@Override
@@ -42,7 +40,7 @@ public class TblInformacaoCondutorOutroAcompanhante extends IndexableEntity {
     
     @Override
     public String getCompoundIdColumnName() {
-    	return "IdTipoOutroAcompanhante";
+    	return "idTipoEscolheBarco";
     }
 
 	public String getIdFormulario() {
@@ -53,12 +51,12 @@ public class TblInformacaoCondutorOutroAcompanhante extends IndexableEntity {
 		this.idFormulario = idFormulario;
 	}
 
-	public int getIdTipoOutroAcompanhante() {
-		return idTipoOutroAcompanhante;
+	public int getIdTipoEscolheBarco() {
+		return idTipoEscolheBarco;
 	}
 
-	public void setIdTipoOutroAcompanhante(int idTipoOutroAcompanhante) {
-		this.idTipoOutroAcompanhante = idTipoOutroAcompanhante;
+	public void setIdTipoEscolheBarco(int idTipoEscolheBarco) {
+		this.idTipoEscolheBarco = idTipoEscolheBarco;
 	}
 
 	public String getQuemOutro() {
@@ -69,12 +67,4 @@ public class TblInformacaoCondutorOutroAcompanhante extends IndexableEntity {
 		this.quemOutro = quemOutro;
 	}
 
-	public String getOutroAcompanhante() {
-		return outroAcompanhante;
-	}
-
-	public void setOutroAcompanhante(String outroAcompanhante) {
-		this.outroAcompanhante = outroAcompanhante;
-	}
-	
 }

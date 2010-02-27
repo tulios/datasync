@@ -1,4 +1,4 @@
-package com.datasync.models.barco;
+package com.datasync.models.barco.condutor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,9 +8,9 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 
 @Entity
-@Table(name = "TblInformacaoCondutorRealizaReparo")
+@Table(name = "TblInformacaoCondutorRealizaManutencao")
 @SuppressWarnings("serial")
-public class TblInformacaoCondutorRealizaReparo extends IndexableEntity {
+public class TblInformacaoCondutorRealizaManutencao extends IndexableEntity {
 
 	@Id
 	@Column(name = "IdFormulario")
@@ -20,7 +20,7 @@ public class TblInformacaoCondutorRealizaReparo extends IndexableEntity {
 	@Column(name = "QuemOutro")
 	private String quemOutro;
 	
-	public TblInformacaoCondutorRealizaReparo(){
+	public TblInformacaoCondutorRealizaManutencao(){
 	}
 	
 	@Override
@@ -66,5 +66,5 @@ public class TblInformacaoCondutorRealizaReparo extends IndexableEntity {
 	public void setQuemOutro(String quemOutro) {
 		this.quemOutro = quemOutro;
 	}
-    
+
 }
