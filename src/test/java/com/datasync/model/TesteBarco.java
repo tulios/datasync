@@ -20,6 +20,9 @@ public class TesteBarco extends Teste{
 		localEm.createNativeQuery("delete from TblInformacaoCondutorQuandoManutencao").executeUpdate();
 		serverEm.createNativeQuery("delete from TblInformacaoCondutorQuandoManutencao").executeUpdate();
 		
+		localEm.createNativeQuery("delete from TblInformacaoCondutorQuandoManutencao").executeUpdate();
+		serverEm.createNativeQuery("delete from TblInformacaoCondutorQuandoManutencao").executeUpdate();
+		
 		localEm.createNativeQuery("delete from TblInformacaoCondutorPercursoTempo").executeUpdate();
 		serverEm.createNativeQuery("delete from TblInformacaoCondutorPercursoTempo").executeUpdate();
 		
@@ -112,14 +115,17 @@ public class TesteBarco extends Teste{
 		
 		localEm.createNativeQuery("delete from tblTipoQuandoManutencao").executeUpdate();
 		serverEm.createNativeQuery("delete from tblTipoQuandoManutencao").executeUpdate();
+		
+		localEm.createNativeQuery("delete from tblTipoRealizaManutencao").executeUpdate();
+		serverEm.createNativeQuery("delete from tblTipoRealizaManutencao").executeUpdate();
 	}
 	
 	private void insertDefaultData(){
-		localEm.createNativeQuery("insert into tblMunicipio (IdMunicipio, NomeMunicipio, UF) values (1, 'Brasília', 'DF');").executeUpdate();
-		serverEm.createNativeQuery("insert into tblMunicipio (IdMunicipio, NomeMunicipio, UF) values (1, 'Brasília', 'DF');").executeUpdate();
+		localEm.createNativeQuery("insert into tblMunicipio (IdMunicipio, NomeMunicipio, UF) values (1, 'Bras√≠lia', 'DF');").executeUpdate();
+		serverEm.createNativeQuery("insert into tblMunicipio (IdMunicipio, NomeMunicipio, UF) values (1, 'Bras√≠lia', 'DF');").executeUpdate();
 		
-		localEm.createNativeQuery("insert into tblTipoEscolaridade values (1,'Ensino Fundamental 1ª série');").executeUpdate();
-		serverEm.createNativeQuery("insert into tblTipoEscolaridade values (1,'Ensino Fundamental 1ª série');").executeUpdate();
+		localEm.createNativeQuery("insert into tblTipoEscolaridade values (1,'Ensino Fundamental 1¬∫ s√©rie');").executeUpdate();
+		serverEm.createNativeQuery("insert into tblTipoEscolaridade values (1,'Ensino Fundamental 1¬∫ s√©rie');").executeUpdate();
 		
 		localEm.createNativeQuery("insert into tblTipoFrequencia values (1,'Desc Frequencia');").executeUpdate();
 		serverEm.createNativeQuery("insert into tblTipoFrequencia values (1,'Desc Frequencia');").executeUpdate();
@@ -130,8 +136,8 @@ public class TesteBarco extends Teste{
 		localEm.createNativeQuery("insert into tblTipoAvisoAluno values (1,'Faz nada');").executeUpdate();
 		serverEm.createNativeQuery("insert into tblTipoAvisoAluno values (1,'Faz nada');").executeUpdate();
 		
-		localEm.createNativeQuery("insert into tblTipoContrato values (1,'Não quis informar');").executeUpdate();
-		serverEm.createNativeQuery("insert into tblTipoContrato values (1,'Não quis informar');").executeUpdate();
+		localEm.createNativeQuery("insert into tblTipoContrato values (1,'N√£o quis informar');").executeUpdate();
+		serverEm.createNativeQuery("insert into tblTipoContrato values (1,'N√£o quis informar');").executeUpdate();
 		
 		localEm.createNativeQuery("insert into tblTipoEscolheBarco values (1,'A escola');").executeUpdate();
 		serverEm.createNativeQuery("insert into tblTipoEscolheBarco values (1,'A escola');").executeUpdate();
@@ -157,6 +163,9 @@ public class TesteBarco extends Teste{
 		localEm.createNativeQuery("insert into tblTipoQuandoManutencao values (1,'Nos finais de semana');").executeUpdate();
 		serverEm.createNativeQuery("insert into tblTipoQuandoManutencao values (1,'Nos finais de semana');").executeUpdate();
 		
+		localEm.createNativeQuery("insert into tblTipoRealizaManutencao values (1,'Condutor');").executeUpdate();
+		serverEm.createNativeQuery("insert into tblTipoRealizaManutencao values (1,'Condutor');").executeUpdate();
+
 		//localEm.createNativeQuery("").executeUpdate();
 		//serverEm.createNativeQuery("").executeUpdate();
 	}
