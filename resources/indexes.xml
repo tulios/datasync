@@ -1,6 +1,18 @@
 <list>
   <com.datasync.processor.Index>
+    <className>com.datasync.models.barco.TblInformacaoCondutorAvisoAluno</className>
+    <id>1#1</id>
+  </com.datasync.processor.Index>
+  <com.datasync.processor.Index>
     <className>com.datasync.models.barco.TblBarcoCabecalhoCondutor</className>
+    <id>1</id>
+  </com.datasync.processor.Index>
+  <com.datasync.processor.Index>
+    <className>com.datasync.models.barco.TblCaracterizacaoCondutor</className>
+    <id>1</id>
+  </com.datasync.processor.Index>
+  <com.datasync.processor.Index>
+    <className>com.datasync.models.barco.TblInformacaoCondutor</className>
     <id>1</id>
   </com.datasync.processor.Index>
 </list>

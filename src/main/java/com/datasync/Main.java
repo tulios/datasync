@@ -78,41 +78,52 @@ public class Main {
 	private static void createDefaultConfigFile(){
 		if (!Config.getConfigFile().exists()){
 			StringBuilder str = new StringBuilder();
-			str.append("# Esta opção habilita ou desabilita o uso desse arquivo.\n");
-			str.append("# Os valores possíveis são: true e false\n");
+			str.append("###########################################################################\n");
+			str.append("# Esta opcao habilita ou desabilita o uso desse arquivo.\n");
+			str.append("# Os valores possiveis sao: true e false\n");
 			str.append("enabled=false\n\n");
 			
-			str.append("# Esta opção define o grupo de tabelas que serão sincronizadas\n");
-			str.append("# Os valores possíveis são: custo, barco\n");
+			str.append("###########################################################################\n");
+			str.append("# Esta opcao define o grupo de tabelas que serao sincronizadas\n");
+			str.append("# Os valores possiveis sao: custo, barco\n");
 			str.append("modelo=custo\n\n");
 			
-			str.append("# Esta opção configura o cabeçalho da URL de conexão\n");
-			str.append("#connection_url=jdbc:postgresql://\n");
-			str.append("connection_url=jdbc:jtds:sqlserver://\n");
+			str.append("###########################################################################\n");
+			str.append("# Esta opcao configura o cabecalho da URL de conexao\n\n");
+			str.append("# Configuracao para o POSTGRES\n");
+			str.append("#connection_url=jdbc:postgresql://\n\n");
+			str.append("# Configuracao para o SQL SERVER 2005\n");
+			str.append("connection_url=jdbc:jtds:sqlserver://\n\n");
 			
-			str.append("# Esta opção configura a classe de acesso do driver do banco de dados\n");
-			str.append("#driver_class=org.postgresql.Driver\n");
-			str.append("driver_class=net.sourceforge.jtds.jdbc.Driver\n");
+			str.append("###########################################################################\n");
+			str.append("# Esta opcao configura a classe de acesso do driver do banco de dados\n\n");
+			str.append("# Configuracao para o POSTGRES\n");
+			str.append("#driver_class=org.postgresql.Driver\n\n");
+			str.append("# Configuracao para o SQL SERVER 2005\n");
+			str.append("driver_class=net.sourceforge.jtds.jdbc.Driver\n\n");
 			
-			str.append("# Esta opção configura o dialeto de conversação com o banco de dados\n");
-			str.append("#dialect=org.hibernate.dialect.PostgreSQLDialect\n");
-			str.append("dialect=org.hibernate.dialect.SQLServerDialect\n");
+			str.append("###########################################################################\n");
+			str.append("# Esta opcao configura o dialeto de conversacao com o banco de dados\n\n");
+			str.append("# Configuracao para o POSTGRES\n");
+			str.append("#dialect=org.hibernate.dialect.PostgreSQLDialect\n\n");
+			str.append("# Configuracao para o SQL SERVER 2005\n");
+			str.append("dialect=org.hibernate.dialect.SQLServerDialect\n\n");
+			
+			str.append("###########################################################################\n");
+			str.append("# Este grupo de opcoes configuram o acesso ao banco de dados local\n");
+			str.append("ip_local=localhost\n");
+			str.append("porta_local=1433\n");
+			str.append("banco_local=\n");
+			str.append("usuario_local=\n");
+			str.append("senha_local=\n");
 			
 			str.append("\n");
-			str.append("# Este grupo de opções configuram o acesso ao banco de dados local\n");
-			str.append("#ip_local=\n");
-			str.append("#porta_local=\n");
-			str.append("#banco_local=\n");
-			str.append("#usuario_local=\n");
-			str.append("#senha_local=\n");
-			
-			str.append("\n");
-			str.append("# Este grupo de opções configuram o acesso ao banco de dados remoto\n");
-			str.append("#ip_server=\n");
-			str.append("#porta_server=\n");
-			str.append("#banco_server=\n");
-			str.append("#usuario_server=\n");
-			str.append("#senha_server=\n");
+			str.append("# Este grupo de opcoes configuram o acesso ao banco de dados remoto\n");
+			str.append("ip_server=\n");
+			str.append("porta_server=\n");
+			str.append("banco_server=\n");
+			str.append("usuario_server=\n");
+			str.append("senha_server=\n");
 			
 			try {
 				FileOutputStream fos = new FileOutputStream(Config.getConfigFile());
