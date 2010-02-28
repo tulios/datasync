@@ -4,26 +4,27 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import com.datasync.model.barco.TesteTblBarcoCabecalhoCondutor;
-import com.datasync.model.barco.TesteTblCaracterizacaoCondutor;
-import com.datasync.model.barco.TesteTblIdentificacaoCondutor;
-import com.datasync.model.barco.TesteTblInformacaoCondutor;
-import com.datasync.model.barco.TesteTblInformacaoCondutorAvisoAluno;
-import com.datasync.model.barco.TesteTblInformacaoCondutorContrato;
-import com.datasync.model.barco.TesteTblInformacaoCondutorDonoBarco;
-import com.datasync.model.barco.TesteTblInformacaoCondutorEscolheBarco;
-import com.datasync.model.barco.TesteTblInformacaoCondutorEstrago;
-import com.datasync.model.barco.TesteTblInformacaoCondutorFrequencia;
-import com.datasync.model.barco.TesteTblInformacaoCondutorGuardaBarco;
-import com.datasync.model.barco.TesteTblInformacaoCondutorMotivoQuebra;
-import com.datasync.model.barco.TesteTblInformacaoCondutorOutroAcompanhante;
-import com.datasync.model.barco.TesteTblInformacaoCondutorPagaManutencao;
-import com.datasync.model.barco.TesteTblInformacaoCondutorPercursoTempo;
-import com.datasync.model.barco.TesteTblInformacaoCondutorQuandoManutencao;
-import com.datasync.model.barco.TesteTblInformacaoCondutorRealizaManutencao;
-import com.datasync.model.barco.TesteTblInformacaoCondutorRealizaReparo;
-import com.datasync.model.barco.TesteTblInformacaoCondutorServico;
-import com.datasync.model.barco.TesteTblNovaLanchaCondutor;
+import com.datasync.model.barco.condutor.TesteTblBarcoCabecalhoCondutor;
+import com.datasync.model.barco.condutor.TesteTblCaracterizacaoCondutor;
+import com.datasync.model.barco.condutor.TesteTblIdentificacaoCondutor;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutor;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorAvisoAluno;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorContrato;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorDonoBarco;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorEscolheBarco;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorEstrago;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorFrequencia;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorGuardaBarco;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorMotivoQuebra;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorOutroAcompanhante;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorPagaManutencao;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorPercursoTempo;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorQuandoManutencao;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorRealizaManutencao;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorRealizaReparo;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorServico;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorTrabalhaRota;
+import com.datasync.model.barco.condutor.TesteTblNovaLanchaCondutor;
 
 @RunWith(value=Suite.class)
 @SuiteClasses({  
@@ -47,6 +48,7 @@ import com.datasync.model.barco.TesteTblNovaLanchaCondutor;
 	TesteTblInformacaoCondutorRealizaManutencao.class,
 	TesteTblInformacaoCondutorRealizaReparo.class,
 	TesteTblInformacaoCondutorServico.class,
+	TesteTblInformacaoCondutorTrabalhaRota.class,
 	
 	TesteTblNovaLanchaCondutor.class
 })

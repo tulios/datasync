@@ -1,4 +1,4 @@
-package com.datasync.model.barco;
+package com.datasync.model.barco.condutor;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,24 +13,24 @@ import com.datasync.model.TesteBarco;
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.barco.condutor.TblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.condutor.TblInformacaoCondutor;
-import com.datasync.models.barco.condutor.TblInformacaoCondutorMotivoQuebra;
+import com.datasync.models.barco.condutor.TblInformacaoCondutorServico;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncLocalDatabaseService;
 import com.datasync.service.runner.ServiceRunner;
 
-public class TesteTblInformacaoCondutorMotivoQuebra extends TesteBarco {
+public class TesteTblInformacaoCondutorServico extends TesteBarco{
 
 	@Test
 	public void verificaSincronismo() throws Exception{
 		open();
 
 		List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
-		indexables.add(new TblInformacaoCondutorMotivoQuebra());
+		indexables.add(new TblInformacaoCondutorServico());
 
-		Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorMotivoQuebra t").getSingleResult();
+		Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorServico t").getSingleResult();
 		assertEquals(0, local.intValue());
 
-		Number server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorMotivoQuebra t").getSingleResult();
+		Number server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorServico t").getSingleResult();
 		assertEquals(0, server.intValue());
 
 		TblBarcoCabecalhoCondutor cab = new TblBarcoCabecalhoCondutor();
@@ -57,17 +57,18 @@ public class TesteTblInformacaoCondutorMotivoQuebra extends TesteBarco {
 		getLocalEm().persist(i);
 		getServerEm().persist(i);
 		
-		TblInformacaoCondutorMotivoQuebra quebra = new TblInformacaoCondutorMotivoQuebra();
-		quebra.setIdFormulario("1");
-		quebra.setIdTipoMotivo(1);
-		quebra.setQuaisOutros("Outros");
-		getLocalEm().persist(quebra);
+		TblInformacaoCondutorServico servico = new TblInformacaoCondutorServico();
+		servico.setIdFormulario("1");
+		servico.setIdTipoServico(1);
+		servico.setQualOutro("Outro");
+		servico.setFrequencia("sempre");
+		getLocalEm().persist(servico);
 
-		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorMotivoQuebra t").getSingleResult();
+		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorServico t").getSingleResult();
 		assertEquals(1, local.intValue());
 
 		IndexProcessor processor = new IndexProcessor();
-		assertEquals(0, processor.getIdsList(quebra.getFullClassName()).size());
+		assertEquals(0, processor.getIdsList(servico.getFullClassName()).size());
 
 		close();
 
@@ -75,11 +76,11 @@ public class TesteTblInformacaoCondutorMotivoQuebra extends TesteBarco {
 		runner.run(new SyncLocalDatabaseService(indexables));
 
 		processor = new IndexProcessor();
-		assertEquals(1, processor.getIdsList(quebra.getFullClassName()).size());
+		assertEquals(1, processor.getIdsList(servico.getFullClassName()).size());
 
 		open();
 		
-		server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorMotivoQuebra t").getSingleResult();
+		server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorServico t").getSingleResult();
 		assertEquals(1, server.intValue());
 		close();
 	}
