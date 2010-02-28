@@ -25,6 +25,7 @@ import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorRealizaReparo
 import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorServico;
 import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorTrabalhaRota;
 import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorTransportaOutro;
+import com.datasync.model.barco.condutor.TesteTblInformacaoCondutorTrocaBarco;
 import com.datasync.model.barco.condutor.TesteTblNovaLanchaCondutor;
 
 @RunWith(value=Suite.class)
@@ -51,7 +52,7 @@ import com.datasync.model.barco.condutor.TesteTblNovaLanchaCondutor;
 	TesteTblInformacaoCondutorServico.class,
 	TesteTblInformacaoCondutorTrabalhaRota.class,
 	TesteTblInformacaoCondutorTransportaOutro.class,
-	
+	TesteTblInformacaoCondutorTrocaBarco.class,
 	TesteTblNovaLanchaCondutor.class
 })
 public class TodosBarco {
