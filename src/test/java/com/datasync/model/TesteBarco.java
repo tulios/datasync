@@ -17,134 +17,58 @@ public class TesteBarco extends Teste{
 	}  
 
 	private void clearBarco(){
-		localEm.createNativeQuery("delete from TblInformacaoCondutorTrocaBarco").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorTrocaBarco").executeUpdate();
+		String[] tabelas = new String[]{
+				//Condutor
+				"TblInformacaoCondutorTrocaBarco",
+				"TblInformacaoCondutorTransportaOutro",
+				"TblInformacaoCondutorTrabalhaRota",
+				"TblInformacaoCondutorServico",
+				"TblInformacaoCondutorRealizaReparo",
+				"TblInformacaoCondutorRealizaManutencao",
+				"TblInformacaoCondutorQuandoManutencao",
+				"TblInformacaoCondutorPercursoTempo",
+				"TblInformacaoCondutorPagaManutencao",
+				"TblNovaLanchaCondutor",
+				"TblInformacaoCondutorOutroAcompanhante",
+				"TblInformacaoCondutorMotivoQuebra",
+				"TblInformacaoCondutorGuardaBarco",
+				"TblInformacaoCondutorEstrago",
+				"TblInformacaoCondutorEscolheBarco",
+				"TblInformacaoCondutorContrato",
+				"TblInformacaoCondutorAvisoAluno",
+				"TblInformacaoCondutorDonoBarco",
+				"TblInformacaoCondutorFrequencia",
+				"TblInformacaoCondutor",
+				"TblIdentificacaoCondutor",
+				"TblCaracterizacaoCondutor",
+				"TblCabecalhoCondutor",
+				
+				//Tabelas Comuns
+				"tblMunicipio",
+				"tblTipoEscolaridade",
+				"tblTipoFrequencia",
+				"tblTipoDonoBarco",
+				"tblTipoAvisoAluno",
+				"tblTipoContrato",
+				"tblTipoEscolheBarco",
+				"tblTipoEstrago",
+				"tblTipoGuardaBarco",
+				"tblTipoMotivoQuebra",
+				"tblTipoOutroAcompanhante",
+				"tblTipoPagaManutencao",
+				"tblTipoPercursoTempo",
+				"tblTipoQuandoManutencao",
+				"tblTipoRealizaManutencao",
+				"tblTipoServico",
+				"tblTipoNaoTrabalhaRota",
+				"tblTipoTransportaOutro",
+				"tblTipoTrocaBarco"
+		};
 		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorTransportaOutro").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorTransportaOutro").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorTrabalhaRota").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorTrabalhaRota").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorServico").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorServico").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorRealizaReparo").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorRealizaReparo").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorRealizaManutencao").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorRealizaManutencao").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorQuandoManutencao").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorQuandoManutencao").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorPercursoTempo").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorPercursoTempo").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorPagaManutencao").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorPagaManutencao").executeUpdate();
-		
-		//Lancha
-		localEm.createNativeQuery("delete from TblNovaLanchaCondutor").executeUpdate();
-		serverEm.createNativeQuery("delete from TblNovaLanchaCondutor").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorOutroAcompanhante").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorOutroAcompanhante").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorMotivoQuebra").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorMotivoQuebra").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorGuardaBarco").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorGuardaBarco").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorEstrago").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorEstrago").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorEscolheBarco").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorEscolheBarco").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorContrato").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorContrato").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorAvisoAluno").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorAvisoAluno").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorDonoBarco").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorDonoBarco").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutorFrequencia").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutorFrequencia").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblInformacaoCondutor").executeUpdate();
-		serverEm.createNativeQuery("delete from TblInformacaoCondutor").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblIdentificacaoCondutor").executeUpdate();
-		serverEm.createNativeQuery("delete from TblIdentificacaoCondutor").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblCaracterizacaoCondutor").executeUpdate();
-		serverEm.createNativeQuery("delete from TblCaracterizacaoCondutor").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblCabecalhoCondutor").executeUpdate();
-		serverEm.createNativeQuery("delete from TblCabecalhoCondutor").executeUpdate();
-		
-		//Tabelas Comuns
-		
-		localEm.createNativeQuery("delete from tblMunicipio").executeUpdate();
-		serverEm.createNativeQuery("delete from tblMunicipio").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoEscolaridade").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoEscolaridade").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoFrequencia").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoFrequencia").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoDonoBarco").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoDonoBarco").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoAvisoAluno").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoAvisoAluno").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoContrato").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoContrato").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoEscolheBarco").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoEscolheBarco").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoEstrago").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoEstrago").executeUpdate();
-
-		localEm.createNativeQuery("delete from tblTipoGuardaBarco").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoGuardaBarco").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoMotivoQuebra").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoMotivoQuebra").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoOutroAcompanhante").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoOutroAcompanhante").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoPagaManutencao").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoPagaManutencao").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoPercursoTempo").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoPercursoTempo").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoQuandoManutencao").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoQuandoManutencao").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoRealizaManutencao").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoRealizaManutencao").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoServico").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoServico").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoNaoTrabalhaRota").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoNaoTrabalhaRota").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoTransportaOutro").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoTransportaOutro").executeUpdate();
-		
-		localEm.createNativeQuery("delete from tblTipoTrocaBarco").executeUpdate();
-		serverEm.createNativeQuery("delete from tblTipoTrocaBarco").executeUpdate();
+		for(String tabela : tabelas){
+			localEm.createNativeQuery("delete from " + tabela).executeUpdate();
+			serverEm.createNativeQuery("delete from " + tabela).executeUpdate();
+		}
 	}
 	
 	private void insertDefaultData(){
