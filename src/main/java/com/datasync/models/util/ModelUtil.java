@@ -5,6 +5,8 @@ import java.util.List;
 
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.barco.aluno.Tblcabecalhoaluno;
+import com.datasync.models.barco.aluno.Tblcaracterizacaofamiliaaluno;
+import com.datasync.models.barco.aluno.Tblcaracterizacaofamiliaalunoauxilio;
 import com.datasync.models.barco.condutor.TblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.condutor.TblCaracterizacaoCondutor;
 import com.datasync.models.barco.condutor.TblIdentificacaoCondutor;
@@ -87,6 +89,8 @@ public class ModelUtil {
 			
 			//Aluno
 			indexables.add(new Tblcabecalhoaluno());
+			indexables.add(new Tblcaracterizacaofamiliaaluno());
+			indexables.add(new Tblcaracterizacaofamiliaalunoauxilio());
 			
 			//Professor
 			
