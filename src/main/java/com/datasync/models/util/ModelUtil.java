@@ -8,6 +8,7 @@ import com.datasync.models.barco.aluno.Tblcabecalhoaluno;
 import com.datasync.models.barco.aluno.Tblcaracterizacaofamiliaaluno;
 import com.datasync.models.barco.aluno.Tblcaracterizacaofamiliaalunoauxilio;
 import com.datasync.models.barco.aluno.Tblcaracterizacaofamiliaalunotrabalho;
+import com.datasync.models.barco.aluno.Tblidentificacaoaluno;
 import com.datasync.models.barco.condutor.TblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.condutor.TblCaracterizacaoCondutor;
 import com.datasync.models.barco.condutor.TblIdentificacaoCondutor;
@@ -93,6 +94,7 @@ public class ModelUtil {
 			indexables.add(new Tblcaracterizacaofamiliaaluno());
 			indexables.add(new Tblcaracterizacaofamiliaalunoauxilio());
 			indexables.add(new Tblcaracterizacaofamiliaalunotrabalho());
+			indexables.add(new Tblidentificacaoaluno());
 			
 			//Professor
 			
