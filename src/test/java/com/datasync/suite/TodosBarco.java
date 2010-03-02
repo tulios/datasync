@@ -9,6 +9,7 @@ import com.datasync.models.barco.aluno.TesteTblcaracterizacaofamiliaaluno;
 import com.datasync.models.barco.aluno.TesteTblcaracterizacaofamiliaalunoauxilio;
 import com.datasync.models.barco.aluno.TesteTblcaracterizacaofamiliaalunotrabalho;
 import com.datasync.models.barco.aluno.TesteTblidentificacaoaluno;
+import com.datasync.models.barco.aluno.TesteTblpercepcaoalunomelhoria;
 import com.datasync.models.barco.condutor.TesteTblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.condutor.TesteTblCaracterizacaoCondutor;
 import com.datasync.models.barco.condutor.TesteTblIdentificacaoCondutor;
@@ -65,7 +66,8 @@ import com.datasync.models.barco.condutor.TesteTblNovaLanchaCondutor;
 	TesteTblcaracterizacaofamiliaaluno.class,
 	TesteTblcaracterizacaofamiliaalunoauxilio.class,
 	TesteTblcaracterizacaofamiliaalunotrabalho.class,
-	TesteTblidentificacaoaluno.class
+	TesteTblidentificacaoaluno.class,
+	TesteTblpercepcaoalunomelhoria.class
 	
 	//Professor
 	//Diretor
