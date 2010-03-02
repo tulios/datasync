@@ -11,7 +11,7 @@ public class TesteBarco extends Teste{
 	public void zerarBanco(){
 		open();
 		clearBarco();
-		//insertDefaultData();
+		insertDefaultData();
 		close();
 		new IndexProcessor().getFile().delete();
 	}  
@@ -19,7 +19,6 @@ public class TesteBarco extends Teste{
 	private void clearBarco(){
 		String[] tabelas = new String[]{
 				//Condutor
-				/*
 				"TblInformacaoCondutorTrocaBarco",
 				"TblInformacaoCondutorTransportaOutro",
 				"TblInformacaoCondutorTrabalhaRota",
@@ -43,12 +42,16 @@ public class TesteBarco extends Teste{
 				"TblIdentificacaoCondutor",
 				"TblCaracterizacaoCondutor",
 				"TblCabecalhoCondutor",
-				*/
+
+				//Aluno
+				
 				//Professor
-				"Tblcabecalhoprofessor"
+				
+				//Diretor
+				
+				//Prefeito
 				
 				//Tabelas Comuns
-				/*
 				"tblMunicipio",
 				"tblTipoEscolaridade",
 				"tblTipoFrequencia",
@@ -67,7 +70,7 @@ public class TesteBarco extends Teste{
 				"tblTipoServico",
 				"tblTipoNaoTrabalhaRota",
 				"tblTipoTransportaOutro",
-				"tblTipoTrocaBarco"*/
+				"tblTipoTrocaBarco"
 		};
 		
 		for(String tabela : tabelas){
