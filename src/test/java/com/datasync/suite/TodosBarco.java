@@ -7,6 +7,7 @@ import org.junit.runners.Suite.SuiteClasses;
 import com.datasync.models.barco.aluno.TesteTblcabecalhoaluno;
 import com.datasync.models.barco.aluno.TesteTblcaracterizacaofamiliaaluno;
 import com.datasync.models.barco.aluno.TesteTblcaracterizacaofamiliaalunoauxilio;
+import com.datasync.models.barco.aluno.TesteTblcaracterizacaofamiliaalunotrabalho;
 import com.datasync.models.barco.condutor.TesteTblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.condutor.TesteTblCaracterizacaoCondutor;
 import com.datasync.models.barco.condutor.TesteTblIdentificacaoCondutor;
@@ -61,7 +62,8 @@ import com.datasync.models.barco.condutor.TesteTblNovaLanchaCondutor;
 	//Aluno
 	TesteTblcabecalhoaluno.class,
 	TesteTblcaracterizacaofamiliaaluno.class,
-	TesteTblcaracterizacaofamiliaalunoauxilio.class
+	TesteTblcaracterizacaofamiliaalunoauxilio.class,
+	TesteTblcaracterizacaofamiliaalunotrabalho.class
 	
 	//Professor
 	//Diretor
