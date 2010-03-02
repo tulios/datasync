@@ -4,6 +4,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+import com.datasync.models.barco.aluno.TesteTblcabecalhoaluno;
 import com.datasync.models.barco.condutor.TesteTblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.condutor.TesteTblCaracterizacaoCondutor;
 import com.datasync.models.barco.condutor.TesteTblIdentificacaoCondutor;
@@ -53,7 +54,14 @@ import com.datasync.models.barco.condutor.TesteTblNovaLanchaCondutor;
 	TesteTblInformacaoCondutorTrabalhaRota.class,
 	TesteTblInformacaoCondutorTransportaOutro.class,
 	TesteTblInformacaoCondutorTrocaBarco.class,
-	TesteTblNovaLanchaCondutor.class
+	TesteTblNovaLanchaCondutor.class,
+	
+	//Aluno
+	TesteTblcabecalhoaluno.class
+	//Professor
+	//Diretor
+	//Prefeito
+	//Secretario
 })
 public class TodosBarco {
 }

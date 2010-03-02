@@ -44,6 +44,7 @@ public class TesteBarco extends Teste{
 				"TblCabecalhoCondutor",
 
 				//Aluno
+				"tblCabecalhoAluno",
 				
 				//Professor
 				
@@ -52,6 +53,7 @@ public class TesteBarco extends Teste{
 				//Prefeito
 				
 				//Tabelas Comuns
+				"tblEscola",
 				"tblMunicipio",
 				"tblTipoEscolaridade",
 				"tblTipoFrequencia",
@@ -81,7 +83,7 @@ public class TesteBarco extends Teste{
 	
 	private void insertDefaultData(){
 		String[] inserts = new String[]{
-				"insert into tblMunicipio (IdMunicipio, NomeMunicipio, UF) values (1, 'Brasília', 'DF');",
+				"insert into tblMunicipio values (1, 'Brasília', 'DF');",
 				"insert into tblTipoEscolaridade values (1,'Ensino Fundamental 1º série');",
 				"insert into tblTipoFrequencia values (1,'Desc Frequencia');",
 				"insert into tblTipoDonoBarco values (1,'Da Prefeitura');",
@@ -99,7 +101,8 @@ public class TesteBarco extends Teste{
 				"insert into tblTipoServico values (1,'Calafeto');",
 				"insert into tblTipoNaoTrabalhaRota values (1,'Não quis informar/Não sabe');",
 				"insert into tblTipoTransportaOutro values (1,'Nada');",
-				"insert into tblTipoTrocaBarco values (1, 'Descricao');"
+				"insert into tblTipoTrocaBarco values (1, 'Descricao');",
+				"insert into tblEscola values (1,'EMEF INDIGENA SAHU-APE',1);"
 		};
 		
 		for (String insert : inserts){

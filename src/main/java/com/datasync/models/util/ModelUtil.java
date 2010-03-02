@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.datasync.models.IndexableEntity;
+import com.datasync.models.barco.aluno.Tblcabecalhoaluno;
 import com.datasync.models.barco.condutor.TblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.condutor.TblCaracterizacaoCondutor;
 import com.datasync.models.barco.condutor.TblIdentificacaoCondutor;
@@ -82,8 +83,18 @@ public class ModelUtil {
 			indexables.add(new TblInformacaoCondutorTrabalhaRota());
 			indexables.add(new TblInformacaoCondutorTransportaOutro());
 			indexables.add(new TblInformacaoCondutorTrocaBarco());
-			
 			indexables.add(new TblNovaLanchaCondutor());
+			
+			//Aluno
+			indexables.add(new Tblcabecalhoaluno());
+			
+			//Professor
+			
+			//Diretor
+			
+			//Prefeito
+			
+			//Secretario
 		}
 		
 		return indexables;
