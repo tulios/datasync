@@ -1,0 +1,5 @@
+jruby -S rake model:generate['com.datasync.models.barco','/Users/tulios/Desktop/models']
+
+jruby -S rake model:generate['com.datasync.models.barco.professor','/Users/tulios/Desktop/models/professor']
+
+jruby -S rake model:generate['com.datasync.models.barco.professor','/Users/tulios/Desktop/models/professor','TesteBarco']

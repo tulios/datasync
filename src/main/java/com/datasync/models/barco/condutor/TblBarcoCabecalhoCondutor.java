@@ -19,6 +19,8 @@ public class TblBarcoCabecalhoCondutor extends IndexableEntity {
 	private String idFormulario;
 	@Column(name = "IdPesquisador")
 	private int idPesquisador;
+	@Column(name = "IdRota")
+	private int idRota;
 	@Column(name = "IdMunicipio")
 	private int idMunicipio;
 	@Column(name = "Rota")
@@ -97,6 +99,14 @@ public class TblBarcoCabecalhoCondutor extends IndexableEntity {
 
 	public void setHorarioTermino(String horarioTermino) {
 		this.horarioTermino = horarioTermino;
+	}
+
+	public int getIdRota() {
+		return idRota;
+	}
+
+	public void setIdRota(int idRota) {
+		this.idRota = idRota;
 	}
 	
 }
