@@ -1,6 +1,6 @@
 <list>
   <com.datasync.processor.Index>
-    <className>com.datasync.models.barco.aluno.Tblpercepcaoalunorotafazcaminhoescola</className>
+    <className>com.datasync.models.barco.aluno.Tblpercepcaoalunorotafazoutracoisa</className>
     <id>1        #1</id>
   </com.datasync.processor.Index>
 </list>
