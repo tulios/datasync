@@ -41,6 +41,14 @@ import com.datasync.models.barco.condutor.TblInformacaoCondutorTrabalhaRota;
 import com.datasync.models.barco.condutor.TblInformacaoCondutorTransportaOutro;
 import com.datasync.models.barco.condutor.TblInformacaoCondutorTrocaBarco;
 import com.datasync.models.barco.condutor.TblNovaLanchaCondutor;
+import com.datasync.models.barco.prefeito.Tblcabecalhoprefeito;
+import com.datasync.models.barco.prefeito.Tblcaracterizacaoprefeito;
+import com.datasync.models.barco.prefeito.Tblidentificacaoprefeito;
+import com.datasync.models.barco.prefeito.Tblinformacaoprefeito;
+import com.datasync.models.barco.prefeito.Tblinformacaoprefeitoacordo;
+import com.datasync.models.barco.prefeito.Tblinformacaoprefeitopublicoalvo;
+import com.datasync.models.barco.prefeito.Tblinformacaoprefeitoreage;
+import com.datasync.models.barco.prefeito.Tblinformacaoprefeitoresponsaveltransporescolar;
 import com.datasync.models.barco.professor.Tblcabecalhoprofessor;
 import com.datasync.models.barco.professor.Tblcaracterizacaoprofessor;
 import com.datasync.models.barco.professor.Tblidentificacaoprofessor;
@@ -135,6 +143,14 @@ public class ModelUtil {
 			//Diretor
 			
 			//Prefeito
+			indexables.add(new Tblcabecalhoprefeito());
+			indexables.add(new Tblcaracterizacaoprefeito());
+			indexables.add(new Tblidentificacaoprefeito());
+			indexables.add(new Tblinformacaoprefeito());
+			indexables.add(new Tblinformacaoprefeitoacordo());
+			indexables.add(new Tblinformacaoprefeitopublicoalvo());
+			indexables.add(new Tblinformacaoprefeitoreage());
+			indexables.add(new Tblinformacaoprefeitoresponsaveltransporescolar());
 			
 			//Secretario
 		}

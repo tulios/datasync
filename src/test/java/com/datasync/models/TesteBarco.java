@@ -72,6 +72,14 @@ public class TesteBarco extends Teste{
 				//Diretor
 				
 				//Prefeito
+				"Tblinformacaoprefeitoresponsaveltransporescolar",
+				"Tblinformacaoprefeitoreage",
+				"Tblinformacaoprefeitopublicoalvo",
+				"Tblinformacaoprefeitoacordo",
+				"Tblinformacaoprefeito",
+				"Tblidentificacaoprefeito",
+				"Tblcaracterizacaoprefeito",
+				"Tblcabecalhoprefeito",
 				
 				//Tabelas Comuns
 				"tblEscola",
@@ -102,7 +110,12 @@ public class TesteBarco extends Teste{
 				"tblTipoFazCaminhoEscola",
 				"tblTipoFazOutraCoisa",
 				"tblTipoMolhaAluno",
-				"tblTipoProvidenciaProfessor"
+				"tblTipoProvidenciaProfessor",
+				
+				"tblTipoAcordo",
+				"tblTipoPublicoAlvo",
+				"tblTipoReage",
+				"tblTipoResponsavel"
 		};
 		
 		for(String tabela : tabelas){
@@ -141,7 +154,12 @@ public class TesteBarco extends Teste{
 				"insert into tblTipoFazCaminhoEscola values (1,'Não faz nada');",
 				"insert into tblTipoFazOutraCoisa values (1,'Não faz nada');",
 				"insert into tblTipoMolhaAluno values(1,'Correu');",
-				"insert into tblTipoProvidenciaProfessor values (1,'Nenhuma');"
+				"insert into tblTipoProvidenciaProfessor values (1,'Nenhuma');",
+				
+				"insert into tblTipoAcordo values (1,'O FNDE/MEC repassa direto o dinheiro para o estado');",
+				"insert into tblTipoPublicoAlvo values (1,'Passageiros');",
+				"insert into tblTipoReage values (1,'Continua transportando os alunos');",
+				"insert into tblTipoResponsavel values(1,'Prefeitura');"
 		};
 		
 		for (String insert : inserts){

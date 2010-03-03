@@ -41,6 +41,14 @@ import com.datasync.models.barco.condutor.TesteTblInformacaoCondutorTrabalhaRota
 import com.datasync.models.barco.condutor.TesteTblInformacaoCondutorTransportaOutro;
 import com.datasync.models.barco.condutor.TesteTblInformacaoCondutorTrocaBarco;
 import com.datasync.models.barco.condutor.TesteTblNovaLanchaCondutor;
+import com.datasync.models.barco.prefeito.TesteTblcabecalhoprefeito;
+import com.datasync.models.barco.prefeito.TesteTblcaracterizacaoprefeito;
+import com.datasync.models.barco.prefeito.TesteTblidentificacaoprefeito;
+import com.datasync.models.barco.prefeito.TesteTblinformacaoprefeito;
+import com.datasync.models.barco.prefeito.TesteTblinformacaoprefeitoacordo;
+import com.datasync.models.barco.prefeito.TesteTblinformacaoprefeitopublicoalvo;
+import com.datasync.models.barco.prefeito.TesteTblinformacaoprefeitoreage;
+import com.datasync.models.barco.prefeito.TesteTblinformacaoprefeitoresponsaveltransporescolar;
 import com.datasync.models.barco.professor.TesteTblcabecalhoprofessor;
 import com.datasync.models.barco.professor.TesteTblcaracterizacaoprofessor;
 import com.datasync.models.barco.professor.TesteTblidentificacaoprofessor;
@@ -101,10 +109,20 @@ import com.datasync.models.barco.professor.TesteTblpercepcaoprofessorprovidencia
 	TesteTblpercepcaoprofessoralunonaoescola.class,
 	TesteTblpercepcaoprofessoralunoreclama.class,
 	TesteTblpercepcaoprofessoravisoaluno.class,
-	TesteTblpercepcaoprofessorprovidencia.class
+	TesteTblpercepcaoprofessorprovidencia.class,
 	
 	//Diretor
+	
 	//Prefeito
+	TesteTblcabecalhoprefeito.class,
+	TesteTblcaracterizacaoprefeito.class,
+	TesteTblidentificacaoprefeito.class,
+	TesteTblinformacaoprefeito.class,
+	TesteTblinformacaoprefeitoacordo.class,
+	TesteTblinformacaoprefeitopublicoalvo.class,
+	TesteTblinformacaoprefeitoreage.class,
+	TesteTblinformacaoprefeitoresponsaveltransporescolar.class
+	
 	//Secretario
 })
 public class TodosBarco {
