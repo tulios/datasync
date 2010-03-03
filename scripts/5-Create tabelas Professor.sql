@@ -323,4 +323,4 @@ ALTER TABLE tblPercepcaoProfessorProvidencia ADD CONSTRAINT ReftblTipoProvidenci
     REFERENCES tblTipoProvidenciaProfessor(IdTipoProvidenciaProfessor)
 go
 
-
+alter table tblCabecalhoProfessor add IdRota int null;
