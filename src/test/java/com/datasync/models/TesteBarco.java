@@ -60,6 +60,7 @@ public class TesteBarco extends Teste{
 				"TblCabecalhoAluno",
 				
 				//Professor
+				"Tblidentificacaoprofessor",
 				"Tblcaracterizacaoprofessor",
 				"Tblcabecalhoprofessor",
 				

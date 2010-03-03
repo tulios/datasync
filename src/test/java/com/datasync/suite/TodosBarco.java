@@ -43,6 +43,7 @@ import com.datasync.models.barco.condutor.TesteTblInformacaoCondutorTrocaBarco;
 import com.datasync.models.barco.condutor.TesteTblNovaLanchaCondutor;
 import com.datasync.models.barco.professor.TesteTblcabecalhoprofessor;
 import com.datasync.models.barco.professor.TesteTblcaracterizacaoprofessor;
+import com.datasync.models.barco.professor.TesteTblidentificacaoprofessor;
 
 @RunWith(value=Suite.class)
 @SuiteClasses({  
@@ -89,7 +90,8 @@ import com.datasync.models.barco.professor.TesteTblcaracterizacaoprofessor;
 	
 	//Professor
 	TesteTblcabecalhoprofessor.class,
-	TesteTblcaracterizacaoprofessor.class
+	TesteTblcaracterizacaoprofessor.class,
+	TesteTblidentificacaoprofessor.class
 	
 	//Diretor
 	//Prefeito
