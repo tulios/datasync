@@ -5,7 +5,7 @@ import org.junit.Before;
 import com.datasync.Teste;
 import com.datasync.processor.IndexProcessor;
 
-public class TesteBarco extends Teste{
+public class TesteDiretor extends Teste{
 
 	@Before
 	public void zerarBanco(){
@@ -70,18 +70,6 @@ public class TesteBarco extends Teste{
 				"Tblcabecalhoprofessor",
 				
 				//Diretor
-				"Tblpercepcaodiretorrendimentoacademico",
-				"Tblpercepcaodiretoralunoreclama",
-				"Tblpercepcaodiretoralunonaoescola",
-				"Tblpercepcaodiretoralunoescola",
-				"Tblinformacaoescolaresponsavelbarco",
-				"Tblidentificacaoescolaplanejamentorota",
-				"Tblidentificacaoescolaatendeturno",
-				"Tblidentificacaoescola",
-				"Tblidentificacaodiretor",
-				"Tblcaracterizacaodiretoroutraexperiencia",
-				"Tblcaracterizacaodiretor",
-				"Tblcabecalhodiretor",
 				
 				//Prefeito
 				
@@ -114,13 +102,7 @@ public class TesteBarco extends Teste{
 				"tblTipoFazCaminhoEscola",
 				"tblTipoFazOutraCoisa",
 				"tblTipoMolhaAluno",
-				"tblTipoProvidenciaProfessor",
-				"tblTipoOutraExperiencia",
-				"TblTipoTurno",
-				"TblTipoResposta",
-				"TblTipoOutroTransporte",
-				"TblTipoAlunoNaoEscola",
-				"TblTipoReclamacao"
+				"tblTipoProvidenciaProfessor"
 		};
 		
 		for(String tabela : tabelas){
@@ -159,13 +141,7 @@ public class TesteBarco extends Teste{
 				"insert into tblTipoFazCaminhoEscola values (1,'Não faz nada');",
 				"insert into tblTipoFazOutraCoisa values (1,'Não faz nada');",
 				"insert into tblTipoMolhaAluno values(1,'Correu');",
-				"insert into tblTipoProvidenciaProfessor values (1,'Nenhuma');",
-				"insert into tblTipoOutraExperiencia values (1,'Professor');",
-				"insert into tblTipoTurno values (1,'Matutino');",
-				"insert into tblTipoResposta values (1,'Não sabe/Não quis informar');",
-				"insert into tblTipoOutroTransporte values (1,'Não vem');",
-				"insert into tblTipoAlunoNaoEscola values (1,'Não resposta');",
-				"insert into tblTipoReclamacao values (1,'Não resposta');"
+				"insert into tblTipoProvidenciaProfessor values (1,'Nenhuma');"
 		};
 		
 		for (String insert : inserts){

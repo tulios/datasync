@@ -41,6 +41,18 @@ import com.datasync.models.barco.condutor.TesteTblInformacaoCondutorTrabalhaRota
 import com.datasync.models.barco.condutor.TesteTblInformacaoCondutorTransportaOutro;
 import com.datasync.models.barco.condutor.TesteTblInformacaoCondutorTrocaBarco;
 import com.datasync.models.barco.condutor.TesteTblNovaLanchaCondutor;
+import com.datasync.models.barco.diretor.TesteTblcabecalhodiretor;
+import com.datasync.models.barco.diretor.TesteTblcaracterizacaodiretor;
+import com.datasync.models.barco.diretor.TesteTblcaracterizacaodiretoroutraexperiencia;
+import com.datasync.models.barco.diretor.TesteTblidentificacaodiretor;
+import com.datasync.models.barco.diretor.TesteTblidentificacaoescola;
+import com.datasync.models.barco.diretor.TesteTblidentificacaoescolaatendeturno;
+import com.datasync.models.barco.diretor.TesteTblidentificacaoescolaplanejamentorota;
+import com.datasync.models.barco.diretor.TesteTblinformacaoescolaresponsavelbarco;
+import com.datasync.models.barco.diretor.TesteTblpercepcaodiretoralunoescola;
+import com.datasync.models.barco.diretor.TesteTblpercepcaodiretoralunonaoescola;
+import com.datasync.models.barco.diretor.TesteTblpercepcaodiretoralunoreclama;
+import com.datasync.models.barco.diretor.TesteTblpercepcaodiretorrendimentoacademico;
 import com.datasync.models.barco.professor.TesteTblcabecalhoprofessor;
 import com.datasync.models.barco.professor.TesteTblcaracterizacaoprofessor;
 import com.datasync.models.barco.professor.TesteTblidentificacaoprofessor;
@@ -101,9 +113,22 @@ import com.datasync.models.barco.professor.TesteTblpercepcaoprofessorprovidencia
 	TesteTblpercepcaoprofessoralunonaoescola.class,
 	TesteTblpercepcaoprofessoralunoreclama.class,
 	TesteTblpercepcaoprofessoravisoaluno.class,
-	TesteTblpercepcaoprofessorprovidencia.class
+	TesteTblpercepcaoprofessorprovidencia.class,
 	
 	//Diretor
+	TesteTblcabecalhodiretor.class,
+	TesteTblcaracterizacaodiretor.class,
+	TesteTblcaracterizacaodiretoroutraexperiencia.class,
+	TesteTblidentificacaodiretor.class,
+	TesteTblidentificacaoescola.class,
+	TesteTblidentificacaoescolaatendeturno.class,
+	TesteTblidentificacaoescolaplanejamentorota.class,
+	TesteTblinformacaoescolaresponsavelbarco.class,
+	TesteTblpercepcaodiretoralunoescola.class,
+	TesteTblpercepcaodiretoralunonaoescola.class,
+	TesteTblpercepcaodiretoralunoreclama.class,
+	TesteTblpercepcaodiretorrendimentoacademico.class
+	
 	//Prefeito
 	//Secretario
 })

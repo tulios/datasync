@@ -9,7 +9,8 @@
  
 development:
   adapter: jdbc
-  url: jdbc:jtds:sqlserver://10.211.55.3:1433/TESTE
+  #url: jdbc:jtds:sqlserver://10.211.55.3:1433/TESTE
+  url: jdbc:jtds:sqlserver://192.168.2.5:1433/TESTE
   driver: net.sourceforge.jtds.jdbc.Driver
   username: datasync_user
   password: 123456

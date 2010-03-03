@@ -257,7 +257,7 @@ go
  * TABLE: tblPosTesteAuno 
  */
 
-CREATE TABLE tblPosTesteAuno(
+CREATE TABLE tblPosTesteAluno(
     IdFormulario           char(9)         NOT NULL,
     MelhorBarco            int             NULL,
     GostouBarco            varchar(250)    NULL,

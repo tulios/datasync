@@ -41,6 +41,18 @@ import com.datasync.models.barco.condutor.TblInformacaoCondutorTrabalhaRota;
 import com.datasync.models.barco.condutor.TblInformacaoCondutorTransportaOutro;
 import com.datasync.models.barco.condutor.TblInformacaoCondutorTrocaBarco;
 import com.datasync.models.barco.condutor.TblNovaLanchaCondutor;
+import com.datasync.models.barco.diretor.Tblcabecalhodiretor;
+import com.datasync.models.barco.diretor.Tblcaracterizacaodiretor;
+import com.datasync.models.barco.diretor.Tblcaracterizacaodiretoroutraexperiencia;
+import com.datasync.models.barco.diretor.Tblidentificacaodiretor;
+import com.datasync.models.barco.diretor.Tblidentificacaoescola;
+import com.datasync.models.barco.diretor.Tblidentificacaoescolaatendeturno;
+import com.datasync.models.barco.diretor.Tblidentificacaoescolaplanejamentorota;
+import com.datasync.models.barco.diretor.Tblinformacaoescolaresponsavelbarco;
+import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunoescola;
+import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunonaoescola;
+import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunoreclama;
+import com.datasync.models.barco.diretor.Tblpercepcaodiretorrendimentoacademico;
 import com.datasync.models.barco.professor.Tblcabecalhoprofessor;
 import com.datasync.models.barco.professor.Tblcaracterizacaoprofessor;
 import com.datasync.models.barco.professor.Tblidentificacaoprofessor;
@@ -133,6 +145,18 @@ public class ModelUtil {
 			indexables.add(new Tblpercepcaoprofessorprovidencia());
 			
 			//Diretor
+			indexables.add(new Tblcabecalhodiretor());
+			indexables.add(new Tblcaracterizacaodiretor());
+			indexables.add(new Tblcaracterizacaodiretoroutraexperiencia());
+			indexables.add(new Tblidentificacaodiretor());
+			indexables.add(new Tblidentificacaoescola());
+			indexables.add(new Tblidentificacaoescolaatendeturno());
+			indexables.add(new Tblidentificacaoescolaplanejamentorota());
+			indexables.add(new Tblinformacaoescolaresponsavelbarco());
+			indexables.add(new Tblpercepcaodiretoralunoescola());
+			indexables.add(new Tblpercepcaodiretoralunonaoescola());
+			indexables.add(new Tblpercepcaodiretoralunoreclama());
+			indexables.add(new Tblpercepcaodiretorrendimentoacademico());
 			
 			//Prefeito
 			
