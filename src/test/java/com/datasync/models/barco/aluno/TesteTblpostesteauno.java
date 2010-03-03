@@ -22,12 +22,12 @@ public class TesteTblpostesteauno extends TesteBarco {
         open();
 
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
-        indexables.add(new Tblpostesteauno());
+        indexables.add(new Tblpostestealuno());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblpostesteauno t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblpostestealuno t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblpostesteauno t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblpostestealuno t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblcabecalhoaluno cabecalho = new Tblcabecalhoaluno();
@@ -61,7 +61,7 @@ public class TesteTblpostesteauno extends TesteBarco {
         getLocalEm().persist(carac);
         getServerEm().persist(carac);
         
-        Tblpostesteauno var = new Tblpostesteauno();
+        Tblpostestealuno var = new Tblpostestealuno();
         var.setIdformulario("1");
         var.setMelhorbarco(1);
         var.setGostoubarco("Sim");
@@ -72,9 +72,10 @@ public class TesteTblpostesteauno extends TesteBarco {
         var.setPorquegostoucolete("Sim");
         var.setUsarcoletesalvavida("Sim");
         var.setPorqueusar("Sim");
+        var.setFaltaBarco("Sim");
         getLocalEm().persist(var);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblpostesteauno t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblpostestealuno t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
@@ -89,7 +90,7 @@ public class TesteTblpostesteauno extends TesteBarco {
         assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblpostesteauno t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblpostestealuno t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }

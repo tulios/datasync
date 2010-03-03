@@ -669,4 +669,5 @@ ALTER TABLE tblPosTesteMolhaAluno ADD CONSTRAINT ReftblTipoMolhaAluno2635
     REFERENCES tblTipoMolhaAluno(IdTipoMolhaAluno)
 go
 
+alter table tblPosTesteAluno add  FaltaBarco varchar(250) NULL;
 

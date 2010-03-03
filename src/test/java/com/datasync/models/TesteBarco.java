@@ -46,7 +46,7 @@ public class TesteBarco extends Teste{
 				//Aluno
 				"Tblpostestemolhaaluno",
 				"Tblpostesteavaliacaolancha",
-				"Tblpostesteauno",
+				"tblPostestealuno",
 				"Tblpercepcaoalunorotafazoutracoisa",
 				"Tblpercepcaoalunorotafazcaminhoescola",
 				"Tblpercepcaoalunorotaepocapior",
