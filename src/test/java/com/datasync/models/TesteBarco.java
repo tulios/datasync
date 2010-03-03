@@ -60,6 +60,7 @@ public class TesteBarco extends Teste{
 				"TblCabecalhoAluno",
 				
 				//Professor
+				"Tblpercepcaoprofessorprovidencia",
 				"Tblpercepcaoprofessoravisoaluno",
 				"Tblpercepcaoprofessoralunoreclama",
 				"Tblpercepcaoprofessoralunonaoescola",
@@ -100,7 +101,8 @@ public class TesteBarco extends Teste{
 				"tblTipoEpoca",
 				"tblTipoFazCaminhoEscola",
 				"tblTipoFazOutraCoisa",
-				"tblTipoMolhaAluno"
+				"tblTipoMolhaAluno",
+				"tblTipoProvidenciaProfessor"
 		};
 		
 		for(String tabela : tabelas){
@@ -138,7 +140,8 @@ public class TesteBarco extends Teste{
 				"insert into tblTipoEpoca values (1,'Inverno/Cheia');",
 				"insert into tblTipoFazCaminhoEscola values (1,'Não faz nada');",
 				"insert into tblTipoFazOutraCoisa values (1,'Não faz nada');",
-				"insert into tblTipoMolhaAluno values(1,'Correu');"
+				"insert into tblTipoMolhaAluno values(1,'Correu');",
+				"insert into tblTipoProvidenciaProfessor values (1,'Nenhuma');"
 		};
 		
 		for (String insert : inserts){
