@@ -15,6 +15,7 @@ import com.datasync.models.barco.aluno.Tblpercepcaoalunorotaajudabarqueiro;
 import com.datasync.models.barco.aluno.Tblpercepcaoalunorotaepocapior;
 import com.datasync.models.barco.aluno.Tblpercepcaoalunorotafazcaminhoescola;
 import com.datasync.models.barco.aluno.Tblpercepcaoalunorotafazoutracoisa;
+import com.datasync.models.barco.aluno.Tblpostesteauno;
 import com.datasync.models.barco.condutor.TblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.condutor.TblCaracterizacaoCondutor;
 import com.datasync.models.barco.condutor.TblIdentificacaoCondutor;
@@ -107,6 +108,7 @@ public class ModelUtil {
 			indexables.add(new Tblpercepcaoalunorotaepocapior());
 			indexables.add(new Tblpercepcaoalunorotafazcaminhoescola());
 			indexables.add(new Tblpercepcaoalunorotafazoutracoisa());
+			indexables.add(new Tblpostesteauno());
 			
 			//Professor
 			

@@ -15,6 +15,7 @@ import com.datasync.models.barco.aluno.TesteTblpercepcaoalunorotaajudabarqueiro;
 import com.datasync.models.barco.aluno.TesteTblpercepcaoalunorotaepocapior;
 import com.datasync.models.barco.aluno.TesteTblpercepcaoalunorotafazcaminhoescola;
 import com.datasync.models.barco.aluno.TesteTblpercepcaoalunorotafazoutracoisa;
+import com.datasync.models.barco.aluno.TesteTblpostesteauno;
 import com.datasync.models.barco.condutor.TesteTblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.condutor.TesteTblCaracterizacaoCondutor;
 import com.datasync.models.barco.condutor.TesteTblIdentificacaoCondutor;
@@ -77,7 +78,8 @@ import com.datasync.models.barco.condutor.TesteTblNovaLanchaCondutor;
 	TesteTblpercepcaoalunorotaajudabarqueiro.class,
 	TesteTblpercepcaoalunorotaepocapior.class,
 	TesteTblpercepcaoalunorotafazcaminhoescola.class,
-	TesteTblpercepcaoalunorotafazoutracoisa.class
+	TesteTblpercepcaoalunorotafazoutracoisa.class,
+	TesteTblpostesteauno.class
 	
 	//Professor
 	//Diretor
