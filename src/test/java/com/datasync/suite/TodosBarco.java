@@ -53,6 +53,14 @@ import com.datasync.models.barco.diretor.TesteTblpercepcaodiretoralunoescola;
 import com.datasync.models.barco.diretor.TesteTblpercepcaodiretoralunonaoescola;
 import com.datasync.models.barco.diretor.TesteTblpercepcaodiretoralunoreclama;
 import com.datasync.models.barco.diretor.TesteTblpercepcaodiretorrendimentoacademico;
+import com.datasync.models.barco.prefeito.TesteTblcabecalhoprefeito;
+import com.datasync.models.barco.prefeito.TesteTblcaracterizacaoprefeito;
+import com.datasync.models.barco.prefeito.TesteTblidentificacaoprefeito;
+import com.datasync.models.barco.prefeito.TesteTblinformacaoprefeito;
+import com.datasync.models.barco.prefeito.TesteTblinformacaoprefeitoacordo;
+import com.datasync.models.barco.prefeito.TesteTblinformacaoprefeitopublicoalvo;
+import com.datasync.models.barco.prefeito.TesteTblinformacaoprefeitoreage;
+import com.datasync.models.barco.prefeito.TesteTblinformacaoprefeitoresponsaveltransporescolar;
 import com.datasync.models.barco.professor.TesteTblcabecalhoprofessor;
 import com.datasync.models.barco.professor.TesteTblcaracterizacaoprofessor;
 import com.datasync.models.barco.professor.TesteTblidentificacaoprofessor;
@@ -61,6 +69,15 @@ import com.datasync.models.barco.professor.TesteTblpercepcaoprofessoralunonaoesc
 import com.datasync.models.barco.professor.TesteTblpercepcaoprofessoralunoreclama;
 import com.datasync.models.barco.professor.TesteTblpercepcaoprofessoravisoaluno;
 import com.datasync.models.barco.professor.TesteTblpercepcaoprofessorprovidencia;
+import com.datasync.models.barco.secretario.TesteTblcabecalhosecretario;
+import com.datasync.models.barco.secretario.TesteTblcaracterizacaosecretario;
+import com.datasync.models.barco.secretario.TesteTblidentificacaosecretario;
+import com.datasync.models.barco.secretario.TesteTblinformacaosecretarioacordo;
+import com.datasync.models.barco.secretario.TesteTblinformacaosecretariocriterio;
+import com.datasync.models.barco.secretario.TesteTblinformacaosecretariooutrotransporte;
+import com.datasync.models.barco.secretario.TesteTblinformacaosecretarioreage;
+import com.datasync.models.barco.secretario.TesteTblpercepcaosecretariodificuldade;
+import com.datasync.models.barco.secretario.TesteTblpercepcaosecretariomotivobarqueiroterceirizado;
 
 @RunWith(value=Suite.class)
 @SuiteClasses({  
@@ -127,10 +144,29 @@ import com.datasync.models.barco.professor.TesteTblpercepcaoprofessorprovidencia
 	TesteTblpercepcaodiretoralunoescola.class,
 	TesteTblpercepcaodiretoralunonaoescola.class,
 	TesteTblpercepcaodiretoralunoreclama.class,
-	TesteTblpercepcaodiretorrendimentoacademico.class
+	TesteTblpercepcaodiretorrendimentoacademico.class,
 	
 	//Prefeito
+	TesteTblcabecalhoprefeito.class,
+	TesteTblcaracterizacaoprefeito.class,
+	TesteTblidentificacaoprefeito.class,
+	TesteTblinformacaoprefeito.class,
+	TesteTblinformacaoprefeitoacordo.class,
+	TesteTblinformacaoprefeitopublicoalvo.class,
+	TesteTblinformacaoprefeitoreage.class,
+	TesteTblinformacaoprefeitoresponsaveltransporescolar.class,
+	
 	//Secretario
+	TesteTblcabecalhosecretario.class,
+	TesteTblcaracterizacaosecretario.class,
+	TesteTblidentificacaosecretario.class,
+	TesteTblinformacaosecretarioacordo.class,
+	TesteTblinformacaosecretariocriterio.class,
+	TesteTblinformacaosecretariooutrotransporte.class,
+	TesteTblinformacaosecretarioreage.class,
+	TesteTblpercepcaosecretariodificuldade.class,
+	TesteTblpercepcaosecretariomotivobarqueiroterceirizado.class
+	
 })
 public class TodosBarco {
 }

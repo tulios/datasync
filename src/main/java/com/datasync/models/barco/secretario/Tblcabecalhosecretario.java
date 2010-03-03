@@ -1,4 +1,4 @@
-package com.datasync.models.barco.diretor;
+package com.datasync.models.barco.secretario;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,9 +10,9 @@ import com.datasync.models.IndexableEntity;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "tblCabecalhoDiretor")
+@Table(name = "tblCabecalhoSecretario")
 @SuppressWarnings("serial")
-public class Tblcabecalhodiretor extends IndexableEntity{
+public class Tblcabecalhosecretario extends IndexableEntity{
 
     @Id
     @Column(name = "IdFormulario")
@@ -21,20 +21,16 @@ public class Tblcabecalhodiretor extends IndexableEntity{
     private String pesquisador;
     @Column(name = "IdMunicipio")
     private Integer idmunicipio;
-    @Column(name = "IdINEP")
-    private Integer idinep;
     @Column(name = "DataColeta")
     private Timestamp datacoleta;
-    @Column(name = "Foto")
-    private String foto;
     @Column(name = "Rota")
     private String rota;
+    @Column(name = "IdRota")
+    private Integer idrota;
     @Column(name = "TempoInicio")
     private String tempoinicio;
     @Column(name = "TempoTermino")
     private String tempotermino;
-    @Column(name = "IdRota")
-    private Integer idRota;
 
     @Override
     public String getIdColumnName() {
@@ -70,14 +66,6 @@ public class Tblcabecalhodiretor extends IndexableEntity{
         return idmunicipio;
     }
 
-    public void setIdinep(Integer idinep){
-        this.idinep = idinep;
-    }
-
-    public Integer getIdinep(){
-        return idinep;
-    }
-
     public void setDatacoleta(Timestamp datacoleta){
         this.datacoleta = datacoleta;
     }
@@ -86,20 +74,20 @@ public class Tblcabecalhodiretor extends IndexableEntity{
         return datacoleta;
     }
 
-    public void setFoto(String foto){
-        this.foto = foto;
-    }
-
-    public String getFoto(){
-        return foto;
-    }
-
     public void setRota(String rota){
         this.rota = rota;
     }
 
     public String getRota(){
         return rota;
+    }
+
+    public void setIdrota(Integer idrota){
+        this.idrota = idrota;
+    }
+
+    public Integer getIdrota(){
+        return idrota;
     }
 
     public void setTempoinicio(String tempoinicio){
@@ -118,12 +106,5 @@ public class Tblcabecalhodiretor extends IndexableEntity{
         return tempotermino;
     }
 
-	public Integer getIdRota() {
-		return idRota;
-	}
-
-	public void setIdRota(Integer idRota) {
-		this.idRota = idRota;
-	}
 
 }

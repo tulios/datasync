@@ -53,6 +53,14 @@ import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunoescola;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunonaoescola;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunoreclama;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretorrendimentoacademico;
+import com.datasync.models.barco.prefeito.Tblcabecalhoprefeito;
+import com.datasync.models.barco.prefeito.Tblcaracterizacaoprefeito;
+import com.datasync.models.barco.prefeito.Tblidentificacaoprefeito;
+import com.datasync.models.barco.prefeito.Tblinformacaoprefeito;
+import com.datasync.models.barco.prefeito.Tblinformacaoprefeitoacordo;
+import com.datasync.models.barco.prefeito.Tblinformacaoprefeitopublicoalvo;
+import com.datasync.models.barco.prefeito.Tblinformacaoprefeitoreage;
+import com.datasync.models.barco.prefeito.Tblinformacaoprefeitoresponsaveltransporescolar;
 import com.datasync.models.barco.professor.Tblcabecalhoprofessor;
 import com.datasync.models.barco.professor.Tblcaracterizacaoprofessor;
 import com.datasync.models.barco.professor.Tblidentificacaoprofessor;
@@ -61,6 +69,15 @@ import com.datasync.models.barco.professor.Tblpercepcaoprofessoralunonaoescola;
 import com.datasync.models.barco.professor.Tblpercepcaoprofessoralunoreclama;
 import com.datasync.models.barco.professor.Tblpercepcaoprofessoravisoaluno;
 import com.datasync.models.barco.professor.Tblpercepcaoprofessorprovidencia;
+import com.datasync.models.barco.secretario.Tblcabecalhosecretario;
+import com.datasync.models.barco.secretario.Tblcaracterizacaosecretario;
+import com.datasync.models.barco.secretario.Tblidentificacaosecretario;
+import com.datasync.models.barco.secretario.Tblinformacaosecretarioacordo;
+import com.datasync.models.barco.secretario.Tblinformacaosecretariocriterio;
+import com.datasync.models.barco.secretario.Tblinformacaosecretariooutrotransporte;
+import com.datasync.models.barco.secretario.Tblinformacaosecretarioreage;
+import com.datasync.models.barco.secretario.Tblpercepcaosecretariodificuldade;
+import com.datasync.models.barco.secretario.Tblpercepcaosecretariomotivobarqueiroterceirizado;
 import com.datasync.models.custo.TblCabecalhoCondutor;
 import com.datasync.models.custo.TblCabecalhoEmbarcacao;
 import com.datasync.models.custo.TblCabecalhoMecanico;
@@ -159,8 +176,25 @@ public class ModelUtil {
 			indexables.add(new Tblpercepcaodiretorrendimentoacademico());
 			
 			//Prefeito
+			indexables.add(new Tblcabecalhoprefeito());
+			indexables.add(new Tblcaracterizacaoprefeito());
+			indexables.add(new Tblidentificacaoprefeito());
+			indexables.add(new Tblinformacaoprefeito());
+			indexables.add(new Tblinformacaoprefeitoacordo());
+			indexables.add(new Tblinformacaoprefeitopublicoalvo());
+			indexables.add(new Tblinformacaoprefeitoreage());
+			indexables.add(new Tblinformacaoprefeitoresponsaveltransporescolar());
 			
 			//Secretario
+			indexables.add(new Tblcabecalhosecretario());
+			indexables.add(new Tblcaracterizacaosecretario());
+			indexables.add(new Tblidentificacaosecretario());
+			indexables.add(new Tblinformacaosecretarioacordo());
+			indexables.add(new Tblinformacaosecretariocriterio());
+			indexables.add(new Tblinformacaosecretariooutrotransporte());
+			indexables.add(new Tblinformacaosecretarioreage());
+			indexables.add(new Tblpercepcaosecretariodificuldade());
+			indexables.add(new Tblpercepcaosecretariomotivobarqueiroterceirizado());
 		}
 		
 		return indexables;

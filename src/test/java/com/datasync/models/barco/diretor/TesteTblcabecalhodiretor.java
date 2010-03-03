@@ -41,6 +41,7 @@ public class TesteTblcabecalhodiretor extends TesteBarco {
         var.setRota("rota");
         var.setTempoinicio("1");
         var.setTempotermino("2");
+        var.setIdRota(1);
         getLocalEm().persist(var);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhodiretor t").getSingleResult();

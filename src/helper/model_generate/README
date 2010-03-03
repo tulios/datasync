@@ -5,3 +5,7 @@ jruby -S rake model:generate['com.datasync.models.barco.professor','/Users/tulio
 jruby -S rake model:generate['com.datasync.models.barco.professor','/Users/tulios/Desktop/models/professor','TesteBarco']
 
 jruby -S rake model:generate['com.datasync.models.barco.aluno','/Users/tulios/Desktop/models/aluno','TesteBarco']
+
+jruby -S rake model:generate['com.datasync.models.barco.prefeito','/Users/tulios/Desktop/models/prefeito','TesteBarco']
+
+jruby -S rake model:generate['com.datasync.models.barco.secretario','/Users/tulios/Desktop/models/secretario','TesteBarco']

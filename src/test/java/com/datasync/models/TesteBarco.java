@@ -84,6 +84,25 @@ public class TesteBarco extends Teste{
 				"Tblcabecalhodiretor",
 				
 				//Prefeito
+				"Tblinformacaoprefeitoresponsaveltransporescolar",
+				"Tblinformacaoprefeitoreage",
+				"Tblinformacaoprefeitopublicoalvo",
+				"Tblinformacaoprefeitoacordo",
+				"Tblinformacaoprefeito",
+				"Tblidentificacaoprefeito",
+				"Tblcaracterizacaoprefeito",
+				"Tblcabecalhoprefeito",
+				
+				//Secretario
+				"Tblpercepcaosecretariomotivobarqueiroterceirizado",
+				"Tblpercepcaosecretariodificuldade",
+				"Tblinformacaosecretarioreage",
+				"Tblinformacaosecretariooutrotransporte",
+				"Tblinformacaosecretariocriterio",
+				"Tblinformacaosecretarioacordo",
+				"Tblidentificacaosecretario",
+				"Tblcaracterizacaosecretario",
+				"Tblcabecalhosecretario",
 				
 				//Tabelas Comuns
 				"tblEscola",
@@ -120,7 +139,14 @@ public class TesteBarco extends Teste{
 				"TblTipoResposta",
 				"TblTipoOutroTransporte",
 				"TblTipoAlunoNaoEscola",
-				"TblTipoReclamacao"
+				"TblTipoReclamacao",
+				"tblTipoAcordo",
+				"tblTipoPublicoAlvo",
+				"tblTipoReage",
+				"tblTipoResponsavel",
+				"tblTipoCriterio",
+				"tblTipoDificuldade",
+				"tblTipoMotivoBarqueiroTerceirizado"
 		};
 		
 		for(String tabela : tabelas){
@@ -165,7 +191,14 @@ public class TesteBarco extends Teste{
 				"insert into tblTipoResposta values (1,'Não sabe/Não quis informar');",
 				"insert into tblTipoOutroTransporte values (1,'Não vem');",
 				"insert into tblTipoAlunoNaoEscola values (1,'Não resposta');",
-				"insert into tblTipoReclamacao values (1,'Não resposta');"
+				"insert into tblTipoReclamacao values (1,'Não resposta');",
+				"insert into tblTipoAcordo values (1,'O FNDE/MEC repassa direto o dinheiro para o estado');",
+				"insert into tblTipoPublicoAlvo values (1,'Passageiros');",
+				"insert into tblTipoReage values (1,'Continua transportando os alunos');",
+				"insert into tblTipoResponsavel values(1,'Prefeitura');",
+				"insert into tblTipoCriterio values (1,'Menor tempo de viagem');",
+				"insert into tblTipoDificuldade values (1,'Pontualidade');",
+				"insert into tblTipoMotivoBarqueiroTerceirizado values (1,'Segurança na navegação');"
 		};
 		
 		for (String insert : inserts){

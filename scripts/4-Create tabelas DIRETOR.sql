@@ -552,4 +552,5 @@ ALTER TABLE tblPercepcaoDiretorRendimentoAcademico ADD CONSTRAINT ReftblCabecalh
     REFERENCES tblCabecalhoDiretor(IdFormulario)
 go
 
+alter table tblCabecalhoDiretor add IdRota int null;
 
