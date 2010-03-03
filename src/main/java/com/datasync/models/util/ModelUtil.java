@@ -47,6 +47,7 @@ import com.datasync.models.barco.professor.Tblidentificacaoprofessor;
 import com.datasync.models.barco.professor.Tblpercepcaoprofessoralunoescola;
 import com.datasync.models.barco.professor.Tblpercepcaoprofessoralunonaoescola;
 import com.datasync.models.barco.professor.Tblpercepcaoprofessoralunoreclama;
+import com.datasync.models.barco.professor.Tblpercepcaoprofessoravisoaluno;
 import com.datasync.models.custo.TblCabecalhoCondutor;
 import com.datasync.models.custo.TblCabecalhoEmbarcacao;
 import com.datasync.models.custo.TblCabecalhoMecanico;
@@ -127,6 +128,7 @@ public class ModelUtil {
 			indexables.add(new Tblpercepcaoprofessoralunoescola());
 			indexables.add(new Tblpercepcaoprofessoralunonaoescola());
 			indexables.add(new Tblpercepcaoprofessoralunoreclama());
+			indexables.add(new Tblpercepcaoprofessoravisoaluno());
 			
 			//Diretor
 			
