@@ -57,6 +57,15 @@ import com.datasync.models.barco.professor.TesteTblpercepcaoprofessoralunonaoesc
 import com.datasync.models.barco.professor.TesteTblpercepcaoprofessoralunoreclama;
 import com.datasync.models.barco.professor.TesteTblpercepcaoprofessoravisoaluno;
 import com.datasync.models.barco.professor.TesteTblpercepcaoprofessorprovidencia;
+import com.datasync.models.barco.secretario.TesteTblcabecalhosecretario;
+import com.datasync.models.barco.secretario.TesteTblcaracterizacaosecretario;
+import com.datasync.models.barco.secretario.TesteTblidentificacaosecretario;
+import com.datasync.models.barco.secretario.TesteTblinformacaosecretarioacordo;
+import com.datasync.models.barco.secretario.TesteTblinformacaosecretariocriterio;
+import com.datasync.models.barco.secretario.TesteTblinformacaosecretariooutrotransporte;
+import com.datasync.models.barco.secretario.TesteTblinformacaosecretarioreage;
+import com.datasync.models.barco.secretario.TesteTblpercepcaosecretariodificuldade;
+import com.datasync.models.barco.secretario.TesteTblpercepcaosecretariomotivobarqueiroterceirizado;
 
 @RunWith(value=Suite.class)
 @SuiteClasses({  
@@ -121,9 +130,19 @@ import com.datasync.models.barco.professor.TesteTblpercepcaoprofessorprovidencia
 	TesteTblinformacaoprefeitoacordo.class,
 	TesteTblinformacaoprefeitopublicoalvo.class,
 	TesteTblinformacaoprefeitoreage.class,
-	TesteTblinformacaoprefeitoresponsaveltransporescolar.class
+	TesteTblinformacaoprefeitoresponsaveltransporescolar.class,
 	
 	//Secretario
+	TesteTblcabecalhosecretario.class,
+	TesteTblcaracterizacaosecretario.class,
+	TesteTblidentificacaosecretario.class,
+	TesteTblinformacaosecretarioacordo.class,
+	TesteTblinformacaosecretariocriterio.class,
+	TesteTblinformacaosecretariooutrotransporte.class,
+	TesteTblinformacaosecretarioreage.class,
+	TesteTblpercepcaosecretariodificuldade.class,
+	TesteTblpercepcaosecretariomotivobarqueiroterceirizado.class
+	
 })
 public class TodosBarco {
 }

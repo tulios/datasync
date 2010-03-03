@@ -81,6 +81,17 @@ public class TesteBarco extends Teste{
 				"Tblcaracterizacaoprefeito",
 				"Tblcabecalhoprefeito",
 				
+				//Secretario
+				"Tblpercepcaosecretariomotivobarqueiroterceirizado",
+				"Tblpercepcaosecretariodificuldade",
+				"Tblinformacaosecretarioreage",
+				"Tblinformacaosecretariooutrotransporte",
+				"Tblinformacaosecretariocriterio",
+				"Tblinformacaosecretarioacordo",
+				"Tblidentificacaosecretario",
+				"Tblcaracterizacaosecretario",
+				"Tblcabecalhosecretario",
+				
 				//Tabelas Comuns
 				"tblEscola",
 				"tblMunicipio",
@@ -115,7 +126,10 @@ public class TesteBarco extends Teste{
 				"tblTipoAcordo",
 				"tblTipoPublicoAlvo",
 				"tblTipoReage",
-				"tblTipoResponsavel"
+				"tblTipoResponsavel",
+				"tblTipoCriterio",
+				"tblTipoDificuldade",
+				"tblTipoMotivoBarqueiroTerceirizado"
 		};
 		
 		for(String tabela : tabelas){
@@ -159,7 +173,10 @@ public class TesteBarco extends Teste{
 				"insert into tblTipoAcordo values (1,'O FNDE/MEC repassa direto o dinheiro para o estado');",
 				"insert into tblTipoPublicoAlvo values (1,'Passageiros');",
 				"insert into tblTipoReage values (1,'Continua transportando os alunos');",
-				"insert into tblTipoResponsavel values(1,'Prefeitura');"
+				"insert into tblTipoResponsavel values(1,'Prefeitura');",
+				"insert into tblTipoCriterio values (1,'Menor tempo de viagem');",
+				"insert into tblTipoDificuldade values (1,'Pontualidade');",
+				"insert into tblTipoMotivoBarqueiroTerceirizado values (1,'Segurança na navegação');"
 		};
 		
 		for (String insert : inserts){
