@@ -33,6 +33,11 @@ public class TesteCusto extends Teste{
 				"TblCabecalhoMonitor",
 				
 				//Embarcado
+				"Tblsobedesce",
+				"Tblidentificacaoveiculo",
+				"Tblidentificacaorota",
+				"Tblidentificacaomonitor",
+				"Tblcabecalhoembarcada",
 				
 				//Tipos Comuns
 				"tblMunicipio"

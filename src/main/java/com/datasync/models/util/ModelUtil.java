@@ -101,6 +101,11 @@ import com.datasync.models.custo.TblIdCondutor;
 import com.datasync.models.custo.TblIdEmbarcacao;
 import com.datasync.models.custo.TblIdMecanico;
 import com.datasync.models.custo.TblIdMonitor;
+import com.datasync.models.custo.embarcado.Tblcabecalhoembarcada;
+import com.datasync.models.custo.embarcado.Tblidentificacaomonitor;
+import com.datasync.models.custo.embarcado.Tblidentificacaorota;
+import com.datasync.models.custo.embarcado.Tblidentificacaoveiculo;
+import com.datasync.models.custo.embarcado.Tblsobedesce;
 
 public class ModelUtil {
 
@@ -122,6 +127,12 @@ public class ModelUtil {
 			indexables.add(new TblIdMonitor());
 			
 			//Embarcado
+			indexables.add(new Tblcabecalhoembarcada());
+			indexables.add(new Tblidentificacaomonitor());
+			indexables.add(new Tblidentificacaorota());
+			indexables.add(new Tblidentificacaoveiculo());
+			indexables.add(new Tblsobedesce());
+			
 			return indexables;
 			
 		}else if (packageName.equalsIgnoreCase(BARCO)){
