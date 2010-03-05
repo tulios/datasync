@@ -104,6 +104,23 @@ public class TesteBarco extends Teste{
 				"Tblcaracterizacaosecretario",
 				"Tblcabecalhosecretario",
 				
+				//Pais
+				"Tblinformacaopaistransportaoutro",
+				"Tblinformacaopaissugestao", 
+				"Tblinformacaopaisprovidencia",
+				"Tblinformacaopaisoutrotransporte",
+				"Tblinformacaopaisescolhebarco",
+				"Tblinformacaopaisepocapior",
+				"Tblinformacaopaisdonobarco",
+				"Tblinformacaopaisbarcoatrasa",
+				"Tblinformacaopaisalunonaoescola",
+				"Tblinformacaopais",
+				"Tblidentificacaopais",
+				"Tblcaracterizacaofamiliapaistrabalho",
+				"Tblcaracterizacaofamiliapaisauxilio",
+				"Tblcaracterizacaofamiliapais",
+				"Tblcabecalhopais",
+				
 				//Tabelas Comuns
 				"tblEscola",
 				"tblMunicipio",
@@ -146,7 +163,9 @@ public class TesteBarco extends Teste{
 				"tblTipoResponsavel",
 				"tblTipoCriterio",
 				"tblTipoDificuldade",
-				"tblTipoMotivoBarqueiroTerceirizado"
+				"tblTipoMotivoBarqueiroTerceirizado",
+				"tblTipoProvidenciaPai",
+				"tbltiposugestao"
 		};
 		
 		for(String tabela : tabelas){
@@ -198,7 +217,9 @@ public class TesteBarco extends Teste{
 				"insert into tblTipoResponsavel values(1,'Prefeitura');",
 				"insert into tblTipoCriterio values (1,'Menor tempo de viagem');",
 				"insert into tblTipoDificuldade values (1,'Pontualidade');",
-				"insert into tblTipoMotivoBarqueiroTerceirizado values (1,'Segurança na navegação');"
+				"insert into tblTipoMotivoBarqueiroTerceirizado values (1,'Segurança na navegação');",
+				"insert into tblTipoProvidenciaPai values (1,'Não faz nada');",
+				"insert into tbltiposugestao values (1,'Ajuste de horário escolar');"
 		};
 		
 		for (String insert : inserts){

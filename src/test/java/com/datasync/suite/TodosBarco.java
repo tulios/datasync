@@ -53,6 +53,21 @@ import com.datasync.models.barco.diretor.TesteTblpercepcaodiretoralunoescola;
 import com.datasync.models.barco.diretor.TesteTblpercepcaodiretoralunonaoescola;
 import com.datasync.models.barco.diretor.TesteTblpercepcaodiretoralunoreclama;
 import com.datasync.models.barco.diretor.TesteTblpercepcaodiretorrendimentoacademico;
+import com.datasync.models.barco.pais.TesteTblcabecalhopais;
+import com.datasync.models.barco.pais.TesteTblcaracterizacaofamiliapais;
+import com.datasync.models.barco.pais.TesteTblcaracterizacaofamiliapaisauxilio;
+import com.datasync.models.barco.pais.TesteTblcaracterizacaofamiliapaistrabalho;
+import com.datasync.models.barco.pais.TesteTblidentificacaopais;
+import com.datasync.models.barco.pais.TesteTblinformacaopais;
+import com.datasync.models.barco.pais.TesteTblinformacaopaisalunonaoescola;
+import com.datasync.models.barco.pais.TesteTblinformacaopaisbarcoatrasa;
+import com.datasync.models.barco.pais.TesteTblinformacaopaisdonobarco;
+import com.datasync.models.barco.pais.TesteTblinformacaopaisepocapior;
+import com.datasync.models.barco.pais.TesteTblinformacaopaisescolhebarco;
+import com.datasync.models.barco.pais.TesteTblinformacaopaisoutrotransporte;
+import com.datasync.models.barco.pais.TesteTblinformacaopaisprovidencia;
+import com.datasync.models.barco.pais.TesteTblinformacaopaissugestao;
+import com.datasync.models.barco.pais.TesteTblinformacaopaistransportaoutro;
 import com.datasync.models.barco.prefeito.TesteTblcabecalhoprefeito;
 import com.datasync.models.barco.prefeito.TesteTblcaracterizacaoprefeito;
 import com.datasync.models.barco.prefeito.TesteTblidentificacaoprefeito;
@@ -165,7 +180,24 @@ import com.datasync.models.barco.secretario.TesteTblpercepcaosecretariomotivobar
 	TesteTblinformacaosecretariooutrotransporte.class,
 	TesteTblinformacaosecretarioreage.class,
 	TesteTblpercepcaosecretariodificuldade.class,
-	TesteTblpercepcaosecretariomotivobarqueiroterceirizado.class
+	TesteTblpercepcaosecretariomotivobarqueiroterceirizado.class,
+	
+	//Pais
+	TesteTblcabecalhopais.class,
+	TesteTblcaracterizacaofamiliapais.class,
+	TesteTblcaracterizacaofamiliapaisauxilio.class,
+	TesteTblcaracterizacaofamiliapaistrabalho.class,
+	TesteTblidentificacaopais.class,
+	TesteTblinformacaopais.class,
+	TesteTblinformacaopaisalunonaoescola.class,
+	TesteTblinformacaopaisbarcoatrasa.class,
+	TesteTblinformacaopaisdonobarco.class,
+	TesteTblinformacaopaisepocapior.class,
+	TesteTblinformacaopaisescolhebarco.class,
+	TesteTblinformacaopaisoutrotransporte.class,
+	TesteTblinformacaopaisprovidencia.class,
+	TesteTblinformacaopaissugestao.class,
+	TesteTblinformacaopaistransportaoutro.class
 	
 })
 public class TodosBarco {

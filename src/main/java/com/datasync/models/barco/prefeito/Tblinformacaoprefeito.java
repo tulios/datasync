@@ -7,8 +7,6 @@ import javax.persistence.Table;
 
 import com.datasync.models.IndexableEntity;
 
-import java.sql.Timestamp;
-
 @Entity
 @Table(name = "tblInformacaoPrefeito")
 @SuppressWarnings("serial")

@@ -53,6 +53,21 @@ import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunoescola;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunonaoescola;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunoreclama;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretorrendimentoacademico;
+import com.datasync.models.barco.pais.Tblcabecalhopais;
+import com.datasync.models.barco.pais.Tblcaracterizacaofamiliapais;
+import com.datasync.models.barco.pais.Tblcaracterizacaofamiliapaisauxilio;
+import com.datasync.models.barco.pais.Tblcaracterizacaofamiliapaistrabalho;
+import com.datasync.models.barco.pais.Tblidentificacaopais;
+import com.datasync.models.barco.pais.Tblinformacaopais;
+import com.datasync.models.barco.pais.Tblinformacaopaisalunonaoescola;
+import com.datasync.models.barco.pais.Tblinformacaopaisbarcoatrasa;
+import com.datasync.models.barco.pais.Tblinformacaopaisdonobarco;
+import com.datasync.models.barco.pais.Tblinformacaopaisepocapior;
+import com.datasync.models.barco.pais.Tblinformacaopaisescolhebarco;
+import com.datasync.models.barco.pais.Tblinformacaopaisoutrotransporte;
+import com.datasync.models.barco.pais.Tblinformacaopaisprovidencia;
+import com.datasync.models.barco.pais.Tblinformacaopaissugestao;
+import com.datasync.models.barco.pais.Tblinformacaopaistransportaoutro;
 import com.datasync.models.barco.prefeito.Tblcabecalhoprefeito;
 import com.datasync.models.barco.prefeito.Tblcaracterizacaoprefeito;
 import com.datasync.models.barco.prefeito.Tblidentificacaoprefeito;
@@ -195,6 +210,23 @@ public class ModelUtil {
 			indexables.add(new Tblinformacaosecretarioreage());
 			indexables.add(new Tblpercepcaosecretariodificuldade());
 			indexables.add(new Tblpercepcaosecretariomotivobarqueiroterceirizado());
+			
+			//Pais
+			indexables.add(new Tblcabecalhopais());
+			indexables.add(new Tblcaracterizacaofamiliapais());
+			indexables.add(new Tblcaracterizacaofamiliapaisauxilio());
+			indexables.add(new Tblcaracterizacaofamiliapaistrabalho());
+			indexables.add(new Tblidentificacaopais());
+			indexables.add(new Tblinformacaopais());
+			indexables.add(new Tblinformacaopaisalunonaoescola());
+			indexables.add(new Tblinformacaopaisbarcoatrasa());
+			indexables.add(new Tblinformacaopaisdonobarco());
+			indexables.add(new Tblinformacaopaisepocapior());
+			indexables.add(new Tblinformacaopaisescolhebarco());
+			indexables.add(new Tblinformacaopaisoutrotransporte());
+			indexables.add(new Tblinformacaopaisprovidencia());
+			indexables.add(new Tblinformacaopaissugestao());
+			indexables.add(new Tblinformacaopaistransportaoutro());
 		}
 		
 		return indexables;
