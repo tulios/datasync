@@ -111,17 +111,17 @@ public class ModelUtil {
 		List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
 
 		if (packageName.equalsIgnoreCase(CUSTO)){
+			//Custo
 			indexables.add(new TblCabecalhoCondutor());
 			indexables.add(new TblIdCondutor());
-			
 			indexables.add(new TblCabecalhoEmbarcacao());
 			indexables.add(new TblIdEmbarcacao());
-			
 			indexables.add(new TblCabecalhoMecanico());
 			indexables.add(new TblIdMecanico());
-			
 			indexables.add(new TblCabecalhoMonitor());
 			indexables.add(new TblIdMonitor());
+			
+			//Embarcado
 			return indexables;
 			
 		}else if (packageName.equalsIgnoreCase(BARCO)){

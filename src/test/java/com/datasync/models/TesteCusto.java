@@ -12,7 +12,8 @@ public class TesteCusto extends Teste{
 		open();
 
 		clearCusto();
-
+		insertDefaultData();
+		
 		serverEm.getTransaction().commit();
 		localEm.getTransaction().commit();
 
@@ -20,29 +21,38 @@ public class TesteCusto extends Teste{
 	}  
 
 	private void clearCusto(){
-		localEm.createNativeQuery("delete from TblIdCondutor").executeUpdate();
-		serverEm.createNativeQuery("delete from TblIdCondutor").executeUpdate();
+		String[] tabelas= new String[]{
+				//Custo
+				"TblIdCondutor",
+				"TblCabecalhoCondutor",
+				"TblIdEmbarcacao",
+				"TblCabecalhoEmbarcacao",
+				"TblIdMecanico",
+				"TblCabecalhoMecanico",
+				"TblIdMonitor",
+				"TblCabecalhoMonitor",
+				
+				//Embarcado
+				
+				//Tipos Comuns
+				"tblMunicipio"
+		};
 		
-		localEm.createNativeQuery("delete from TblCabecalhoCondutor").executeUpdate();
-		serverEm.createNativeQuery("delete from TblCabecalhoCondutor").executeUpdate();
-
-		localEm.createNativeQuery("delete from TblIdEmbarcacao").executeUpdate();
-		serverEm.createNativeQuery("delete from TblIdEmbarcacao").executeUpdate();
+		for (String tabela : tabelas){
+			localEm.createNativeQuery("delete from " + tabela).executeUpdate();
+			serverEm.createNativeQuery("delete from " + tabela).executeUpdate();
+		}
+	}
+	
+	private void insertDefaultData(){
+		String[] inserts = new String[]{
+				"insert into tblMunicipio values (1, 'Brasília', 'DF');"
+		};
 		
-		localEm.createNativeQuery("delete from TblCabecalhoEmbarcacao").executeUpdate();
-		serverEm.createNativeQuery("delete from TblCabecalhoEmbarcacao").executeUpdate();
-
-		localEm.createNativeQuery("delete from TblIdMecanico").executeUpdate();
-		serverEm.createNativeQuery("delete from TblIdMecanico").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblCabecalhoMecanico").executeUpdate();
-		serverEm.createNativeQuery("delete from TblCabecalhoMecanico").executeUpdate();
-
-		localEm.createNativeQuery("delete from TblIdMonitor").executeUpdate();
-		serverEm.createNativeQuery("delete from TblIdMonitor").executeUpdate();
-		
-		localEm.createNativeQuery("delete from TblCabecalhoMonitor").executeUpdate();
-		serverEm.createNativeQuery("delete from TblCabecalhoMonitor").executeUpdate();
+		for (String insert : inserts){
+			localEm.createNativeQuery(insert).executeUpdate();
+			serverEm.createNativeQuery(insert).executeUpdate();
+		}
 	}
 	
 }
