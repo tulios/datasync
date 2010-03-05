@@ -11,8 +11,6 @@ import org.junit.Test;
 
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.TesteBarco;
-import com.datasync.models.barco.condutor.TblBarcoCabecalhoCondutor;
-import com.datasync.models.barco.condutor.TblCaracterizacaoCondutor;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncLocalDatabaseService;
 import com.datasync.service.runner.ServiceRunner;
@@ -54,7 +52,7 @@ public class TesteTblCaracterizacaoCondutor extends TesteBarco {
 		c.setAnoRegistro(2009);
 		c.setParticipacaoCurso("Sim");
 		c.setPilotaBarcoMotorPopa("Sim");
-		c.setQuantoHP(200);
+		c.setQuantoHP(200.5);
 		getLocalEm().persist(c);
 		
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblCaracterizacaoCondutor t").getSingleResult();

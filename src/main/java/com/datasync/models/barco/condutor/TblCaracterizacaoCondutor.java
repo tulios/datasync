@@ -34,7 +34,7 @@ public class TblCaracterizacaoCondutor extends IndexableEntity{
 	@Column(name = "PilotaBarcoMotorPopa", length = 3)
 	private String pilotaBarcoMotorPopa;
 	@Column(name = "QuantoHP")
-	private int quantoHP;
+	private double quantoHP;
 
 	public TblCaracterizacaoCondutor(){
 	}
@@ -129,11 +129,11 @@ public class TblCaracterizacaoCondutor extends IndexableEntity{
 		this.pilotaBarcoMotorPopa = pilotaBarcoMotorPopa;
 	}
 
-	public int getQuantoHP() {
+	public double getQuantoHP() {
 		return quantoHP;
 	}
 
-	public void setQuantoHP(int quantoHP) {
+	public void setQuantoHP(double quantoHP) {
 		this.quantoHP = quantoHP;
 	}
 	

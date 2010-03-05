@@ -943,3 +943,4 @@ ALTER TABLE [dbo].[tblNovaLanchaCondutor]  WITH CHECK ADD  CONSTRAINT [ReftblCab
 REFERENCES [dbo].[tblCabecalhoCondutor] ([IdFormulario])
 
 alter table tblCabecalhoCondutor add IdRota int null;
+alter table tblCaracterizacaoCondutor alter column QuantoHP decimal(10,2);
