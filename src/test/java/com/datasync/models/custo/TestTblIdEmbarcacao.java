@@ -9,8 +9,6 @@ import org.junit.Test;
 
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.TesteCusto;
-import com.datasync.models.custo.TblCabecalhoEmbarcacao;
-import com.datasync.models.custo.TblIdEmbarcacao;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncLocalDatabaseService;
 import com.datasync.service.runner.ServiceRunner;
@@ -33,16 +31,17 @@ public class TestTblIdEmbarcacao extends TesteCusto {
 
 		TblCabecalhoEmbarcacao e = new TblCabecalhoEmbarcacao();
 		e.setIdFormulario("1");
-		e.setPesquisador("T�lio");
-		e.setMunicipio("Bras�lia");
+		e.setPesquisador("Tulio");
+		e.setMunicipio("Brasilia");
 		e.setUf("DF");
-		e.setResponsavel("T�lio");
+		e.setResponsavel("Tulio");
 		e.setDataColeta("10-10-2010");
 		getLocalEm().persist(e);
 		
 		TblIdEmbarcacao eId = new TblIdEmbarcacao();
 		eId.setIdFormulario("1");
 		eId.setIdEmbarcacao("10");
+		/*
 		eId.setAlunosmatutino("10");
 		eId.setAlunosnoturno("10");
 		eId.setAlunosvespertino("10");
@@ -56,7 +55,7 @@ public class TestTblIdEmbarcacao extends TesteCusto {
 		eId.setNomeembarcacao("Nome Barco");
 		eId.setPosicaomotor("1");
 		eId.setPotenciamotor("20");
-		eId.setPropriedadeembarcacao("T�lio");
+		eId.setPropriedadeembarcacao("Tulio");
 		eId.setPropriedadeoutros("Outros");
 		eId.setQuantidaderota("10");
 		eId.setQuantmotor("10");
@@ -73,6 +72,7 @@ public class TestTblIdEmbarcacao extends TesteCusto {
 		eId.setValorcusto("1000");
 		eId.setValorembarcacao("5000");
 		eId.setValorunidade("500");
+		*/
 		getLocalEm().persist(eId);
 
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblCabecalhoEmbarcacao t").getSingleResult();

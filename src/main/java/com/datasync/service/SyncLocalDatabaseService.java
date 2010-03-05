@@ -21,7 +21,7 @@ import com.datasync.ui.MainFrame;
 public class SyncLocalDatabaseService implements IService {
 
 	private static Logger log = Logger.getLogger(SyncLocalDatabaseService.class);
-	
+
 	private EntityManager localEm;
 	private EntityManager serverEm;
 
@@ -52,29 +52,29 @@ public class SyncLocalDatabaseService implements IService {
 			if (indexable.isCompoundKey()){
 				String compoundName = indexable.getCompoundIdColumnName();
 				String strQuery = "from " + entityName + " where " + columnName + " not in (:ids) " +
-								  "and " + compoundName + " not in (:compoundIds) order by " + columnName;
-				
+				"and " + compoundName + " not in (:compoundIds) order by " + columnName;
+
 				List<String> pkId = new ArrayList<String>();
 				List<String> compoundId = new ArrayList<String>();
-				
+
 				for (String id : ids) {
 					String[] parts = id.split("#");
 					pkId.add(parts[0]);
 					compoundId.add(parts[1]);
 				}
-				
+
 				Set<String> set = new HashSet<String>(pkId);
 				List<String> uniquePkId = new ArrayList<String>(set);
 				Collections.sort(uniquePkId);
-				
+
 				set = new HashSet<String>(compoundId);
 				List<String> uniqueCompoundId = new ArrayList<String>(set);
 				Collections.sort(uniqueCompoundId);
-				
+
 				query = localEm.createQuery(strQuery);
 				query.setParameter("ids", uniquePkId);
 				query.setParameter("compoundIds", uniqueCompoundId);
-				
+
 			} else {
 				String strQuery = "from " + entityName + " where " + columnName + " not in (:ids) order by " + columnName;
 				query = localEm.createQuery(strQuery);
@@ -100,21 +100,25 @@ public class SyncLocalDatabaseService implements IService {
 			//Verifica se ja existe no outro banco
 			Query search = null;
 			if (entity.isCompoundKey()){
-				
+
 				String compoundName = entity.getCompoundIdColumnName();
-				
+
 				search = serverEm.createQuery("from " + entityName +" where " + columnName   + " = :id and " + 
-																			    compoundName + " = :compoundId");
+											  compoundName + " = :compoundId");
 				String[] ids = entity.getIndexId().split("#");
 				search.setParameter("id", ids[0]);
-				
-				try{
-					int number = Integer.parseInt(ids[1]);
-					search.setParameter("compoundId", number);
-				}catch(NumberFormatException e){
+
+				if (entity.getCompoundKeyType().equalsIgnoreCase("String")){
 					search.setParameter("compoundId", ids[1]);
+				}else{
+					try{
+						int number = Integer.parseInt(ids[1]);
+						search.setParameter("compoundId", number);
+					}catch(NumberFormatException e){
+						search.setParameter("compoundId", ids[1]);
+					}
 				}
-				
+
 			}else{
 				search = serverEm.createQuery("from " + entityName +" where " + columnName + " = :id");
 				search.setParameter("id", entity.getIndexId());
@@ -131,7 +135,7 @@ public class SyncLocalDatabaseService implements IService {
 				// Salva no xml para marcar como ja realizado
 				processor.save(entity);
 			}
-			
+
 			index++;
 			atualizarProgressBar(index, resultList.size());
 		}
@@ -147,7 +151,7 @@ public class SyncLocalDatabaseService implements IService {
 			}
 		});
 	}
-	
+
 	@Override
 	@SuppressWarnings("unchecked")
 	public void execute() throws Exception {
@@ -156,23 +160,23 @@ public class SyncLocalDatabaseService implements IService {
 		for(IndexableEntity indexable : indexables){
 			MainFrame.getInstance().setMensagem("Sincronizando " + indexable.getShortClassName());
 			log.debug("-> " + indexable.getFullClassName());
-			
+
 			// Para manter a barra em 0% enquanto não começa o processo
 			atualizarProgressBar(0, 1);
-			
+
 			Query query  = createQuery(processor, indexable);
 			List<IndexableEntity> resultList = query.getResultList();
 
 			log.debug("ResultList: " + resultList.size());
 			if (resultList.size() > 0){
 				sync(processor, resultList);
-				
+
 			}else{
 				MainFrame.getInstance().setMensagem(indexable.getShortClassName() + " já está sincronizado");
 				atualizarProgressBar(1, 1);
 			}
 		}
-		
+
 		processor.commit();
 		// Para manter a barra em 100% quando tudo acabar
 		atualizarProgressBar(1, 1);

@@ -41,7 +41,12 @@ public class TblIdCondutor extends IndexableEntity {
 	private String condutorReserva;
 	@Column(name = "Observacao")
 	private String observacao;
-
+	@Column(name = "Grupo")
+	private String grupo;
+	@Column(name = "OutrasCategorias")
+	private String outrasCategorias;
+	
+	
 	public TblIdCondutor(){
 	}
 	
@@ -167,4 +172,20 @@ public class TblIdCondutor extends IndexableEntity {
 		this.observacao = observacao;
 	}
 
+	public String getGrupo() {
+		return grupo;
+	}
+
+	public void setGrupo(String grupo) {
+		this.grupo = grupo;
+	}
+
+	public String getOutrasCategorias() {
+		return outrasCategorias;
+	}
+
+	public void setOutrasCategorias(String outrasCategorias) {
+		this.outrasCategorias = outrasCategorias;
+	}
+	
 }

@@ -8,8 +8,16 @@ public abstract class IndexableEntity implements Serializable{
 	public abstract String getIndexId();
 	public abstract String getIdColumnName();
 
+	public String getIndexIdType(){
+		return "String";
+	}
+	
 	public boolean isCompoundKey(){
 		return false;
+	}
+	
+	public String getCompoundKeyType(){
+		return "Integer";
 	}
 	
 	public String getCompoundIdColumnName(){

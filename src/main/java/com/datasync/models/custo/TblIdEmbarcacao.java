@@ -99,6 +99,11 @@ public class TblIdEmbarcacao extends IndexableEntity {
     }
     
     @Override
+    public String getCompoundKeyType(){
+		return "String";
+	}
+    
+    @Override
     public String getIndexId() {
     	return getIdFormulario()+"#"+getIdEmbarcacao();
     }

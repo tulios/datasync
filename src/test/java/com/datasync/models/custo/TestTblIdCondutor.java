@@ -9,8 +9,6 @@ import org.junit.Test;
 
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.TesteCusto;
-import com.datasync.models.custo.TblCabecalhoCondutor;
-import com.datasync.models.custo.TblIdCondutor;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncLocalDatabaseService;
 import com.datasync.service.runner.ServiceRunner;
@@ -33,16 +31,16 @@ public class TestTblIdCondutor extends TesteCusto {
 
 		TblCabecalhoCondutor c = new TblCabecalhoCondutor();
 		c.setIdFormulario("1");
-		c.setPesquisador("T�lio");
-		c.setMunicipio("Bras�lia");
+		c.setPesquisador("Tulio");
+		c.setMunicipio("Brasilia");
 		c.setUf("DF");
-		c.setResponsavel("T�lio");
+		c.setResponsavel("Tulio");
 		c.setDataColeta("10-10-2010");
 		getLocalEm().persist(c);
 		
 		TblIdCondutor cId = new TblIdCondutor();
 		cId.setIdFormulario("1");
-		cId.setNome("T�lio");
+		cId.setNome("Tulio");
 		cId.setIdentidade("12332112");
 		cId.setIdentidadeUF("DF");
 		cId.setDataNasc("15-12-1987");
@@ -55,6 +53,8 @@ public class TestTblIdCondutor extends TesteCusto {
 		cId.setSalario("6.500");
 		cId.setCondutorReserva("123");
 		cId.setObservacao("Observacao");
+		cId.setGrupo("Grupo");
+		cId.setOutrasCategorias("Outras");
 		getLocalEm().persist(cId);
 
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblCabecalhoCondutor t").getSingleResult();
