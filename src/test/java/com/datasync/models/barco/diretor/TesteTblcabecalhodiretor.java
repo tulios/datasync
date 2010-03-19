@@ -9,12 +9,12 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.datasync.models.TesteBarco;
 import com.datasync.models.IndexableEntity;
-import com.datasync.models.barco.diretor.Tblcabecalhodiretor;
+import com.datasync.models.TesteBarco;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
+import com.datasync.service.runner.SyncServiceRunner;
 
 public class TesteTblcabecalhodiretor extends TesteBarco {
 
@@ -52,7 +52,7 @@ public class TesteTblcabecalhodiretor extends TesteBarco {
 
         close();
 
-        ServiceRunner runner = new ServiceRunner();
+        ServiceRunner runner = new SyncServiceRunner();
         runner.run(new SyncDatabasesService(indexables));
 
         processor = new IndexProcessor();

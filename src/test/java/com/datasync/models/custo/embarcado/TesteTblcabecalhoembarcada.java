@@ -12,6 +12,7 @@ import com.datasync.models.TesteCusto;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
+import com.datasync.service.runner.SyncServiceRunner;
 
 public class TesteTblcabecalhoembarcada extends TesteCusto {
 
@@ -46,7 +47,7 @@ public class TesteTblcabecalhoembarcada extends TesteCusto {
 
         close();
 
-        ServiceRunner runner = new ServiceRunner();
+        ServiceRunner runner = new SyncServiceRunner();
         runner.run(new SyncDatabasesService(indexables));
 
         processor = new IndexProcessor();

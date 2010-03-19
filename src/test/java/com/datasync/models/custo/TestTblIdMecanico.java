@@ -9,11 +9,10 @@ import org.junit.Test;
 
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.TesteCusto;
-import com.datasync.models.custo.TblCabecalhoMecanico;
-import com.datasync.models.custo.TblIdMecanico;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
+import com.datasync.service.runner.SyncServiceRunner;
 
 public class TestTblIdMecanico extends TesteCusto {
 
@@ -61,7 +60,7 @@ public class TestTblIdMecanico extends TesteCusto {
 
 		close();
 
-		ServiceRunner runner = new ServiceRunner();
+		ServiceRunner runner = new SyncServiceRunner();
 		runner.run(new SyncDatabasesService(indexables));
 
 		processor = new IndexProcessor();

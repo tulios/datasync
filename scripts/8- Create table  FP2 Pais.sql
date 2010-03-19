@@ -67,7 +67,7 @@ CREATE TABLE tblCaracterizacaoFamiliaPais(
     QuantidadeFilhos                int             NULL,
     QuantidadeFilhosIdadeEscolar    int             NULL,
     QuantidadeCasaPais              int             NULL,
-    QuantidadeCasaMãe               int             NULL,
+    QuantidadeCasaMÃ£e               int             NULL,
     QuantidadeCasaFilhos            int             NULL,
     QuantidadeCasaNoraGenro         int             NULL,
     QuantidadeCasaIrmao             int             NULL,

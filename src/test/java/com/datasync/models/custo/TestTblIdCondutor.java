@@ -12,6 +12,7 @@ import com.datasync.models.TesteCusto;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
+import com.datasync.service.runner.SyncServiceRunner;
 
 public class TestTblIdCondutor extends TesteCusto {
 
@@ -59,6 +60,7 @@ public class TestTblIdCondutor extends TesteCusto {
 
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblCabecalhoCondutor t").getSingleResult();
 		assertEquals(1, local.intValue());
+		
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblIdCondutor t").getSingleResult();
 		assertEquals(1, local.intValue());
 
@@ -67,7 +69,7 @@ public class TestTblIdCondutor extends TesteCusto {
 
 		close();
 
-		ServiceRunner runner = new ServiceRunner();
+		ServiceRunner runner = new SyncServiceRunner();
 		runner.run(new SyncDatabasesService(indexables));
 
 		processor = new IndexProcessor();

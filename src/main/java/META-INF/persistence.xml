@@ -32,7 +32,7 @@
 	 -->
 	  	<persistence-unit name="datasync-local" transaction-type="RESOURCE_LOCAL">
 			<properties>
-				<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.0.0.101:1433/BD_BARCO" />
+				<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.0.0.101:1433/BD_CUSTO" />
 				<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
 				<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
 				<property name="hibernate.connection.username" value="datasync_user" />
@@ -42,7 +42,7 @@
 		 
 		<persistence-unit name="datasync-server" transaction-type="RESOURCE_LOCAL">
 			<properties>
-				<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.0.0.101:1433/BD_BARCO2" />
+				<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.0.0.101:1433/BD_CUSTO2" />
 				<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
 				<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
 				<property name="hibernate.connection.username" value="datasync_user" />

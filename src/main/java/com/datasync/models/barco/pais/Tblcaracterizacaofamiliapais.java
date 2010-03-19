@@ -25,8 +25,8 @@ public class Tblcaracterizacaofamiliapais extends IndexableEntity{
     private Integer quantidadefilhosidadeescolar;
     @Column(name = "QuantidadeCasaPais")
     private Integer quantidadecasapais;
-    @Column(name = "QuantidadeCasaMãe")
-    private Integer quantidadecasamãe;
+    @Column(name = "QuantidadeCasaMae")
+    private Integer quantidadecasamae;
     @Column(name = "QuantidadeCasaFilhos")
     private Integer quantidadecasafilhos;
     @Column(name = "QuantidadeCasaNoraGenro")
@@ -103,11 +103,11 @@ public class Tblcaracterizacaofamiliapais extends IndexableEntity{
     }
 
     public void setQuantidadecasamãe(Integer quantidadecasamãe){
-        this.quantidadecasamãe = quantidadecasamãe;
+        this.quantidadecasamae = quantidadecasamãe;
     }
 
     public Integer getQuantidadecasamãe(){
-        return quantidadecasamãe;
+        return quantidadecasamae;
     }
 
     public void setQuantidadecasafilhos(Integer quantidadecasafilhos){

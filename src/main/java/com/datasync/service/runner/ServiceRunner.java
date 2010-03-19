@@ -13,8 +13,8 @@ public abstract class ServiceRunner {
 
 	protected static Logger log = Logger.getLogger(ServiceRunner.class);
 	
-	private EntityManager localEm;
-	private EntityManager remoteEm;
+	protected EntityManager localEm;
+	protected EntityManager remoteEm;
 	
 	EntityTransaction txLocal;
 	EntityTransaction txRemote;
@@ -59,17 +59,37 @@ public abstract class ServiceRunner {
 		}
 	}
 	
-	protected void executeServiceOnLocalServer(IService service) throws Exception {
+	protected void execute(IService service) throws Exception {
 		try{
-			service.setLocalEntityManager(localEm);
+			service.setLocalEntityManager(this.localEm);
+			service.setRemoteEntityManager(this.remoteEm);
 			log.debug("Running: " + service.getClass().getName());
 			service.execute();
-			
+		}
+		catch (Exception e) {
+			MainFrame.getInstance().apresentarErro("Erro ao executar operação.\n");
+			throw e;
+		}
+	}
+	
+	protected void commitLocalExecution() throws Exception {
+		try{
 			txLocal.commit();
 			localEm.close();
 		}
 		catch (Exception e) {
 			MainFrame.getInstance().apresentarErro("Erro ao executar operação no servidor local.\n");
+			throw e;
+		}
+	}
+	
+	protected void commitRemoteExecution() throws Exception {
+		try{
+			txRemote.commit();
+			remoteEm.close();
+		}
+		catch (Exception e) {
+			MainFrame.getInstance().apresentarErro("Erro ao executar operação no servidor remoto.\n");
 			throw e;
 		}
 	}
