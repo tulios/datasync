@@ -12,7 +12,7 @@ import org.junit.Test;
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.TesteBarco;
 import com.datasync.processor.IndexProcessor;
-import com.datasync.service.SyncLocalDatabaseService;
+import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
 
 public class TesteTblcabecalhoprofessor extends TesteBarco {
@@ -53,7 +53,7 @@ public class TesteTblcabecalhoprofessor extends TesteBarco {
         close();
 
         ServiceRunner runner = new ServiceRunner();
-        runner.run(new SyncLocalDatabaseService(indexables));
+        runner.run(new SyncDatabasesService(indexables));
 
         processor = new IndexProcessor();
         assertEquals(1, processor.getIdsList(cab.getFullClassName()).size());

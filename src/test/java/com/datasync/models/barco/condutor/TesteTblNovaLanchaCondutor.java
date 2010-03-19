@@ -14,7 +14,7 @@ import com.datasync.models.TesteBarco;
 import com.datasync.models.barco.condutor.TblBarcoCabecalhoCondutor;
 import com.datasync.models.barco.condutor.TblNovaLanchaCondutor;
 import com.datasync.processor.IndexProcessor;
-import com.datasync.service.SyncLocalDatabaseService;
+import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
 
 public class TesteTblNovaLanchaCondutor extends TesteBarco {
@@ -89,7 +89,7 @@ public class TesteTblNovaLanchaCondutor extends TesteBarco {
 		close();
 		
     	ServiceRunner runner = new ServiceRunner();
-    	runner.run(new SyncLocalDatabaseService(indexables));
+    	runner.run(new SyncDatabasesService(indexables));
     	
     	processor = new IndexProcessor();
     	assertEquals(1, processor.getIdsList(c.getFullClassName()).size());

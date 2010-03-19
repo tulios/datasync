@@ -11,7 +11,7 @@ import com.datasync.models.IndexableEntity;
 import com.datasync.models.TesteCusto;
 import com.datasync.models.custo.TblCabecalhoCondutor;
 import com.datasync.processor.IndexProcessor;
-import com.datasync.service.SyncLocalDatabaseService;
+import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
 
 public class TestTblCabecalhoCondutor extends TesteCusto{
@@ -47,7 +47,7 @@ public class TestTblCabecalhoCondutor extends TesteCusto{
 		close();
 		
     	ServiceRunner runner = new ServiceRunner();
-    	runner.run(new SyncLocalDatabaseService(indexables));
+    	runner.run(new SyncDatabasesService(indexables));
     	
     	processor = new IndexProcessor();
     	assertEquals(1, processor.getIdsList(c.getFullClassName()).size());

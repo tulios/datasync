@@ -36,10 +36,10 @@ public class BackupLocalDatabaseService implements IService {
 	}
 
 	@Override
-	public void setEntityManagers(EntityManager localEm, EntityManager serverEm) {
+	public void setLocalEntityManager(EntityManager localEm) {
 		this.localEm = localEm;
 	}
-
+	
 	private Query createQuery(String dir) {
 		Query query = localEm.createNativeQuery("BACKUP DATABASE :database TO DISK = :filePath");
 		
@@ -63,5 +63,10 @@ public class BackupLocalDatabaseService implements IService {
 		String fileName = dir+"\\"+localDBName+"-"+simpleDateFormat.format(data)+".bak";
 		
 		return fileName;
+	}
+
+	@Override
+	public void setRemoteEntityManager(EntityManager remoteEm) {
+		// TODO Auto-generated method stub
 	}
 }

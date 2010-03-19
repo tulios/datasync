@@ -10,6 +10,8 @@ public abstract class Processar extends Thread {
 	private static Logger log = Logger.getLogger(Processar.class);
 	protected IService service;
 	
+	protected abstract ServiceRunner getServiceRunner();
+	
 	private String formatTime(long time){
 		long minutos = (time/1000)/60;
 		time -= minutos * (1000 * 60);
@@ -35,7 +37,7 @@ public abstract class Processar extends Thread {
 
 			long start = System.currentTimeMillis();
 			
-			ServiceRunner runner = new ServiceRunner();
+			ServiceRunner runner = this.getServiceRunner();
 			boolean res = runner.run(this.service);
 
 			long time = System.currentTimeMillis() - start;

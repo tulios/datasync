@@ -12,7 +12,7 @@ import com.datasync.models.TesteCusto;
 import com.datasync.models.custo.TblCabecalhoMonitor;
 import com.datasync.models.custo.TblIdMonitor;
 import com.datasync.processor.IndexProcessor;
-import com.datasync.service.SyncLocalDatabaseService;
+import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
 
 public class TestTblIdMonitor extends TesteCusto {
@@ -64,7 +64,7 @@ public class TestTblIdMonitor extends TesteCusto {
 		close();
 
 		ServiceRunner runner = new ServiceRunner();
-		runner.run(new SyncLocalDatabaseService(indexables));
+		runner.run(new SyncDatabasesService(indexables));
 
 		processor = new IndexProcessor();
 		assertEquals(1, processor.getIdsList(mId.getFullClassName()).size());

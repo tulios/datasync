@@ -9,73 +9,83 @@ import com.datasync.jpa.JPAUtil;
 import com.datasync.service.IService;
 import com.datasync.ui.MainFrame;
 
-public class ServiceRunner {
+public abstract class ServiceRunner {
 
-	private static Logger log = Logger.getLogger(ServiceRunner.class);
+	protected static Logger log = Logger.getLogger(ServiceRunner.class);
 	
 	private EntityManager localEm;
-	private EntityManager serverEm;
+	private EntityManager remoteEm;
 	
 	EntityTransaction txLocal;
-	EntityTransaction txServer;
+	EntityTransaction txRemote;
 	
-	public boolean run(IService service) throws Exception {
-		try{
-			conectar();
-			executar(service);
-
-		} catch (Exception e) {
-			log.error(e.getMessage());
-			e.printStackTrace();
-			return false;
-		}
-		
-		return true;
-	}
+	public abstract boolean run(IService service) throws Exception;
 	
-	private void conectar() throws Exception{
+	protected void conectToLocalServer() throws Exception {
 		try{
-			MainFrame.getInstance().setMensagem("Iniciando conexão...");
+			MainFrame.getInstance().setMensagem("Iniciando conexão com servidor local...");
 			
 			this.localEm = JPAUtil.getInstance().getLocalEntityManager();
-			this.serverEm = JPAUtil.getInstance().getServerEntityManager();
-			
+
 			MainFrame.getInstance().setMensagem("Conectado, iniciando tarefa...");
 			
 			this.txLocal = localEm.getTransaction();
-			this.txServer = serverEm.getTransaction();
-			
 			this.txLocal.begin();
-			this.txServer.begin();
 			
 		} catch (Exception e) {
-			MainFrame.getInstance().apresentarErro("Erro de conexão", 
-					"Erro ao conectar com os servidores. Por favor, " +
-					"vefifique as configurações de conexão e tente novamente.\n\n" +
-					"Detalhes: "+e.getMessage());
+			MainFrame.getInstance().apresentarErro("Erro de conexão com o servidor local. " +
+				"Por favor, vefifique as configurações de conexão e tente novamente.\n\n");
 			
 			throw e;
 		}
 	}
 	
-	private void executar(IService service) throws Exception {
+	protected void conectToRemoteServer() throws Exception{
 		try{
-			service.setEntityManagers(localEm, serverEm);
+			MainFrame.getInstance().setMensagem("Iniciando conexão com o servidor remoto...");
+			
+			this.remoteEm = JPAUtil.getInstance().getServerEntityManager();
+			
+			MainFrame.getInstance().setMensagem("Conectado, iniciando tarefa...");
+			
+			this.txRemote = remoteEm.getTransaction();
+			this.txRemote.begin();
+			
+		} catch (Exception e) {
+			MainFrame.getInstance().apresentarErro("Erro de conexão com o servidor remoto." +
+				"Por favor, vefifique as configurações de conexão e tente novamente.\n\n");
+			
+			throw e;
+		}
+	}
+	
+	protected void executeServiceOnLocalServer(IService service) throws Exception {
+		try{
+			service.setLocalEntityManager(localEm);
 			log.debug("Running: " + service.getClass().getName());
 			service.execute();
 			
 			txLocal.commit();
-			txServer.commit();
-			
 			localEm.close();
-			serverEm.close();
 		}
 		catch (Exception e) {
-			MainFrame.getInstance().apresentarErro("Erro ao executar operação.\n" +
-					"Detalhes: "+e.getMessage());
-			
+			MainFrame.getInstance().apresentarErro("Erro ao executar operação no servidor local.\n");
 			throw e;
 		}
 	}
-
+	
+	protected void executeServiceOnRemoteServer(IService service) throws Exception {
+		try{
+			service.setRemoteEntityManager(remoteEm);
+			log.debug("Running: " + service.getClass().getName());
+			service.execute();
+			
+			txRemote.commit();
+			remoteEm.close();
+		}
+		catch (Exception e) {
+			MainFrame.getInstance().apresentarErro("Erro ao executar operação no servidor remoto.\n");
+			throw e;
+		}
+	}
 }
