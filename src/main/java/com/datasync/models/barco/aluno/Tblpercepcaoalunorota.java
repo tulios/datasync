@@ -21,6 +21,8 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
     private String descricaotempo;
     @Column(name = "Tempo")
     private String tempo;
+    @Column(name = "QuaisOutros")
+    private String quaisOutros;
 
     @Override
     public String getIdColumnName() {
@@ -74,5 +76,12 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
         return tempo;
     }
 
+	public String getQuaisOutros() {
+		return quaisOutros;
+	}
+
+	public void setQuaisOutros(String quaisOutros) {
+		this.quaisOutros = quaisOutros;
+	}
 
 }

@@ -66,6 +66,7 @@ public class TesteTblpercepcaoalunorota extends TesteBarco {
         var.setIdtipooutrotransporte(1);
         var.setDescricaotempo("Desc");
         var.setTempo("1");
+        var.setQuaisOutros("outros");
         getLocalEm().persist(var);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblpercepcaoalunorota t").getSingleResult();

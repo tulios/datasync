@@ -944,3 +944,4 @@ REFERENCES [dbo].[tblCabecalhoCondutor] ([IdFormulario])
 
 alter table tblCabecalhoCondutor add IdRota int null;
 alter table tblCaracterizacaoCondutor alter column QuantoHP decimal(10,2);
+alter table tblPercepcaoAlunoRota add QuaisOutros varchar(100) null; 
