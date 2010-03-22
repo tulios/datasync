@@ -36,10 +36,9 @@ public class TesteTblcaracterizacaoprefeito extends TesteBarco {
         cabecalho.setPesquisador("Tulio");
         cabecalho.setIdmunicipio(1);
         cabecalho.setDatacoleta(new Timestamp(new Date().getTime()));
-        cabecalho.setRota("rota");
-        cabecalho.setIdrota(1);
         cabecalho.setTempoinicio("1");
         cabecalho.setTempotermino("2");
+        cabecalho.setObservacao("Uma observacao");
         getLocalEm().persist(cabecalho);
         getServerEm().persist(cabecalho);
         
@@ -48,6 +47,7 @@ public class TesteTblcaracterizacaoprefeito extends TesteBarco {
         carac.setTempomandatoano(1);
         carac.setTempomandatomeses(1);
         carac.setQuantidademandato(1);
+        carac.setQuaisMandatos("Varios!");
         getLocalEm().persist(carac);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcaracterizacaoprefeito t").getSingleResult();

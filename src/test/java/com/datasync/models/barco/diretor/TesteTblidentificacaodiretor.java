@@ -38,9 +38,9 @@ public class TesteTblidentificacaodiretor extends TesteBarco {
         cabecalho.setIdinep(1);
         cabecalho.setDatacoleta(new Timestamp(new Date().getTime()));
         cabecalho.setFoto("foto");
-        cabecalho.setRota("rota");
         cabecalho.setTempoinicio("1");
         cabecalho.setTempotermino("2");
+        cabecalho.setObservacao("Observacao!");
         getLocalEm().persist(cabecalho);
         getServerEm().persist(cabecalho);
         
@@ -60,6 +60,8 @@ public class TesteTblidentificacaodiretor extends TesteBarco {
         var.setComunidade("comunidade");
         var.setSexo("m");
         var.setIdade(20);
+        var.setGrupo("Grupo");
+        var.setQuaisGrupos("Outros");
         getLocalEm().persist(var);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaodiretor t").getSingleResult();

@@ -36,10 +36,9 @@ public class TesteTblcabecalhosecretario extends TesteBarco {
         cabecalho.setPesquisador("Tulio");
         cabecalho.setIdmunicipio(1);
         cabecalho.setDatacoleta(new Timestamp(new Date().getTime()));
-        cabecalho.setRota("rota");
-        cabecalho.setIdrota(1);
         cabecalho.setTempoinicio("1");
         cabecalho.setTempotermino("1");
+        cabecalho.setObservacao("Uma Observacao");
         getLocalEm().persist(cabecalho);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhosecretario t").getSingleResult();

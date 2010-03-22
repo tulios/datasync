@@ -50,15 +50,10 @@ public class TesteTblidentificacaopais extends TesteBarco {
 		carac.setOcupacaomae("Sim");
 		carac.setQuantidadefilhos(1);
 		carac.setQuantidadefilhosidadeescolar(1);
-		carac.setQuantidadecasapais(1);
-		carac.setQuantidadecasamãe(1);
-		carac.setQuantidadecasafilhos(1);
-		carac.setQuantidadecasanoragenro(1);
-		carac.setQuantidadecasairmao(1);
-		carac.setQuantidadecasaavos(1);
-		carac.setQuantidadecasanetos(1);
-		carac.setQuantidadeoutros(1);
-		carac.setQuantidadecasaoutrosquais("1");
+		carac.setObservacao("Observacao");
+        carac.setQuantidadeFamilia(5);
+        carac.setParentes(10);
+        carac.setQuaisParentes("Varios");
 		carac.setQuantidadeajudamsustento(1);
 		getLocalEm().persist(carac);
 		getServerEm().persist(carac);
@@ -69,6 +64,8 @@ public class TesteTblidentificacaopais extends TesteBarco {
         var.setComunidade("c");
         var.setIdade(1);
         var.setIdtipoescolaridade(1);
+        var.setGrupo("Grupo");
+        var.setQuaisGrupos("Outros");
         getLocalEm().persist(var);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaopais t").getSingleResult();

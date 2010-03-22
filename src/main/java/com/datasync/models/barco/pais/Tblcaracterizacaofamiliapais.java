@@ -23,26 +23,16 @@ public class Tblcaracterizacaofamiliapais extends IndexableEntity{
     private Integer quantidadefilhos;
     @Column(name = "QuantidadeFilhosIdadeEscolar")
     private Integer quantidadefilhosidadeescolar;
-    @Column(name = "QuantidadeCasaPais")
-    private Integer quantidadecasapais;
-    @Column(name = "QuantidadeCasaMae")
-    private Integer quantidadecasamae;
-    @Column(name = "QuantidadeCasaFilhos")
-    private Integer quantidadecasafilhos;
-    @Column(name = "QuantidadeCasaNoraGenro")
-    private Integer quantidadecasanoragenro;
-    @Column(name = "QuantidadeCasaIrmao")
-    private Integer quantidadecasairmao;
-    @Column(name = "QuantidadeCasaAvos")
-    private Integer quantidadecasaavos;
-    @Column(name = "QuantidadeCasaNetos")
-    private Integer quantidadecasanetos;
-    @Column(name = "QuantidadeOutros")
-    private Integer quantidadeoutros;
-    @Column(name = "QuantidadeCasaOutrosQuais")
-    private String quantidadecasaoutrosquais;
     @Column(name = "QuantidadeAjudamSustento")
     private Integer quantidadeajudamsustento;
+    @Column(name = "Observacao")
+    private String observacao;
+    @Column(name = "QuantidadeFamilia")
+    private int quantidadeFamilia;
+    @Column(name = "Parentes")
+    private int parentes;
+    @Column(name = "QuaisParentes")
+    private String quaisParentes;
 
     @Override
     public String getIdColumnName() {
@@ -94,78 +84,6 @@ public class Tblcaracterizacaofamiliapais extends IndexableEntity{
         return quantidadefilhosidadeescolar;
     }
 
-    public void setQuantidadecasapais(Integer quantidadecasapais){
-        this.quantidadecasapais = quantidadecasapais;
-    }
-
-    public Integer getQuantidadecasapais(){
-        return quantidadecasapais;
-    }
-
-    public void setQuantidadecasamãe(Integer quantidadecasamãe){
-        this.quantidadecasamae = quantidadecasamãe;
-    }
-
-    public Integer getQuantidadecasamãe(){
-        return quantidadecasamae;
-    }
-
-    public void setQuantidadecasafilhos(Integer quantidadecasafilhos){
-        this.quantidadecasafilhos = quantidadecasafilhos;
-    }
-
-    public Integer getQuantidadecasafilhos(){
-        return quantidadecasafilhos;
-    }
-
-    public void setQuantidadecasanoragenro(Integer quantidadecasanoragenro){
-        this.quantidadecasanoragenro = quantidadecasanoragenro;
-    }
-
-    public Integer getQuantidadecasanoragenro(){
-        return quantidadecasanoragenro;
-    }
-
-    public void setQuantidadecasairmao(Integer quantidadecasairmao){
-        this.quantidadecasairmao = quantidadecasairmao;
-    }
-
-    public Integer getQuantidadecasairmao(){
-        return quantidadecasairmao;
-    }
-
-    public void setQuantidadecasaavos(Integer quantidadecasaavos){
-        this.quantidadecasaavos = quantidadecasaavos;
-    }
-
-    public Integer getQuantidadecasaavos(){
-        return quantidadecasaavos;
-    }
-
-    public void setQuantidadecasanetos(Integer quantidadecasanetos){
-        this.quantidadecasanetos = quantidadecasanetos;
-    }
-
-    public Integer getQuantidadecasanetos(){
-        return quantidadecasanetos;
-    }
-
-    public void setQuantidadeoutros(Integer quantidadeoutros){
-        this.quantidadeoutros = quantidadeoutros;
-    }
-
-    public Integer getQuantidadeoutros(){
-        return quantidadeoutros;
-    }
-
-    public void setQuantidadecasaoutrosquais(String quantidadecasaoutrosquais){
-        this.quantidadecasaoutrosquais = quantidadecasaoutrosquais;
-    }
-
-    public String getQuantidadecasaoutrosquais(){
-        return quantidadecasaoutrosquais;
-    }
-
     public void setQuantidadeajudamsustento(Integer quantidadeajudamsustento){
         this.quantidadeajudamsustento = quantidadeajudamsustento;
     }
@@ -174,5 +92,36 @@ public class Tblcaracterizacaofamiliapais extends IndexableEntity{
         return quantidadeajudamsustento;
     }
 
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
+
+	public int getQuantidadeFamilia() {
+		return quantidadeFamilia;
+	}
+
+	public void setQuantidadeFamilia(int quantidadeFamilia) {
+		this.quantidadeFamilia = quantidadeFamilia;
+	}
+
+	public int getParentes() {
+		return parentes;
+	}
+
+	public void setParentes(int parentes) {
+		this.parentes = parentes;
+	}
+
+	public String getQuaisParentes() {
+		return quaisParentes;
+	}
+
+	public void setQuaisParentes(String quaisParentes) {
+		this.quaisParentes = quaisParentes;
+	}
 
 }

@@ -23,7 +23,11 @@ public class Tblidentificacaopais extends IndexableEntity{
     private Integer idade;
     @Column(name = "IdTipoEscolaridade")
     private Integer idtipoescolaridade;
-
+    @Column(name = "Grupo")
+    private String grupo;
+    @Column(name = "QuaisGrupos")
+    private String quaisGrupos;
+    
     @Override
     public String getIdColumnName() {
         return "idformulario";
@@ -74,5 +78,20 @@ public class Tblidentificacaopais extends IndexableEntity{
         return idtipoescolaridade;
     }
 
+	public String getGrupo() {
+		return grupo;
+	}
+
+	public void setGrupo(String grupo) {
+		this.grupo = grupo;
+	}
+
+	public String getQuaisGrupos() {
+		return quaisGrupos;
+	}
+
+	public void setQuaisGrupos(String quaisGrupos) {
+		this.quaisGrupos = quaisGrupos;
+	}
 
 }

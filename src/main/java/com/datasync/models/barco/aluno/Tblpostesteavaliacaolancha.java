@@ -25,6 +25,8 @@ public class Tblpostesteavaliacaolancha extends IndexableEntity{
     private Integer protecaosolchuva;
     @Column(name = "TempoViagem")
     private Integer tempoviagem;
+    @Column(name = "Observacao")
+    private String observacao;
 
     @Override
     public String getIdColumnName() {
@@ -84,5 +86,12 @@ public class Tblpostesteavaliacaolancha extends IndexableEntity{
         return tempoviagem;
     }
 
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
 
 }

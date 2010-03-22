@@ -1,13 +1,13 @@
 package com.datasync.models.barco.diretor;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.datasync.models.IndexableEntity;
-
-import java.sql.Timestamp;
 
 @Entity
 @Table(name = "tblCabecalhoDiretor")
@@ -27,14 +27,12 @@ public class Tblcabecalhodiretor extends IndexableEntity{
     private Timestamp datacoleta;
     @Column(name = "Foto")
     private String foto;
-    @Column(name = "Rota")
-    private String rota;
     @Column(name = "TempoInicio")
     private String tempoinicio;
     @Column(name = "TempoTermino")
     private String tempotermino;
-    @Column(name = "IdRota")
-    private Integer idRota;
+    @Column(name = "Observacao")
+    private String observacao;
 
     @Override
     public String getIdColumnName() {
@@ -94,14 +92,6 @@ public class Tblcabecalhodiretor extends IndexableEntity{
         return foto;
     }
 
-    public void setRota(String rota){
-        this.rota = rota;
-    }
-
-    public String getRota(){
-        return rota;
-    }
-
     public void setTempoinicio(String tempoinicio){
         this.tempoinicio = tempoinicio;
     }
@@ -118,12 +108,11 @@ public class Tblcabecalhodiretor extends IndexableEntity{
         return tempotermino;
     }
 
-	public Integer getIdRota() {
-		return idRota;
+	public String getObservacao() {
+		return observacao;
 	}
 
-	public void setIdRota(Integer idRota) {
-		this.idRota = idRota;
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
 	}
-
 }

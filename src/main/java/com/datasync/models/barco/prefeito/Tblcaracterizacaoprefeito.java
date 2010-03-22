@@ -21,6 +21,8 @@ public class Tblcaracterizacaoprefeito extends IndexableEntity{
     private Integer tempomandatomeses;
     @Column(name = "QuantidadeMandato")
     private Integer quantidademandato;
+    @Column(name = "QuaisMandatos")
+    private String quaisMandatos;
 
     @Override
     public String getIdColumnName() {
@@ -64,5 +66,11 @@ public class Tblcaracterizacaoprefeito extends IndexableEntity{
         return quantidademandato;
     }
 
+	public String getQuaisMandatos() {
+		return quaisMandatos;
+	}
 
+	public void setQuaisMandatos(String quaisMandatos) {
+		this.quaisMandatos = quaisMandatos;
+	}
 }

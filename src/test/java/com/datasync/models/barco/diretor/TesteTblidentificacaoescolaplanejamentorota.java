@@ -38,9 +38,9 @@ public class TesteTblidentificacaoescolaplanejamentorota extends TesteBarco {
         cabecalho.setIdinep(1);
         cabecalho.setDatacoleta(new Timestamp(new Date().getTime()));
         cabecalho.setFoto("foto");
-        cabecalho.setRota("rota");
         cabecalho.setTempoinicio("1");
         cabecalho.setTempotermino("2");
+        cabecalho.setObservacao("Observacao!");
         getLocalEm().persist(cabecalho);
         getServerEm().persist(cabecalho);
 

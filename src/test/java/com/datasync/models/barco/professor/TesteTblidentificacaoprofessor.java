@@ -43,6 +43,7 @@ public class TesteTblidentificacaoprofessor extends TesteBarco {
         cab.setTempoinicio("1");
         cab.setTempotermino("2"); 
   	    cab.setIdRota(1);
+  	    cab.setObservacao("Observacao");
         getLocalEm().persist(cab);
         getServerEm().persist(cab);
         
@@ -67,6 +68,8 @@ public class TesteTblidentificacaoprofessor extends TesteBarco {
         var.setSexo("M");
         var.setIdade(1);
         var.setComunidade("Comu");
+        var.setGrupo("Grupo");
+        var.setQuaisGrupos("Outros");
         getLocalEm().persist(var);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaoprofessor t").getSingleResult();

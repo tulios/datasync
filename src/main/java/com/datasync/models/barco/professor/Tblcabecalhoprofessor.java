@@ -37,6 +37,8 @@ public class Tblcabecalhoprofessor extends IndexableEntity{
     private String tempotermino;
     @Column(name = "IdRota")
     private int idRota;
+    @Column(name = "Observacao")
+    private String observacao;
 
     @Override
     public String getIdColumnName() {
@@ -136,4 +138,11 @@ public class Tblcabecalhoprofessor extends IndexableEntity{
 		this.idRota = idRota;
 	}
 
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
 }

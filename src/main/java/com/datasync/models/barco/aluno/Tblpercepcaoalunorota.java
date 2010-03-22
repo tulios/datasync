@@ -15,14 +15,16 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
     @Id
     @Column(name = "IdFormulario")
     private String idformulario;
-    @Column(name = "IdTipoOutroTransporte")
-    private Integer idtipooutrotransporte;
-    @Column(name = "DescricaoTempo")
-    private String descricaotempo;
     @Column(name = "Tempo")
     private String tempo;
     @Column(name = "QuaisOutros")
     private String quaisOutros;
+    @Column(name = "DescricaoTempo")
+    private String caminho;
+    @Column(name = "Cheia")
+    private String cheia;
+    @Column(name = "Epoca")
+    private String epoca;
 
     @Override
     public String getIdColumnName() {
@@ -31,17 +33,7 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
 
     @Override
 	public String getIndexId() {
-		return getIdformulario()+"#"+getIdtipooutrotransporte();
-	}
-
-	@Override
-	public boolean isCompoundKey() {
-		return true;
-	}
-
-	@Override
-	public String getCompoundIdColumnName() {
-		return "idtipooutrotransporte";
+		return getIdformulario();
 	}
 
     public void setIdformulario(String idformulario){
@@ -50,22 +42,6 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
 
     public String getIdformulario(){
         return idformulario;
-    }
-
-    public void setIdtipooutrotransporte(Integer idtipooutrotransporte){
-        this.idtipooutrotransporte = idtipooutrotransporte;
-    }
-
-    public Integer getIdtipooutrotransporte(){
-        return idtipooutrotransporte;
-    }
-
-    public void setDescricaotempo(String descricaotempo){
-        this.descricaotempo = descricaotempo;
-    }
-
-    public String getDescricaotempo(){
-        return descricaotempo;
     }
 
     public void setTempo(String tempo){
@@ -84,4 +60,28 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
 		this.quaisOutros = quaisOutros;
 	}
 
+	public String getCaminho() {
+		return caminho;
+	}
+
+	public void setCaminho(String caminho) {
+		this.caminho = caminho;
+	}
+
+	public String getCheia() {
+		return cheia;
+	}
+
+	public void setCheia(String cheia) {
+		this.cheia = cheia;
+	}
+
+	public String getEpoca() {
+		return epoca;
+	}
+
+	public void setEpoca(String epoca) {
+		this.epoca = epoca;
+	}
+	
 }

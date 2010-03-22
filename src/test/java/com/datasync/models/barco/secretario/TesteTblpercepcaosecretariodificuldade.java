@@ -36,8 +36,7 @@ public class TesteTblpercepcaosecretariodificuldade extends TesteBarco {
     	cabecalho.setPesquisador("Tulio");
     	cabecalho.setIdmunicipio(1);
     	cabecalho.setDatacoleta(new Timestamp(new Date().getTime()));
-    	cabecalho.setRota("rota");
-    	cabecalho.setIdrota(1);
+    	cabecalho.setObservacao("Uma Observacao");
     	cabecalho.setTempoinicio("1");
     	cabecalho.setTempotermino("1");
     	getLocalEm().persist(cabecalho);

@@ -41,24 +41,21 @@ public class TesteTblpercepcaoalunorotaajudabarqueiro extends TesteBarco {
         cabecalho.setIdrota(1);
         cabecalho.setTempoinicio("1");
         cabecalho.setTempotermino("2");
+        cabecalho.setObservacao("Observacao!");
         getLocalEm().persist(cabecalho);
         getServerEm().persist(cabecalho);
         
         Tblcaracterizacaofamiliaaluno carac = new Tblcaracterizacaofamiliaaluno();
         carac.setIdformulario("1");
         carac.setTemfilhos("Sim");
-        carac.setQuantidadefilhos(1);
         carac.setQuantidadefilhosidadeescolar(1);
-        carac.setQuantidadecasapais(1);
-        carac.setQuantidadecasamae(1);
-        carac.setQuantidadecasafilhos(1);
         carac.setQuantidadecasaconjuge(1);
         carac.setQuantidadecasaprimos(1);
-        carac.setQuantidadecasaavos(1);
-        carac.setQuantidadecasairmao(1);
         carac.setQuantidadecasatio(1);
-        carac.setQuantidadecasaoutrosquais("Outro");
         carac.setCasaoutrosquem("Outro");
+        carac.setQuantidadeFamilia(10);
+        carac.setIdParentes(10);
+        carac.setQuaisParentes("Varios");
         getLocalEm().persist(carac);
         getServerEm().persist(carac);
         

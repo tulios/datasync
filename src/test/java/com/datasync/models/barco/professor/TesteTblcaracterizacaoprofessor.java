@@ -43,6 +43,7 @@ public class TesteTblcaracterizacaoprofessor extends TesteBarco {
         cab.setTempoinicio("1");
         cab.setTempotermino("2"); 
 		cab.setIdRota(1);
+		cab.setObservacao("Observacao");
         getLocalEm().persist(cab);
         getServerEm().persist(cab);
         
