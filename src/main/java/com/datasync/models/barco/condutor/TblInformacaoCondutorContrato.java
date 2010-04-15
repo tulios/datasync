@@ -18,7 +18,13 @@ public class TblInformacaoCondutorContrato extends IndexableEntity {
 	@Column(name = "IdTipoContrato")
 	private int idTipoContrato;
 	@Column(name = "Valor")
-	private double valor;
+	private String valor;
+	@Column(name = "FormaContrato")
+	private int formaContrato;
+	@Column(name = "TipoPagamento")
+	private String tipoPagamento;
+	@Column(name = "Pagamento")
+	private int pagamento;
 	
 	public TblInformacaoCondutorContrato(){
 	}
@@ -59,12 +65,36 @@ public class TblInformacaoCondutorContrato extends IndexableEntity {
 		this.idTipoContrato = idTipoContrato;
 	}
 
-	public double getValor() {
+	public String getValor() {
 		return valor;
 	}
 
-	public void setValor(double valor) {
+	public void setValor(String valor) {
 		this.valor = valor;
+	}
+
+	public int getFormaContrato() {
+		return formaContrato;
+	}
+
+	public void setFormaContrato(int formaContrato) {
+		this.formaContrato = formaContrato;
+	}
+
+	public String getTipoPagamento() {
+		return tipoPagamento;
+	}
+
+	public void setTipoPagamento(String tipoPagamento) {
+		this.tipoPagamento = tipoPagamento;
+	}
+
+	public int getPagamento() {
+		return pagamento;
+	}
+
+	public void setPagamento(int pagamento) {
+		this.pagamento = pagamento;
 	}
 
 }

@@ -1,3 +1,4 @@
+-- Arquivo itens-a-serem-alterados...doc
 alter table tblCabecalhoPrefeito drop column Rota;
 alter table tblCabecalhoPrefeito drop column IdRota;
 alter table tblCabecalhoPrefeito add Observacao text;
@@ -59,9 +60,25 @@ alter table tblCaracterizacaoFamiliaAluno drop column QuantidadeCasaOutrosQuais;
  
 alter table tblPosTesteAvaliacaoLancha add Observacao text;
 
+alter table tblIdentificacaoCondutor add Grupo varchar(50);
+alter table tblIdentificacaoCondutor add QuaisGrupos varchar(100);
 
+alter table tblInformacaoCondutor add Observacao text;
 
+alter table tblInformacaoCondutorContrato add FormaContrato int;
+alter table tblInformacaoCondutorContrato add TipoPagamento varchar(100);
+alter table tblInformacaoCondutorContrato add Pagamento int;
+alter table tblInformacaoCondutorContrato drop column valor; -- confirmar
+alter table tblInformacaoCondutorContrato add valor varchar(15);
 
+alter table tblInformacaoCondutor add CompraOLeo char(3);
+alter table tblInformacaoCondutor add Onde varchar(100);
+alter table tblInformacaoCondutor add Frequencia varchar(100);
+
+alter table tblNovaLanchaCondutor add Observacao text;
+
+-- (falta tipo) alter table tblNovaLanchaCondutor drop column UtilizariaLanchaMEC
+-- (falta tipo) alter table tblNovaLanchaCondutor drop column PorqueUtilizariaLanchaMEC
 
 
 

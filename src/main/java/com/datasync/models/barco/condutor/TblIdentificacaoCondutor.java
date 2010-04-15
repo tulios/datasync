@@ -23,7 +23,11 @@ public class TblIdentificacaoCondutor extends IndexableEntity {
 	private int idade;
 	@Column(name = "IdTipoEscolaridade")
 	private int idTipoEscolaridade;
-
+	@Column(name = "Grupo")
+	private String grupo;
+	@Column(name = "QuaisGrupos")
+	private String quaisGrupos;
+	
 	public TblIdentificacaoCondutor(){
 	}
 	
@@ -75,6 +79,22 @@ public class TblIdentificacaoCondutor extends IndexableEntity {
 
 	public void setIdTipoEscolaridade(int idTipoEscolaridade) {
 		this.idTipoEscolaridade = idTipoEscolaridade;
+	}
+
+	public String getGrupo() {
+		return grupo;
+	}
+
+	public void setGrupo(String grupo) {
+		this.grupo = grupo;
+	}
+
+	public String getQuaisGrupos() {
+		return quaisGrupos;
+	}
+
+	public void setQuaisGrupos(String quaisGrupos) {
+		this.quaisGrupos = quaisGrupos;
 	}
 	
 }

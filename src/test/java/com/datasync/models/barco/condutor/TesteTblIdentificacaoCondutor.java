@@ -48,6 +48,8 @@ public class TesteTblIdentificacaoCondutor extends TesteBarco {
 		i.setSexo("M");
 		i.setIdade(22);
 		i.setIdTipoEscolaridade(1);
+		i.setGrupo("grupo");
+		i.setQuaisGrupos("Varios");
 		getLocalEm().persist(i);
 		
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblIdentificacaoCondutor t").getSingleResult();

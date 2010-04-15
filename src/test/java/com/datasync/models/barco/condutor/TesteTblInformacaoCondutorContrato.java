@@ -58,7 +58,10 @@ public class TesteTblInformacaoCondutorContrato extends TesteBarco {
 		TblInformacaoCondutorContrato contrato = new TblInformacaoCondutorContrato();
 		contrato.setIdFormulario("1");
 		contrato.setIdTipoContrato(1);
-		contrato.setValor(100.50);
+		contrato.setValor("100.50");
+		contrato.setFormaContrato(1);
+		contrato.setTipoPagamento("cartao");
+		contrato.setPagamento(1);
 		getLocalEm().persist(contrato);
 
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorContrato t").getSingleResult();

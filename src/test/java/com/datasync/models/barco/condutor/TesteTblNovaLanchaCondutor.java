@@ -76,7 +76,8 @@ public class TesteTblNovaLanchaCondutor extends TesteBarco {
 		c.setPorqueManutencaoNecessaria("Por que sim");
 		c.setLanchaSegura("Sim");
 		c.setPorqueLanchaSegura("Por que sim");
-		c.setQualSolucao("Solu��o");
+		c.setQualSolucao("Solucao");
+		c.setObservacao("observacao");
 		getLocalEm().persist(c);
 		
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblNovaLanchaCondutor t").getSingleResult();

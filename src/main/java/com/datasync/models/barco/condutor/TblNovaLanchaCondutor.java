@@ -81,6 +81,8 @@ public class TblNovaLanchaCondutor extends IndexableEntity {
 	private String porqueLanchaSegura;
 	@Column(name = "QualSolucao")
 	private String qualSolucao;
+	@Column(name = "Observacao")
+	private String observacao;
 	
 	public TblNovaLanchaCondutor(){
 	}
@@ -365,6 +367,14 @@ public class TblNovaLanchaCondutor extends IndexableEntity {
 
 	public void setQualSolucao(String qualSolucao) {
 		this.qualSolucao = qualSolucao;
+	}
+
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
 	}
 	
 }
