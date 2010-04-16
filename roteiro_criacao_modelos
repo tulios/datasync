@@ -1,0 +1,34 @@
+1 - Subir o SQLServer e criar uma base de dados de teste. Essa base de dados 
+    conterá apenas as tabelas as quais teram os modelos criados
+
+2 - Rodar o script de criação das tabelas na base de teste.
+
+3 - Configurar o acesso ao banco feito pela aplicação ruby no arquivo 
+    db/database.yml
+
+4 - Gerar os modelos e testes a partir tabelas da base de teste:
+    Ex:
+      PARAMS => :package, :path, :test_class
+      
+      jruby -S rake model:generate['com.datasync.models.barco.professor',
+                  '/Users/tulios/Desktop/models/professor','TesteBarco']
+
+5 - Configurar acesso ao banco pela aplicação java no persistence.xml
+
+6 - Adicionar o modelo da tabela no pacote correto e verificar se tem chave composta. 
+    Caso tiver, sobrescrever o método isCompoundKey e o método getIndexId 
+    contendo o id do objeto e o id da referência:
+    Ex:
+      @Override
+      public String getIndexId() {
+        return getIdformulario()+"#"+getIdtipocombustivel();
+      }
+      
+7 - Adicionar o teste no pacote correto. Popular os dados do objeto para teste. 
+    Instancia e salvar, no servidor local e remoto, uma possível dependência 
+    do objeto. 
+  
+8 - Adicionar a classe e o seu teste nas classes:
+      ModelUtil.java
+      TodosBarco | TodosCusto (Dependendo do banco)
+      TesteBarco | TodosCusto (Dependendo do banco)
