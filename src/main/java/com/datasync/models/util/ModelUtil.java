@@ -53,6 +53,26 @@ import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunoescola;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunonaoescola;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunoreclama;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretorrendimentoacademico;
+import com.datasync.models.barco.embarcacao.Tblcabecalhoembarcacao;
+import com.datasync.models.barco.embarcacao.Tblcaracterizacaoembarcacao;
+import com.datasync.models.barco.embarcacao.Tblcombustivelembarcacao;
+import com.datasync.models.barco.embarcacao.Tblconservacaoembarcacao;
+import com.datasync.models.barco.embarcacao.Tbldimensaoembarcacao;
+import com.datasync.models.barco.embarcacao.Tblidentificacaoembarcacao;
+import com.datasync.models.barco.embarcacao.Tblimagensembarcacao;
+import com.datasync.models.barco.embarcacao.Tblmaterialassento;
+import com.datasync.models.barco.embarcacao.Tblmaterialcasco;
+import com.datasync.models.barco.embarcacao.Tblmaterialteto;
+import com.datasync.models.barco.embarcacao.Tblpropriedadeembarcacao;
+import com.datasync.models.barco.embarcacao.Tblsinalizacaonoturna;
+import com.datasync.models.barco.embarcacao.Tbltripulacao;
+import com.datasync.models.barco.municipio.Tblcabecalhomunicipio;
+import com.datasync.models.barco.municipio.Tblitensmunicipio;
+import com.datasync.models.barco.municipio.Tbloutrositensmunicipio;
+import com.datasync.models.barco.municipio.Tblpostoabastecimento1;
+import com.datasync.models.barco.municipio.Tblpostoabastecimento2;
+import com.datasync.models.barco.municipio.Tblpostoabastecimento3;
+import com.datasync.models.barco.municipio.Tblservicosemergenciaismunicipio;
 import com.datasync.models.barco.pais.TblCaracterizacaoFamiliaParentes;
 import com.datasync.models.barco.pais.Tblcabecalhopais;
 import com.datasync.models.barco.pais.Tblcaracterizacaofamiliapais;
@@ -240,6 +260,30 @@ public class ModelUtil {
 			indexables.add(new Tblinformacaopaissugestao());
 			indexables.add(new Tblinformacaopaistransportaoutro());
 			indexables.add(new TblCaracterizacaoFamiliaParentes());//adicionado 15/05/2010
+			
+			//Embarcacao
+			indexables.add(new Tblcabecalhoembarcacao());
+			indexables.add(new Tblcaracterizacaoembarcacao());
+			indexables.add(new Tblcombustivelembarcacao());
+			indexables.add(new Tblconservacaoembarcacao());
+			indexables.add(new Tbldimensaoembarcacao());
+			indexables.add(new Tblidentificacaoembarcacao());
+			indexables.add(new Tblimagensembarcacao());
+			indexables.add(new Tbltripulacao());
+			indexables.add(new Tblmaterialassento());
+			indexables.add(new Tblmaterialcasco());
+			indexables.add(new Tblmaterialteto());
+			indexables.add(new Tblpropriedadeembarcacao());
+			indexables.add(new Tblsinalizacaonoturna());
+			
+			//Municipios
+			indexables.add(new Tblcabecalhomunicipio());
+			indexables.add(new Tblitensmunicipio());
+			indexables.add(new Tbloutrositensmunicipio());
+			indexables.add(new Tblpostoabastecimento1());
+			indexables.add(new Tblpostoabastecimento2());
+			indexables.add(new Tblpostoabastecimento3());
+			indexables.add(new Tblservicosemergenciaismunicipio());
 		}
 		
 		return indexables;

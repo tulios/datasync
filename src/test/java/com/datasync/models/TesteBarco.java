@@ -122,6 +122,30 @@ public class TesteBarco extends Teste{
 				"Tblcaracterizacaofamiliapais",
 				"Tblcabecalhopais",
 				
+				//Embarcacao
+				"tblsinalizacaonoturna",
+				"tblpropriedadeembarcacao",
+				"tblmaterialteto",
+				"tblmaterialcasco",
+				"tblmaterialassento",
+				"tblimagensembarcacao",
+				"tbltripulacao",
+				"tblidentificacaoembarcacao",
+				"tbldimensaoembarcacao",
+				"tblconservacaoembarcacao",
+				"Tblcombustivelembarcacao",
+				"Tblcaracterizacaoembarcacao",
+				"Tblcabecalhoembarcacao",
+				
+				//Municipio
+				"Tblserviçosemergenciaismunicipio",
+				"tblpostoabastecimento3",
+				"tblpostoabastecimento2",
+				"tblpostoabastecimento1",
+				"tbloutrositensmunicipio",
+				"tblitensmunicipio",
+				"tblcabecalhomunicipio",
+				
 				//Tabelas Comuns
 				"tblEscola",
 				"tblMunicipio",
@@ -166,7 +190,13 @@ public class TesteBarco extends Teste{
 				"tblTipoDificuldade",
 				"tblTipoMotivoBarqueiroTerceirizado",
 				"tblTipoProvidenciaPai",
-				"tbltiposugestao"
+				"tbltiposugestao",
+				"tbltipocombustivel",
+				"tbltipoassento",
+				"tbltipocasco",
+				"tbltipoteto",
+				"tbltipopropriedade",
+				"tblTipoSinalizacaoNoturna"
 		};
 		
 		for(String tabela : tabelas){
@@ -220,7 +250,13 @@ public class TesteBarco extends Teste{
 				"insert into tblTipoDificuldade values (1,'Pontualidade');",
 				"insert into tblTipoMotivoBarqueiroTerceirizado values (1,'Segurança na navegação');",
 				"insert into tblTipoProvidenciaPai values (1,'Não faz nada');",
-				"insert into tbltiposugestao values (1,'Ajuste de horário escolar');"
+				"insert into tbltiposugestao values (1,'Ajuste de horário escolar');",
+				"insert	into tblTipoCombustivel	values (1,'Gasolina')",
+				"insert into tblTipoAssento	values (1,'Madeira')",
+				"insert into tblTipoCasco values (1,'Madeira')",
+				"insert into tblTipoTeto values	(1,'Madeira')",
+				"insert into tblTipoPropriedade	values (1,'Própria')",
+				"insert into tblTipoSinalizacaoNoturna values (1,'Não possui')"
 		};
 		
 		for (String insert : inserts){
