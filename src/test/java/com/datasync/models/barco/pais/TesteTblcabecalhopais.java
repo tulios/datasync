@@ -41,6 +41,7 @@ public class TesteTblcabecalhopais extends TesteBarco {
         cabecalho.setIdrota(1);
         cabecalho.setTempoinicio("1");
         cabecalho.setTempotermino("2");
+        cabecalho.setObservacao("observacao!");
         getLocalEm().persist(cabecalho);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhopais t").getSingleResult();

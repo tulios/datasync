@@ -49,10 +49,6 @@ public class TesteTblpercepcaoalunorota extends TesteBarco {
         carac.setIdformulario("1");
         carac.setTemfilhos("Sim");
         carac.setQuantidadefilhosidadeescolar(1);
-        carac.setQuantidadecasaconjuge(1);
-        carac.setQuantidadecasaprimos(1);
-        carac.setQuantidadecasatio(1);
-        carac.setCasaoutrosquem("Outro");
         carac.setQuantidadeFamilia(10);
         carac.setIdParentes(10);
         carac.setQuaisParentes("Varios");
@@ -63,9 +59,11 @@ public class TesteTblpercepcaoalunorota extends TesteBarco {
         var.setIdformulario("1");
         var.setTempo("1");
         var.setQuaisOutros("outros");
-        var.setCaminho("Caminho");
         var.setCheia("Cheia");
         var.setEpoca("Epoca");
+        var.setCaminhoSeca("sim");
+        var.setCaminhoCheia("nao");
+        var.setSeca("seca");
         getLocalEm().persist(var);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblpercepcaoalunorota t").getSingleResult();

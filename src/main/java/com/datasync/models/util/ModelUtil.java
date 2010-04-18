@@ -53,6 +53,7 @@ import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunoescola;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunonaoescola;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretoralunoreclama;
 import com.datasync.models.barco.diretor.Tblpercepcaodiretorrendimentoacademico;
+import com.datasync.models.barco.pais.TblCaracterizacaoFamiliaParentes;
 import com.datasync.models.barco.pais.Tblcabecalhopais;
 import com.datasync.models.barco.pais.Tblcaracterizacaofamiliapais;
 import com.datasync.models.barco.pais.Tblcaracterizacaofamiliapaisauxilio;
@@ -238,6 +239,7 @@ public class ModelUtil {
 			indexables.add(new Tblinformacaopaisprovidencia());
 			indexables.add(new Tblinformacaopaissugestao());
 			indexables.add(new Tblinformacaopaistransportaoutro());
+			indexables.add(new TblCaracterizacaoFamiliaParentes());//adicionado 15/05/2010
 		}
 		
 		return indexables;

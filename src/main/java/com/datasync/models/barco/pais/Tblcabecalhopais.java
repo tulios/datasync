@@ -1,13 +1,13 @@
 package com.datasync.models.barco.pais;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.datasync.models.IndexableEntity;
-
-import java.sql.Timestamp;
 
 @Entity
 @Table(name = "tblCabecalhoPais")
@@ -33,6 +33,8 @@ public class Tblcabecalhopais extends IndexableEntity{
     private String tempoinicio;
     @Column(name = "TempoTermino")
     private String tempotermino;
+    @Column(name = "Observacao")
+    private String observacao;
 
     @Override
     public String getIdColumnName() {
@@ -116,5 +118,12 @@ public class Tblcabecalhopais extends IndexableEntity{
         return tempotermino;
     }
 
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
 
 }

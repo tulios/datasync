@@ -105,6 +105,7 @@ public class TesteBarco extends Teste{
 				"Tblcabecalhosecretario",
 				
 				//Pais
+				"TblCaracterizacaoFamiliaParentes",
 				"Tblinformacaopaistransportaoutro",
 				"Tblinformacaopaissugestao", 
 				"Tblinformacaopaisprovidencia",

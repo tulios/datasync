@@ -39,6 +39,8 @@ public class Tblcabecalhoprofessor extends IndexableEntity{
     private int idRota;
     @Column(name = "Observacao")
     private String observacao;
+    @Column(name = "NomeEscola")
+    private String nomeEscola;
 
     @Override
     public String getIdColumnName() {
@@ -145,4 +147,13 @@ public class Tblcabecalhoprofessor extends IndexableEntity{
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
 	}
+
+	public String getNomeEscola() {
+		return nomeEscola;
+	}
+
+	public void setNomeEscola(String nomeEscola) {
+		this.nomeEscola = nomeEscola;
+	}
+	
 }

@@ -44,6 +44,7 @@ public class TesteTblcabecalhoprofessor extends TesteBarco {
         cab.setTempotermino("2");
         cab.setIdRota(1);
         cab.setObservacao("Observacao");
+        cab.setNomeEscola("nome");
         getLocalEm().persist(cab);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhoprofessor t").getSingleResult();

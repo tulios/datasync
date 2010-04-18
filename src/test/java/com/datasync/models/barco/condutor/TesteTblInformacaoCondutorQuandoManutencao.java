@@ -33,7 +33,7 @@ public class TesteTblInformacaoCondutorQuandoManutencao extends TesteBarco {
 
 		TblBarcoCabecalhoCondutor cab = new TblBarcoCabecalhoCondutor();
 		cab.setIdFormulario("1");
-		cab.setIdPesquisador(1);
+		cab.setIdPesquisador("1");
 		cab.setIdMunicipio(1);
 		cab.setRota("100");
 		cab.setData(new Timestamp(new Date().getTime()));

@@ -49,10 +49,6 @@ public class TesteTblpercepcaoalunomelhoria extends TesteBarco {
         carac.setIdformulario("1");
         carac.setTemfilhos("Sim");
         carac.setQuantidadefilhosidadeescolar(1);
-        carac.setQuantidadecasaconjuge(1);
-        carac.setQuantidadecasaprimos(1);
-        carac.setQuantidadecasatio(1);
-        carac.setCasaoutrosquem("Outro");
         carac.setQuantidadeFamilia(10);
         carac.setIdParentes(10);
         carac.setQuaisParentes("Varios");

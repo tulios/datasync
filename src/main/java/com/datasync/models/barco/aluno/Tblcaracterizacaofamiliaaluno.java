@@ -19,14 +19,6 @@ public class Tblcaracterizacaofamiliaaluno extends IndexableEntity{
     private String temfilhos;
     @Column(name = "QuantidadeFilhosIdadeEscolar")
     private Integer quantidadefilhosidadeescolar;
-    @Column(name = "QuantidadeCasaConjuge")
-    private Integer quantidadecasaconjuge;
-    @Column(name = "QuantidadeCasaPrimos")
-    private Integer quantidadecasaprimos;
-    @Column(name = "QuantidadeCasaTio")
-    private Integer quantidadecasatio;
-    @Column(name = "CasaOutrosQuem")
-    private String casaoutrosquem;
     @Column(name = "QuantidadeFamilia")
     private int quantidadeFamilia;
     @Column(name = "IdParentes")
@@ -66,38 +58,6 @@ public class Tblcaracterizacaofamiliaaluno extends IndexableEntity{
 
     public Integer getQuantidadefilhosidadeescolar(){
         return quantidadefilhosidadeescolar;
-    }
-
-    public void setQuantidadecasaconjuge(Integer quantidadecasaconjuge){
-        this.quantidadecasaconjuge = quantidadecasaconjuge;
-    }
-
-    public Integer getQuantidadecasaconjuge(){
-        return quantidadecasaconjuge;
-    }
-
-    public void setQuantidadecasaprimos(Integer quantidadecasaprimos){
-        this.quantidadecasaprimos = quantidadecasaprimos;
-    }
-
-    public Integer getQuantidadecasaprimos(){
-        return quantidadecasaprimos;
-    }
-
-    public void setQuantidadecasatio(Integer quantidadecasatio){
-        this.quantidadecasatio = quantidadecasatio;
-    }
-
-    public Integer getQuantidadecasatio(){
-        return quantidadecasatio;
-    }
-
-    public void setCasaoutrosquem(String casaoutrosquem){
-        this.casaoutrosquem = casaoutrosquem;
-    }
-
-    public String getCasaoutrosquem(){
-        return casaoutrosquem;
     }
 
 	public int getQuantidadeFamilia() {

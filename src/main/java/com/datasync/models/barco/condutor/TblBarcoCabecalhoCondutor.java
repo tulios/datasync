@@ -18,7 +18,7 @@ public class TblBarcoCabecalhoCondutor extends IndexableEntity {
 	@Column(name = "IdFormulario")
 	private String idFormulario;
 	@Column(name = "IdPesquisador")
-	private int idPesquisador;
+	private String idPesquisador;
 	@Column(name = "IdRota")
 	private int idRota;
 	@Column(name = "IdMunicipio")
@@ -31,6 +31,8 @@ public class TblBarcoCabecalhoCondutor extends IndexableEntity {
 	private String horarioInicio;
 	@Column(name = "HorarioTermino")
 	private String horarioTermino;
+	@Column(name = "Observacao")
+	private String observacao;
 	
 	public TblBarcoCabecalhoCondutor(){
 	}
@@ -53,11 +55,11 @@ public class TblBarcoCabecalhoCondutor extends IndexableEntity {
 		this.idFormulario = idFormulario;
 	}
 
-	public int getIdPesquisador() {
+	public String getIdPesquisador() {
 		return idPesquisador;
 	}
 
-	public void setIdPesquisador(int idPesquisador) {
+	public void setIdPesquisador(String idPesquisador) {
 		this.idPesquisador = idPesquisador;
 	}
 
@@ -107,6 +109,14 @@ public class TblBarcoCabecalhoCondutor extends IndexableEntity {
 
 	public void setIdRota(int idRota) {
 		this.idRota = idRota;
+	}
+
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
 	}
 	
 }

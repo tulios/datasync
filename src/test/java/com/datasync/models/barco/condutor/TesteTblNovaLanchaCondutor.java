@@ -33,7 +33,7 @@ public class TesteTblNovaLanchaCondutor extends TesteBarco {
 		
 		TblBarcoCabecalhoCondutor cab = new TblBarcoCabecalhoCondutor();
 		cab.setIdFormulario("1");
-		cab.setIdPesquisador(1);
+		cab.setIdPesquisador("1");
 		cab.setIdMunicipio(1);
 		cab.setRota("100");
 		cab.setData(new Timestamp(new Date().getTime()));
@@ -66,8 +66,6 @@ public class TesteTblNovaLanchaCondutor extends TesteBarco {
 		c.setPorqueMotorPopa("Por que sim");
 		c.setVibracao(100);
 		c.setTempoAtracagem(20);
-		c.setUtilizariaLanchaMEC("Sim");
-		c.setPorqueUtilizariaLanchaMEC("Por que sim");
 		c.setTrechoMaiorDificuldade("Sim");
 		c.setPorqueTrechoMaiorDificuldade("Por que sim");
 		c.setContratadoBarco("Sim");

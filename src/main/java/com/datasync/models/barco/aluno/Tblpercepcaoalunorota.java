@@ -19,12 +19,16 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
     private String tempo;
     @Column(name = "QuaisOutros")
     private String quaisOutros;
-    @Column(name = "DescricaoTempo")
-    private String caminho;
     @Column(name = "Cheia")
     private String cheia;
     @Column(name = "Epoca")
     private String epoca;
+    @Column(name = "CaminhoSeca")
+    private String caminhoSeca;
+    @Column(name = "CaminhoCheia")
+    private String caminhoCheia;
+    @Column(name = "Seca")
+    private String seca;
 
     @Override
     public String getIdColumnName() {
@@ -60,14 +64,6 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
 		this.quaisOutros = quaisOutros;
 	}
 
-	public String getCaminho() {
-		return caminho;
-	}
-
-	public void setCaminho(String caminho) {
-		this.caminho = caminho;
-	}
-
 	public String getCheia() {
 		return cheia;
 	}
@@ -82,6 +78,30 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
 
 	public void setEpoca(String epoca) {
 		this.epoca = epoca;
+	}
+
+	public String getCaminhoSeca() {
+		return caminhoSeca;
+	}
+
+	public void setCaminhoSeca(String caminhoSeca) {
+		this.caminhoSeca = caminhoSeca;
+	}
+
+	public String getCaminhoCheia() {
+		return caminhoCheia;
+	}
+
+	public void setCaminhoCheia(String caminhoCheia) {
+		this.caminhoCheia = caminhoCheia;
+	}
+
+	public String getSeca() {
+		return seca;
+	}
+
+	public void setSeca(String seca) {
+		this.seca = seca;
 	}
 	
 }

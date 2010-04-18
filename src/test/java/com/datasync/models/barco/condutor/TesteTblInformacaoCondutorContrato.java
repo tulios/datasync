@@ -33,7 +33,7 @@ public class TesteTblInformacaoCondutorContrato extends TesteBarco {
 
 		TblBarcoCabecalhoCondutor cab = new TblBarcoCabecalhoCondutor();
 		cab.setIdFormulario("1");
-		cab.setIdPesquisador(1);
+		cab.setIdPesquisador("1");
 		cab.setIdMunicipio(1);
 		cab.setRota("100");
 		cab.setData(new Timestamp(new Date().getTime()));
@@ -62,6 +62,7 @@ public class TesteTblInformacaoCondutorContrato extends TesteBarco {
 		contrato.setFormaContrato(1);
 		contrato.setTipoPagamento("cartao");
 		contrato.setPagamento(1);
+		contrato.setQuaisOutros("outros");
 		getLocalEm().persist(contrato);
 
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorContrato t").getSingleResult();

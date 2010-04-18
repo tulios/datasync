@@ -29,7 +29,7 @@ public class Tblidentificacaoprefeito extends IndexableEntity{
     private String sexo;
     @Column(name = "Idade")
     private Integer idade;
-
+    
     @Override
     public String getIdColumnName() {
         return "idformulario";

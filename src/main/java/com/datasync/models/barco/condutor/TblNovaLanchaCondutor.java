@@ -59,10 +59,6 @@ public class TblNovaLanchaCondutor extends IndexableEntity {
 	private int vibracao;
 	@Column(name = "TempoAtracagem")
 	private int tempoAtracagem;
-	@Column(name = "UtilizariaLanchaMEC")
-	private String utilizariaLanchaMEC;
-	@Column(name = "PorqueUtilizariaLanchaMEC")
-	private String porqueUtilizariaLanchaMEC;
 	@Column(name = "TrechoMaiorDificuldade")
 	private String trechoMaiorDificuldade;
 	@Column(name = "PorqueTrechoMaiorDificuldade")
@@ -279,22 +275,6 @@ public class TblNovaLanchaCondutor extends IndexableEntity {
 
 	public void setTempoAtracagem(int tempoAtracagem) {
 		this.tempoAtracagem = tempoAtracagem;
-	}
-
-	public String getUtilizariaLanchaMEC() {
-		return utilizariaLanchaMEC;
-	}
-
-	public void setUtilizariaLanchaMEC(String utilizariaLanchaMEC) {
-		this.utilizariaLanchaMEC = utilizariaLanchaMEC;
-	}
-
-	public String getPorqueUtilizariaLanchaMEC() {
-		return porqueUtilizariaLanchaMEC;
-	}
-
-	public void setPorqueUtilizariaLanchaMEC(String porqueUtilizariaLanchaMEC) {
-		this.porqueUtilizariaLanchaMEC = porqueUtilizariaLanchaMEC;
 	}
 
 	public String getTrechoMaiorDificuldade() {
