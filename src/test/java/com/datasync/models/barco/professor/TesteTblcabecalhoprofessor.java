@@ -34,7 +34,6 @@ public class TesteTblcabecalhoprofessor extends TesteBarco {
         Tblcabecalhoprofessor cab = new Tblcabecalhoprofessor();
         cab.setIdformulario("1");
         cab.setPesquisador("Tulio");
-        cab.setIdformularioaluno("Tulio");
         cab.setDatacoleta(new Timestamp(new Date().getTime()));
         cab.setIdmunicipio(1);
         cab.setIdinep(1);

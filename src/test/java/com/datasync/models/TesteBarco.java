@@ -43,10 +43,29 @@ public class TesteBarco extends Teste{
 				"TblCaracterizacaoCondutor",
 				"TblCabecalhoCondutor",
 
+				//Pais
+				"TblCaracterizacaoFamiliaAlunoParentes",
+				"TblCaracterizacaoFamiliaParentes",
+				"Tblinformacaopaistransportaoutro",
+				"Tblinformacaopaissugestao", 
+				"Tblinformacaopaisprovidencia",
+				"Tblinformacaopaisoutrotransporte",
+				"Tblinformacaopaisescolhebarco",
+				"Tblinformacaopaisepocapior",
+				"Tblinformacaopaisdonobarco",
+				"Tblinformacaopaisbarcoatrasa",
+				"Tblinformacaopaisalunonaoescola",
+				"Tblinformacaopais",
+				"Tblidentificacaopais",
+				"Tblcaracterizacaofamiliapaistrabalho",
+				"Tblcaracterizacaofamiliapaisauxilio",
+				"Tblcaracterizacaofamiliapais",
+				"Tblcabecalhopais",
+				
 				//Aluno
 				"Tblpostestemolhaaluno",
 				"Tblpostesteavaliacaolancha",
-				"tblPostestealuno",
+				"tblPostesteauno", //"tblPostestealuno",
 				"Tblpercepcaoalunorotafazoutracoisa",
 				"Tblpercepcaoalunorotafazcaminhoescola",
 				"Tblpercepcaoalunorotaepocapior",
@@ -103,24 +122,6 @@ public class TesteBarco extends Teste{
 				"Tblidentificacaosecretario",
 				"Tblcaracterizacaosecretario",
 				"Tblcabecalhosecretario",
-				
-				//Pais
-				"TblCaracterizacaoFamiliaParentes",
-				"Tblinformacaopaistransportaoutro",
-				"Tblinformacaopaissugestao", 
-				"Tblinformacaopaisprovidencia",
-				"Tblinformacaopaisoutrotransporte",
-				"Tblinformacaopaisescolhebarco",
-				"Tblinformacaopaisepocapior",
-				"Tblinformacaopaisdonobarco",
-				"Tblinformacaopaisbarcoatrasa",
-				"Tblinformacaopaisalunonaoescola",
-				"Tblinformacaopais",
-				"Tblidentificacaopais",
-				"Tblcaracterizacaofamiliapaistrabalho",
-				"Tblcaracterizacaofamiliapaisauxilio",
-				"Tblcaracterizacaofamiliapais",
-				"Tblcabecalhopais",
 				
 				//Embarcacao
 				"tblsinalizacaonoturna",
@@ -196,7 +197,8 @@ public class TesteBarco extends Teste{
 				"tbltipocasco",
 				"tbltipoteto",
 				"tbltipopropriedade",
-				"tblTipoSinalizacaoNoturna"
+				"tblTipoSinalizacaoNoturna",
+				"tblTipoParentes"
 		};
 		
 		for(String tabela : tabelas){
@@ -256,7 +258,8 @@ public class TesteBarco extends Teste{
 				"insert into tblTipoCasco values (1,'Madeira')",
 				"insert into tblTipoTeto values	(1,'Madeira')",
 				"insert into tblTipoPropriedade	values (1,'Própria')",
-				"insert into tblTipoSinalizacaoNoturna values (1,'Não possui')"
+				"insert into tblTipoSinalizacaoNoturna values (1,'Não possui')",
+				"insert into tblTipoParentes values (1, 'PAI')"
 		};
 		
 		for (String insert : inserts){

@@ -52,7 +52,6 @@ public class TesteTblInformacaoCondutor extends TesteBarco {
 		i.setQuaisRotasAtendidas("Varias");
 		i.setDiferencaTempo("10");
 		i.setQualDiferencaTempo("20");
-		i.setObservacao("observacao");
 		i.setCompraOleoo("1");
 		i.setOnde("aqui");
 		i.setFrequencia("diario");

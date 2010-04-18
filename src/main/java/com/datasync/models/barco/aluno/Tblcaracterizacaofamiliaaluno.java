@@ -17,14 +17,12 @@ public class Tblcaracterizacaofamiliaaluno extends IndexableEntity{
     private String idformulario;
     @Column(name = "TemFilhos")
     private String temfilhos;
+    @Column(name = "QuantidadeFilhos")
+    private int quantidadeFilhos;
     @Column(name = "QuantidadeFilhosIdadeEscolar")
     private Integer quantidadefilhosidadeescolar;
     @Column(name = "QuantidadeFamilia")
     private int quantidadeFamilia;
-    @Column(name = "IdParentes")
-    private int idParentes;
-    @Column(name = "QuaisParentes")
-    private String quaisParentes;
 
     @Override
     public String getIdColumnName() {
@@ -68,20 +66,12 @@ public class Tblcaracterizacaofamiliaaluno extends IndexableEntity{
 		this.quantidadeFamilia = quantidadeFamilia;
 	}
 
-	public int getIdParentes() {
-		return idParentes;
+	public int getQuantidadeFilhos() {
+		return quantidadeFilhos;
 	}
 
-	public void setIdParentes(int idParentes) {
-		this.idParentes = idParentes;
-	}
-
-	public String getQuaisParentes() {
-		return quaisParentes;
-	}
-
-	public void setQuaisParentes(String quaisParentes) {
-		this.quaisParentes = quaisParentes;
+	public void setQuantidadeFilhos(int quantidadeFilhos) {
+		this.quantidadeFilhos = quantidadeFilhos;
 	}
 
 }

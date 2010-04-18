@@ -66,13 +66,15 @@ import com.datasync.models.barco.embarcacao.TesteTblmaterialteto;
 import com.datasync.models.barco.embarcacao.TesteTblpropriedadeembarcacao;
 import com.datasync.models.barco.embarcacao.TesteTblsinalizacaonoturna;
 import com.datasync.models.barco.embarcacao.TesteTbltripulacao;
-import com.datasync.models.barco.municipio.Tblservicosemergenciaismunicipio;
 import com.datasync.models.barco.municipio.TesteTblcabecalhomunicipio;
 import com.datasync.models.barco.municipio.TesteTblitensmunicipio;
 import com.datasync.models.barco.municipio.TesteTbloutrositensmunicipio;
 import com.datasync.models.barco.municipio.TesteTblpostoabastecimento1;
 import com.datasync.models.barco.municipio.TesteTblpostoabastecimento2;
 import com.datasync.models.barco.municipio.TesteTblpostoabastecimento3;
+import com.datasync.models.barco.municipio.TesteTblservicosemergenciaismunicipio;
+import com.datasync.models.barco.pais.TesteTblCaracterizacaoFamiliaAlunoParentes;
+import com.datasync.models.barco.pais.TesteTblCaracterizacaoFamiliaParentes;
 import com.datasync.models.barco.pais.TesteTblcabecalhopais;
 import com.datasync.models.barco.pais.TesteTblcaracterizacaofamiliapais;
 import com.datasync.models.barco.pais.TesteTblcaracterizacaofamiliapaisauxilio;
@@ -218,6 +220,8 @@ import com.datasync.models.barco.secretario.TesteTblpercepcaosecretariomotivobar
 	TesteTblinformacaopaisprovidencia.class,
 	TesteTblinformacaopaissugestao.class,
 	TesteTblinformacaopaistransportaoutro.class,
+	TesteTblCaracterizacaoFamiliaParentes.class,
+	TesteTblCaracterizacaoFamiliaAlunoParentes.class,
 	
 	//Embarcacao
 	TesteTblcabecalhoembarcacao.class,
@@ -241,7 +245,7 @@ import com.datasync.models.barco.secretario.TesteTblpercepcaosecretariomotivobar
 	TesteTblpostoabastecimento1.class,
 	TesteTblpostoabastecimento2.class,
 	TesteTblpostoabastecimento3.class,
-	Tblservicosemergenciaismunicipio.class
+	TesteTblservicosemergenciaismunicipio.class
 	
 })
 public class TodosBarco {

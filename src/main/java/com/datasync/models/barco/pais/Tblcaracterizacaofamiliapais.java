@@ -25,14 +25,8 @@ public class Tblcaracterizacaofamiliapais extends IndexableEntity{
     private Integer quantidadefilhosidadeescolar;
     @Column(name = "QuantidadeAjudamSustento")
     private Integer quantidadeajudamsustento;
-    @Column(name = "Observacao")
-    private String observacao;
     @Column(name = "QuantidadeFamilia")
     private int quantidadeFamilia;
-    @Column(name = "Parentes")
-    private int parentes;
-    @Column(name = "QuaisParentes")
-    private String quaisParentes;
 
     @Override
     public String getIdColumnName() {
@@ -92,36 +86,12 @@ public class Tblcaracterizacaofamiliapais extends IndexableEntity{
         return quantidadeajudamsustento;
     }
 
-	public String getObservacao() {
-		return observacao;
-	}
-
-	public void setObservacao(String observacao) {
-		this.observacao = observacao;
-	}
-
 	public int getQuantidadeFamilia() {
 		return quantidadeFamilia;
 	}
 
 	public void setQuantidadeFamilia(int quantidadeFamilia) {
 		this.quantidadeFamilia = quantidadeFamilia;
-	}
-
-	public int getParentes() {
-		return parentes;
-	}
-
-	public void setParentes(int parentes) {
-		this.parentes = parentes;
-	}
-
-	public String getQuaisParentes() {
-		return quaisParentes;
-	}
-
-	public void setQuaisParentes(String quaisParentes) {
-		this.quaisParentes = quaisParentes;
 	}
 
 }

@@ -50,8 +50,7 @@ public class TesteTblcaracterizacaofamiliaaluno extends TesteBarco {
         carac.setTemfilhos("Sim");
         carac.setQuantidadefilhosidadeescolar(1);
         carac.setQuantidadeFamilia(10);
-        carac.setIdParentes(10);
-        carac.setQuaisParentes("Varios");
+        carac.setQuantidadeFilhos(10);
         getLocalEm().persist(carac);
 
         local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcaracterizacaofamiliaaluno t").getSingleResult();

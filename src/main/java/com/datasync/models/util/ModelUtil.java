@@ -73,6 +73,7 @@ import com.datasync.models.barco.municipio.Tblpostoabastecimento1;
 import com.datasync.models.barco.municipio.Tblpostoabastecimento2;
 import com.datasync.models.barco.municipio.Tblpostoabastecimento3;
 import com.datasync.models.barco.municipio.Tblservicosemergenciaismunicipio;
+import com.datasync.models.barco.pais.TblCaracterizacaoFamiliaAlunoParentes;
 import com.datasync.models.barco.pais.TblCaracterizacaoFamiliaParentes;
 import com.datasync.models.barco.pais.Tblcabecalhopais;
 import com.datasync.models.barco.pais.Tblcaracterizacaofamiliapais;
@@ -259,7 +260,8 @@ public class ModelUtil {
 			indexables.add(new Tblinformacaopaisprovidencia());
 			indexables.add(new Tblinformacaopaissugestao());
 			indexables.add(new Tblinformacaopaistransportaoutro());
-			indexables.add(new TblCaracterizacaoFamiliaParentes());//adicionado 15/05/2010
+			indexables.add(new TblCaracterizacaoFamiliaParentes());//adicionado 15/04/2010
+			indexables.add(new TblCaracterizacaoFamiliaAlunoParentes());//adicionado 18/04/2010
 			
 			//Embarcacao
 			indexables.add(new Tblcabecalhoembarcacao());

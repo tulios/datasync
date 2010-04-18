@@ -9,9 +9,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.datasync.models.TesteBarco;
 import com.datasync.models.IndexableEntity;
-import com.datasync.models.barco.municipio.Tblservicosemergenciaismunicipio;
+import com.datasync.models.TesteBarco;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
@@ -26,10 +25,10 @@ public class TesteTblservicosemergenciaismunicipio extends TesteBarco {
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
         indexables.add(new Tblservicosemergenciaismunicipio());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblserviçosemergenciaismunicipio t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblservicosemergenciaismunicipio t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblserviçosemergenciaismunicipio t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblservicosemergenciaismunicipio t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblcabecalhomunicipio cabecalhoMunicipio = new Tblcabecalhomunicipio();
@@ -70,7 +69,7 @@ public class TesteTblservicosemergenciaismunicipio extends TesteBarco {
         var.setPossuitelefoniafixa("str");
         getLocalEm().persist(var);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblserviçosemergenciaismunicipio t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblservicosemergenciaismunicipio t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
@@ -85,7 +84,7 @@ public class TesteTblservicosemergenciaismunicipio extends TesteBarco {
         assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblserviçosemergenciaismunicipio t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblservicosemergenciaismunicipio t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }

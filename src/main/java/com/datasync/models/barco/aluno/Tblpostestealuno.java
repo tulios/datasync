@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 
 @Entity
-@Table(name = "tblPosTesteAluno")
+@Table(name = "tblPosTesteAuno") //tblPosTesteAluno
 @SuppressWarnings("serial")
 public class Tblpostestealuno extends IndexableEntity{
 

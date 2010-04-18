@@ -50,17 +50,14 @@ public class TesteTblpercepcaoalunorota extends TesteBarco {
         carac.setTemfilhos("Sim");
         carac.setQuantidadefilhosidadeescolar(1);
         carac.setQuantidadeFamilia(10);
-        carac.setIdParentes(10);
-        carac.setQuaisParentes("Varios");
+        carac.setQuantidadeFilhos(10);
         getLocalEm().persist(carac);
         getServerEm().persist(carac);
         
         Tblpercepcaoalunorota var = new Tblpercepcaoalunorota();
         var.setIdformulario("1");
-        var.setTempo("1");
-        var.setQuaisOutros("outros");
         var.setCheia("Cheia");
-        var.setEpoca("Epoca");
+        var.setEpoca("123");
         var.setCaminhoSeca("sim");
         var.setCaminhoCheia("nao");
         var.setSeca("seca");

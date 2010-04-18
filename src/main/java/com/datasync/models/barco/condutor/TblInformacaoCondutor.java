@@ -31,8 +31,6 @@ public class TblInformacaoCondutor extends IndexableEntity {
 	private String diferencaTempo;
 	@Column(name = "QualDiferencaTempo")
 	private String qualDiferencaTempo;
-	@Column(name = "Observacao")
-	private String observacao;
 	@Column(name = "CompraOLeo")
 	private String compraOleoo;
 	@Column(name = "Onde")
@@ -123,14 +121,6 @@ public class TblInformacaoCondutor extends IndexableEntity {
 
 	public void setQualDiferencaTempo(String qualDiferencaTempo) {
 		this.qualDiferencaTempo = qualDiferencaTempo;
-	}
-
-	public String getObservacao() {
-		return observacao;
-	}
-
-	public void setObservacao(String observacao) {
-		this.observacao = observacao;
 	}
 
 	public String getCompraOleoo() {

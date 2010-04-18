@@ -23,12 +23,12 @@ public class TesteTblCaracterizacaoFamiliaParentes extends TesteBarco {
         open();
 
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
-        indexables.add(new Tblinformacaopaisalunonaoescola());
+        indexables.add(new TblCaracterizacaoFamiliaParentes());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from TblCaracterizacaoFamiliaParentes t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblCaracterizacaoFamiliaParentes t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from TblCaracterizacaoFamiliaParentes t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblCaracterizacaoFamiliaParentes t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblcabecalhopais cabecalho = new Tblcabecalhopais();
@@ -50,10 +50,7 @@ public class TesteTblCaracterizacaoFamiliaParentes extends TesteBarco {
 		carac.setOcupacaomae("Sim");
 		carac.setQuantidadefilhos(1);
 		carac.setQuantidadefilhosidadeescolar(1);
-		carac.setObservacao("Observacao");
         carac.setQuantidadeFamilia(5);
-        carac.setParentes(10);
-        carac.setQuaisParentes("Varios");
 		carac.setQuantidadeajudamsustento(1);
 		getLocalEm().persist(carac);
 		getServerEm().persist(carac);
@@ -78,7 +75,7 @@ public class TesteTblCaracterizacaoFamiliaParentes extends TesteBarco {
         parentes.setQuaisParentes("varios");
         getLocalEm().persist(parentes);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from TblCaracterizacaoFamiliaParentes t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblCaracterizacaoFamiliaParentes t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
@@ -93,7 +90,7 @@ public class TesteTblCaracterizacaoFamiliaParentes extends TesteBarco {
         assertEquals(1, processor.getIdsList(parentes.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from TblCaracterizacaoFamiliaParentes t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblCaracterizacaoFamiliaParentes t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }

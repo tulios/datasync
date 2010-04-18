@@ -34,7 +34,6 @@ public class TesteTblidentificacaoprofessor extends TesteBarco {
         Tblcabecalhoprofessor cab = new Tblcabecalhoprofessor();
         cab.setIdformulario("1");
         cab.setPesquisador("Tulio");
-        cab.setIdformularioaluno("Tulio");
         cab.setDatacoleta(new Timestamp(new Date().getTime()));
         cab.setIdmunicipio(1);
         cab.setIdinep(1);
@@ -68,7 +67,7 @@ public class TesteTblidentificacaoprofessor extends TesteBarco {
         var.setSexo("M");
         var.setIdade(1);
         var.setComunidade("Comu");
-        var.setGrupo("Grupo");
+        var.setGrupo(1);
         var.setQuaisGrupos("Outros");
         getLocalEm().persist(var);
 

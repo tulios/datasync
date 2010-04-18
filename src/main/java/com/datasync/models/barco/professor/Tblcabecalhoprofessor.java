@@ -19,8 +19,6 @@ public class Tblcabecalhoprofessor extends IndexableEntity{
     private String idformulario;
     @Column(name = "Pesquisador")
     private String pesquisador;
-    @Column(name = "IdFormularioAluno")
-    private String idformularioaluno;
     @Column(name = "DataColeta")
     private Timestamp datacoleta;
     @Column(name = "IdMunicipio")
@@ -66,14 +64,6 @@ public class Tblcabecalhoprofessor extends IndexableEntity{
 
     public String getPesquisador(){
         return pesquisador;
-    }
-
-    public void setIdformularioaluno(String idformularioaluno){
-        this.idformularioaluno = idformularioaluno;
-    }
-
-    public String getIdformularioaluno(){
-        return idformularioaluno;
     }
 
     public void setDatacoleta(Timestamp datacoleta){

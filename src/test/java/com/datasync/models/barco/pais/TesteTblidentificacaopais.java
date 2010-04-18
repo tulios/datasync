@@ -50,10 +50,7 @@ public class TesteTblidentificacaopais extends TesteBarco {
 		carac.setOcupacaomae("Sim");
 		carac.setQuantidadefilhos(1);
 		carac.setQuantidadefilhosidadeescolar(1);
-		carac.setObservacao("Observacao");
         carac.setQuantidadeFamilia(5);
-        carac.setParentes(10);
-        carac.setQuaisParentes("Varios");
 		carac.setQuantidadeajudamsustento(1);
 		getLocalEm().persist(carac);
 		getServerEm().persist(carac);
@@ -64,7 +61,7 @@ public class TesteTblidentificacaopais extends TesteBarco {
         var.setComunidade("c");
         var.setIdade(1);
         var.setIdtipoescolaridade(1);
-        var.setGrupo("Grupo");
+        var.setGrupo(1);
         var.setQuaisGrupos("Outros");
         getLocalEm().persist(var);
 

@@ -24,7 +24,7 @@ public class Tblidentificacaoprofessor extends IndexableEntity{
     @Column(name = "Comunidade")
     private String comunidade;
     @Column(name = "Grupo")
-    private String grupo;
+    private int grupo;
     @Column(name = "QuaisGrupos")
     private String quaisGrupos;
 
@@ -78,11 +78,11 @@ public class Tblidentificacaoprofessor extends IndexableEntity{
         return comunidade;
     }
 
-	public String getGrupo() {
+	public int getGrupo() {
 		return grupo;
 	}
 
-	public void setGrupo(String grupo) {
+	public void setGrupo(int grupo) {
 		this.grupo = grupo;
 	}
 

@@ -15,10 +15,6 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
     @Id
     @Column(name = "IdFormulario")
     private String idformulario;
-    @Column(name = "Tempo")
-    private String tempo;
-    @Column(name = "QuaisOutros")
-    private String quaisOutros;
     @Column(name = "Cheia")
     private String cheia;
     @Column(name = "Epoca")
@@ -47,22 +43,6 @@ public class Tblpercepcaoalunorota extends IndexableEntity{
     public String getIdformulario(){
         return idformulario;
     }
-
-    public void setTempo(String tempo){
-        this.tempo = tempo;
-    }
-
-    public String getTempo(){
-        return tempo;
-    }
-
-	public String getQuaisOutros() {
-		return quaisOutros;
-	}
-
-	public void setQuaisOutros(String quaisOutros) {
-		this.quaisOutros = quaisOutros;
-	}
 
 	public String getCheia() {
 		return cheia;

@@ -50,10 +50,7 @@ public class TesteTblinformacaopaissugestao extends TesteBarco {
 		carac.setOcupacaomae("Sim");
 		carac.setQuantidadefilhos(1);
 		carac.setQuantidadefilhosidadeescolar(1);
-		carac.setObservacao("Observacao");
         carac.setQuantidadeFamilia(5);
-        carac.setParentes(10);
-        carac.setQuaisParentes("Varios");
 		carac.setQuantidadeajudamsustento(1);
 		getLocalEm().persist(carac);
 		getServerEm().persist(carac);

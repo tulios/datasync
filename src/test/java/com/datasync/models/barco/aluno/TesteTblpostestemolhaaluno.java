@@ -50,8 +50,7 @@ public class TesteTblpostestemolhaaluno extends TesteBarco {
         carac.setTemfilhos("Sim");
         carac.setQuantidadefilhosidadeescolar(1);
         carac.setQuantidadeFamilia(10);
-        carac.setIdParentes(10);
-        carac.setQuaisParentes("Varios");
+        carac.setQuantidadeFilhos(10);
         getLocalEm().persist(carac);
         getServerEm().persist(carac);
         
