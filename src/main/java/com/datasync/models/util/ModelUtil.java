@@ -66,6 +66,8 @@ import com.datasync.models.barco.embarcacao.Tblmaterialteto;
 import com.datasync.models.barco.embarcacao.Tblpropriedadeembarcacao;
 import com.datasync.models.barco.embarcacao.Tblsinalizacaonoturna;
 import com.datasync.models.barco.embarcacao.Tbltripulacao;
+import com.datasync.models.barco.fad.TblCabecalhoDesempenho;
+import com.datasync.models.barco.fad.TblDadosParada;
 import com.datasync.models.barco.municipio.Tblcabecalhomunicipio;
 import com.datasync.models.barco.municipio.Tblitensmunicipio;
 import com.datasync.models.barco.municipio.Tbloutrositensmunicipio;
@@ -286,6 +288,10 @@ public class ModelUtil {
 			indexables.add(new Tblpostoabastecimento2());
 			indexables.add(new Tblpostoabastecimento3());
 			indexables.add(new Tblservicosemergenciaismunicipio());
+			
+			//fad
+			indexables.add(new TblCabecalhoDesempenho());
+			indexables.add(new TblDadosParada());
 		}
 		
 		return indexables;

@@ -1,14 +1,15 @@
-tblDadosParada
-tblDadosParadaQuantidade
+tblCabecalhoDesempenho
+tblDadosParada - feito
 tblDadosOperacionaisInicial
 tblEventosExternos
 tblComportamentoEstabilidade
 tblDadosOperacionaisFinal
-tblDadosEscola
+tblDadosEscola        
+
+tblDadosParadaQuantidade
 tblDadosEntrevista
 tblImagens
 tblEventosInternos
 tblObstaculos
 tblEmbarqueAluno
 tblEscola
-tblCabecalhoDesempenho

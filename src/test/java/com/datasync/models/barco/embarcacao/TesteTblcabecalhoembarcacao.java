@@ -9,9 +9,9 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.datasync.models.TesteBarco;
 import com.datasync.models.IndexableEntity;
-import com.datasync.models.barco.embarcacao.Tblcabecalhoembarcacao;
+import com.datasync.models.TesteBarco;
+import com.datasync.models.barco.fad.TblCabecalhoDesempenho;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
@@ -32,6 +32,21 @@ public class TesteTblcabecalhoembarcacao extends TesteBarco {
         Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblcabecalhoembarcacao t").getSingleResult();
         assertEquals(0, server.intValue());
 
+		TblCabecalhoDesempenho cabecalho = new TblCabecalhoDesempenho();
+		cabecalho.setIdFormulario("1");
+		cabecalho.setCaracteristicaRota(1);
+		cabecalho.setData(new Date());
+		cabecalho.setIdMunicipio(1);
+		cabecalho.setIdRota(1);
+		cabecalho.setPesquisador("Tulio");
+		cabecalho.setPotenciaMotor(20.1);
+		cabecalho.setReferencia(1);
+		cabecalho.setRota("rota");
+		cabecalho.setTipoAvaliado(1);
+		cabecalho.setTipoNaoAvaliado(1);
+		getLocalEm().persist(cabecalho);
+		getServerEm().persist(cabecalho);
+        
         Tblcabecalhoembarcacao var = new Tblcabecalhoembarcacao();
         var.setIdformulario("1");
         var.setPesquisador("Pesquisador");
