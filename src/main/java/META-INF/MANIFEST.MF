@@ -2,5 +2,5 @@ Manifest-Version: 1.0
 Main-Class: com.datasync.Main
 Product-Name:  Data Sync
 Package-Title: datasync
-Package-Version: 0.1
+Package-Version: 0.2
 Package-Vendor: Túlio Ornelas dos Santos
