@@ -15,19 +15,19 @@ import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
 import com.datasync.service.runner.SyncServiceRunner;
 
-public class TesteTblDadosParada extends TesteBarco {
+public class TesteTblDadosOperacionaisInicial extends TesteBarco {
 
 	@Test
 	public void verificaSincronismo() throws Exception{
 		open();
 
 		List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
-		indexables.add(new TblDadosParada());
+		indexables.add(new TblDadosOperacionaisInicial());
 
-		Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblDadosParada t").getSingleResult();
+		Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblDadosOperacionaisInicial t").getSingleResult();
 		assertEquals(0, local.intValue());
 
-		Number server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblDadosParada t").getSingleResult();
+		Number server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblDadosOperacionaisInicial t").getSingleResult();
 		assertEquals(0, server.intValue());
 
 		TblCabecalhoDesempenho cabecalho = new TblCabecalhoDesempenho();
@@ -45,17 +45,17 @@ public class TesteTblDadosParada extends TesteBarco {
 		getLocalEm().persist(cabecalho);
 		getServerEm().persist(cabecalho);
 		
-		TblDadosParada var = new TblDadosParada();
-		var.setCodigoAtracagem("1");
-		var.setCodigoParada("1");
-		var.setCodigoSaida("1");
+		TblDadosOperacionaisInicial var = new TblDadosOperacionaisInicial();
+		var.setGpsOdometroInicial(10.2);
+		var.setHoraInicial("1");
+		var.setIdaVolta(1);
 		var.setIdFormulario("1");
-		var.setIdTipoParada(1);
-		var.setQuantidadeDesembarque(1);
+		var.setLocalInicio("local");
+		var.setPontoGPSInicial("1");
 		var.setQuantidadeEmbarque(1);
 		getLocalEm().persist(var);
-
-		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblDadosParada t").getSingleResult();
+		
+		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblDadosOperacionaisInicial t").getSingleResult();
 		assertEquals(1, local.intValue());
 
 		IndexProcessor processor = new IndexProcessor();
@@ -70,9 +70,10 @@ public class TesteTblDadosParada extends TesteBarco {
 		assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
 		open();
-		server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblDadosParada t").getSingleResult();
+		server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblDadosOperacionaisInicial t").getSingleResult();
 		assertEquals(1, server.intValue());
 		close();
 	}
+
 
 }

@@ -67,6 +67,7 @@ import com.datasync.models.barco.embarcacao.TesteTblpropriedadeembarcacao;
 import com.datasync.models.barco.embarcacao.TesteTblsinalizacaonoturna;
 import com.datasync.models.barco.embarcacao.TesteTbltripulacao;
 import com.datasync.models.barco.fad.TesteTblCabecalhoDesempenho;
+import com.datasync.models.barco.fad.TesteTblDadosOperacionaisInicial;
 import com.datasync.models.barco.fad.TesteTblDadosParada;
 import com.datasync.models.barco.municipio.TesteTblcabecalhomunicipio;
 import com.datasync.models.barco.municipio.TesteTblitensmunicipio;
@@ -251,7 +252,8 @@ import com.datasync.models.barco.secretario.TesteTblpercepcaosecretariomotivobar
 	
 	//fad
 	TesteTblCabecalhoDesempenho.class,
-	TesteTblDadosParada.class
+	TesteTblDadosParada.class,
+	TesteTblDadosOperacionaisInicial.class
 	
 })
 public class TodosBarco {

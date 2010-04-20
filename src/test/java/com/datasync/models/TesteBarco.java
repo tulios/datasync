@@ -149,7 +149,8 @@ public class TesteBarco extends Teste{
 				
 				//fad
 				"tblDadosParada",
-				"TblCabecalhoDesempenho",
+				"tblCabecalhoDesempenho",
+				"tblDadosOperacionaisInicial",
 				
 				//Tabelas Comuns
 				"tblEscola",

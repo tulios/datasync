@@ -1,4 +1,4 @@
-tblCabecalhoDesempenho
+tblCabecalhoDesempenho - feito
 tblDadosParada - feito
 tblDadosOperacionaisInicial
 tblEventosExternos
