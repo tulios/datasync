@@ -148,6 +148,12 @@ public class TesteBarco extends Teste{
 				"tblcabecalhomunicipio",
 				
 				//fad
+				"tblembarquealuno",
+				"tblobstaculos",
+				"tbleventosinternos",
+				"tblImagens",
+				"tblDadosEntrevista",
+				"tblDadosParadaQuantidade",
 				"tblDadosEscola",
 				"tblDadosOperacionaisFinal",
 				"tblComportamentoEstabilidade",
@@ -208,7 +214,9 @@ public class TesteBarco extends Teste{
 				"tbltipopropriedade",
 				"tblTipoSinalizacaoNoturna",
 				"tblTipoParentes",
-				"tblTipoParada"
+				"tblTipoParada",
+				"tblTipoObstaculos",
+				"tblTipoEmbarque"
 		};
 		
 		for(String tabela : tabelas){
@@ -270,7 +278,9 @@ public class TesteBarco extends Teste{
 				"insert into tblTipoPropriedade	values (1,'Própria')",
 				"insert into tblTipoSinalizacaoNoturna values (1,'Não possui')",
 				"insert into tblTipoParentes values (1, 'PAI')",
-				"insert into tblTipoParada values (1, 'Parada1')"
+				"insert into tblTipoParada values (1, 'Parada1')",
+				"insert into tblTipoObstaculos values (1, 'Obstaculo')",
+				"insert into tblTipoEmbarque values (1, 'embarque')"
 		};
 		
 		for (String insert : inserts){

@@ -72,7 +72,14 @@ import com.datasync.models.barco.fad.TblDadosEscola;
 import com.datasync.models.barco.fad.TblDadosOperacionaisFinal;
 import com.datasync.models.barco.fad.TblDadosOperacionaisInicial;
 import com.datasync.models.barco.fad.TblDadosParada;
+import com.datasync.models.barco.fad.TblDadosParadaQuantidade;
 import com.datasync.models.barco.fad.TblEventosExternos;
+import com.datasync.models.barco.fad.TblDadosEntrevista;
+import com.datasync.models.barco.fad.Tblembarquealuno;
+import com.datasync.models.barco.fad.TblEscola;
+import com.datasync.models.barco.fad.Tbleventosinternos;
+import com.datasync.models.barco.fad.Tblimagens;
+import com.datasync.models.barco.fad.Tblobstaculos;
 import com.datasync.models.barco.municipio.Tblcabecalhomunicipio;
 import com.datasync.models.barco.municipio.Tblitensmunicipio;
 import com.datasync.models.barco.municipio.Tbloutrositensmunicipio;
@@ -302,6 +309,13 @@ public class ModelUtil {
 			indexables.add(new TblComportamentoEstabilidade());
 			indexables.add(new TblDadosOperacionaisFinal());
 			indexables.add(new TblDadosEscola());
+			indexables.add(new TblDadosParadaQuantidade());
+			indexables.add(new TblDadosEntrevista());
+			indexables.add(new Tblimagens());
+			indexables.add(new Tbleventosinternos());
+			indexables.add(new Tblobstaculos());
+			indexables.add(new Tblembarquealuno());
+			indexables.add(new TblEscola());
 		}
 		
 		return indexables;

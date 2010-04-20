@@ -72,7 +72,14 @@ import com.datasync.models.barco.fad.TesteTblDadosEscola;
 import com.datasync.models.barco.fad.TesteTblDadosOperacionaisFinal;
 import com.datasync.models.barco.fad.TesteTblDadosOperacionaisInicial;
 import com.datasync.models.barco.fad.TesteTblDadosParada;
+import com.datasync.models.barco.fad.TesteTblDadosParadaQuantidade;
 import com.datasync.models.barco.fad.TesteTblEventosExternos;
+import com.datasync.models.barco.fad.TesteTbldadosentrevista;
+import com.datasync.models.barco.fad.TesteTblembarquealuno;
+import com.datasync.models.barco.fad.TesteTblescola;
+import com.datasync.models.barco.fad.TesteTbleventosinternos;
+import com.datasync.models.barco.fad.TesteTblimagens;
+import com.datasync.models.barco.fad.TesteTblobstaculos;
 import com.datasync.models.barco.municipio.TesteTblcabecalhomunicipio;
 import com.datasync.models.barco.municipio.TesteTblitensmunicipio;
 import com.datasync.models.barco.municipio.TesteTbloutrositensmunicipio;
@@ -261,7 +268,14 @@ import com.datasync.models.barco.secretario.TesteTblpercepcaosecretariomotivobar
 	TesteTblDadosOperacionaisFinal.class,
 	TesteTblEventosExternos.class,
 	TesteTblComportamentoEstabilidade.class,
-	TesteTblDadosEscola.class
+	TesteTblDadosEscola.class,
+	TesteTblDadosParadaQuantidade.class,
+	TesteTbldadosentrevista.class,
+	TesteTblimagens.class,
+	TesteTbleventosinternos.class,
+	TesteTblobstaculos.class,
+	TesteTblembarquealuno.class,
+	TesteTblescola.class
 	
 })
 public class TodosBarco {

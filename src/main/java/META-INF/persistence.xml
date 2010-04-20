@@ -30,7 +30,6 @@
 	<!-- 
 		Configuração Pedro
 	 -->
-	 <!-- 
 	  	<persistence-unit name="datasync-local" transaction-type="RESOURCE_LOCAL">
 			<properties>
 				<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.0.0.104:1433/BD_BARCO" />
@@ -50,10 +49,10 @@
 				<property name="hibernate.connection.password" value="123456" />
 			</properties>
 		</persistence-unit>
- 	-->
 	<!-- 
 		Configuração Tulio
 	-->	
+	<!-- 
 	<persistence-unit name="datasync-local" transaction-type="RESOURCE_LOCAL">
 		<properties>
 			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.211.55.3:1433/BD_BARCO" />
@@ -73,4 +72,5 @@
 			<property name="hibernate.connection.password" value="123456" />
 		</properties>
 	</persistence-unit>
+	 -->
 </persistence>
