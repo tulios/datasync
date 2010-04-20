@@ -68,6 +68,7 @@ import com.datasync.models.barco.embarcacao.Tblsinalizacaonoturna;
 import com.datasync.models.barco.embarcacao.Tbltripulacao;
 import com.datasync.models.barco.fad.TblCabecalhoDesempenho;
 import com.datasync.models.barco.fad.TblComportamentoEstabilidade;
+import com.datasync.models.barco.fad.TblDadosEscola;
 import com.datasync.models.barco.fad.TblDadosOperacionaisFinal;
 import com.datasync.models.barco.fad.TblDadosOperacionaisInicial;
 import com.datasync.models.barco.fad.TblDadosParada;
@@ -300,6 +301,7 @@ public class ModelUtil {
 			indexables.add(new TblEventosExternos());
 			indexables.add(new TblComportamentoEstabilidade());
 			indexables.add(new TblDadosOperacionaisFinal());
+			indexables.add(new TblDadosEscola());
 		}
 		
 		return indexables;

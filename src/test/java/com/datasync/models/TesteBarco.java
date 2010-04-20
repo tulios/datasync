@@ -148,6 +148,7 @@ public class TesteBarco extends Teste{
 				"tblcabecalhomunicipio",
 				
 				//fad
+				"tblDadosEscola",
 				"tblDadosOperacionaisFinal",
 				"tblComportamentoEstabilidade",
 				"tblEventosExternos",
