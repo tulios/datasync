@@ -1,8 +1,8 @@
 tblCabecalhoDesempenho - feito
 tblDadosParada - feito
 tblDadosOperacionaisInicial - feito
-tblEventosExternos
-tblComportamentoEstabilidade
+tblEventosExternos - feito
+tblComportamentoEstabilidade - feito
 tblDadosOperacionaisFinal
 tblDadosEscola        
 
