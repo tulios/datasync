@@ -3,7 +3,7 @@ tblDadosParada - feito
 tblDadosOperacionaisInicial - feito
 tblEventosExternos - feito
 tblComportamentoEstabilidade - feito
-tblDadosOperacionaisFinal
+tblDadosOperacionaisFinal - feito
 tblDadosEscola        
 
 tblDadosParadaQuantidade
