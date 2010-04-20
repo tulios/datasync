@@ -1,6 +1,6 @@
 tblCabecalhoDesempenho - feito
 tblDadosParada - feito
-tblDadosOperacionaisInicial
+tblDadosOperacionaisInicial - feito
 tblEventosExternos
 tblComportamentoEstabilidade
 tblDadosOperacionaisFinal

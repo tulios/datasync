@@ -15,19 +15,19 @@ import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
 import com.datasync.service.runner.SyncServiceRunner;
 
-public class TesteTblDadosOperacionaisInicial extends TesteBarco {
+public class TesteTblEventosExternos extends TesteBarco {
 
 	@Test
 	public void verificaSincronismo() throws Exception{
 		open();
 
 		List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
-		indexables.add(new TblDadosOperacionaisInicial());
+		indexables.add(new TblEventosExternos());
 
-		Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblDadosOperacionaisInicial t").getSingleResult();
+		Number local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblEventosExternos t").getSingleResult();
 		assertEquals(0, local.intValue());
 
-		Number server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblDadosOperacionaisInicial t").getSingleResult();
+		Number server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblEventosExternos t").getSingleResult();
 		assertEquals(0, server.intValue());
 
 		TblCabecalhoDesempenho cabecalho = new TblCabecalhoDesempenho();
@@ -44,18 +44,29 @@ public class TesteTblDadosOperacionaisInicial extends TesteBarco {
 		cabecalho.setTipoNaoAvaliado(1);
 		getLocalEm().persist(cabecalho);
 		getServerEm().persist(cabecalho);
-		
-		TblDadosOperacionaisInicial var = new TblDadosOperacionaisInicial();
-		var.setGpsOdometroInicial(10.2);
-		var.setHoraInicial("1");
-		var.setIdaVolta(1);
+
+		TblEventosExternos var = new TblEventosExternos();
+		var.setAceleracao(1);
+		var.setColisaoBateu(1);
+		var.setComportamentoOnda(1);
+		var.setFilmagem("f");
+		var.setFotoLarguraInsuficiente("f");
+		var.setFotoMeandros("f");
+		var.setFotoObstaculo1("o1");
+		var.setFotoObstaculo2("o2");
+		var.setFotoObstaculo3("o3");
+		var.setFotoOnda1("f");
+		var.setFotoOnda2("f2");
+		var.setGpsFinal("1");
+		var.setGpsInicial("1");
 		var.setIdFormulario("1");
-		var.setLocalInicio("local");
-		var.setPontoGPSInicial("1");
-		var.setQuantidadeEmbarque(1);
+		var.setLarguraInsuficiente(1);
+		var.setMeandros(1);
+		var.setOndasGeradas(1);
+		var.setQuandoObstaculos(1);
 		getLocalEm().persist(var);
-		
-		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblDadosOperacionaisInicial t").getSingleResult();
+
+		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblEventosExternos t").getSingleResult();
 		assertEquals(1, local.intValue());
 
 		IndexProcessor processor = new IndexProcessor();
@@ -70,7 +81,7 @@ public class TesteTblDadosOperacionaisInicial extends TesteBarco {
 		assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
 		open();
-		server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblDadosOperacionaisInicial t").getSingleResult();
+		server = (Number) getServerEm().createQuery("select count(t.idFormulario) from TblEventosExternos t").getSingleResult();
 		assertEquals(1, server.intValue());
 		close();
 	}
