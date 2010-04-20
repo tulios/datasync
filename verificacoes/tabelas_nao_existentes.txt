@@ -1,11 +1,3 @@
-tblCabecalhoDesempenho - feito
-tblDadosParada - feito
-tblDadosOperacionaisInicial - feito
-tblEventosExternos - feito
-tblComportamentoEstabilidade - feito
-tblDadosOperacionaisFinal - feito
-tblDadosEscola        
-
 tblDadosParadaQuantidade
 tblDadosEntrevista
 tblImagens

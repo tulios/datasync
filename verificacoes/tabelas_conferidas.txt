@@ -108,3 +108,10 @@ tblPostoAbastecimento2
 tblPostoAbastecimento3
 tblPostoAbastecimento1
 tblServiçosEmergenciaisMunicipio
+tblCabecalhoDesempenho
+tblDadosParada
+tblDadosOperacionaisInicial
+tblEventosExternos
+tblComportamentoEstabilidade
+tblDadosOperacionaisFinal
+tblDadosEscola       
