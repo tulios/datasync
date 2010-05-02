@@ -32,7 +32,7 @@ public class TesteTblInformacaoCondutorContrato extends TesteBarco {
 		assertEquals(0, server.intValue());
 
 		TblBarcoCabecalhoCondutor cab = new TblBarcoCabecalhoCondutor();
-		cab.setIdFormulario("1");
+		cab.setIdFormulario("FCC5");
 		cab.setIdPesquisador("1");
 		cab.setIdMunicipio(1);
 		cab.setRota("100");
@@ -43,7 +43,7 @@ public class TesteTblInformacaoCondutorContrato extends TesteBarco {
 		getServerEm().persist(cab);
 		
 		TblInformacaoCondutor i = new TblInformacaoCondutor();
-		i.setIdFormulario("1");
+		i.setIdFormulario("FCC5");
 		i.setQuantidadeRota(10);
 		i.setTempoRotaLonga("19");
 		i.setTempoRotaCurta("15");
@@ -56,6 +56,7 @@ public class TesteTblInformacaoCondutorContrato extends TesteBarco {
 		getServerEm().persist(i);
 		
 		TblInformacaoCondutorContrato contrato = new TblInformacaoCondutorContrato();
+		/*
 		contrato.setIdFormulario("1");
 		contrato.setIdTipoContrato(1);
 		contrato.setValor("100.50");
@@ -64,7 +65,17 @@ public class TesteTblInformacaoCondutorContrato extends TesteBarco {
 		contrato.setPagamento(1);
 		contrato.setQuaisOutros("outros");
 		getLocalEm().persist(contrato);
-
+		*/
+		
+		contrato.setIdFormulario("FCC5");
+		contrato.setIdTipoContrato(1);
+		contrato.setQuaisOutros("");
+		contrato.setFormaContrato(1);
+		contrato.setTipoPagamento("");
+		contrato.setPagamento("");
+		contrato.setValor("1,98");
+		getLocalEm().persist(contrato);
+		
 		local = (Number) getLocalEm().createQuery("select count(t.idFormulario) from TblInformacaoCondutorContrato t").getSingleResult();
 		assertEquals(1, local.intValue());
 

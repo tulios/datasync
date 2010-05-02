@@ -68,15 +68,14 @@ import com.datasync.models.barco.embarcacao.Tblsinalizacaonoturna;
 import com.datasync.models.barco.embarcacao.Tbltripulacao;
 import com.datasync.models.barco.fad.TblCabecalhoDesempenho;
 import com.datasync.models.barco.fad.TblComportamentoEstabilidade;
+import com.datasync.models.barco.fad.TblDadosEntrevista;
 import com.datasync.models.barco.fad.TblDadosEscola;
 import com.datasync.models.barco.fad.TblDadosOperacionaisFinal;
 import com.datasync.models.barco.fad.TblDadosOperacionaisInicial;
 import com.datasync.models.barco.fad.TblDadosParada;
 import com.datasync.models.barco.fad.TblDadosParadaQuantidade;
 import com.datasync.models.barco.fad.TblEventosExternos;
-import com.datasync.models.barco.fad.TblDadosEntrevista;
 import com.datasync.models.barco.fad.Tblembarquealuno;
-import com.datasync.models.barco.fad.TblEscola;
 import com.datasync.models.barco.fad.Tbleventosinternos;
 import com.datasync.models.barco.fad.Tblimagens;
 import com.datasync.models.barco.fad.Tblobstaculos;
@@ -315,7 +314,7 @@ public class ModelUtil {
 			indexables.add(new Tbleventosinternos());
 			indexables.add(new Tblobstaculos());
 			indexables.add(new Tblembarquealuno());
-			indexables.add(new TblEscola());
+			//indexables.add(new TblEscola());
 		}
 		
 		return indexables;

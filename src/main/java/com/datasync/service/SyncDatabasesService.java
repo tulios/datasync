@@ -71,9 +71,18 @@ public class SyncDatabasesService implements IService {
 				Collections.sort(uniquePkId);
 
 				set = new HashSet<String>(compoundId);
-				List<String> uniqueCompoundId = new ArrayList<String>(set);
-				Collections.sort(uniqueCompoundId);
+				List<String> uniqueCompoundIdStr = new ArrayList<String>(set);
+				Collections.sort(uniqueCompoundIdStr);
 
+				List<Integer> uniqueCompoundId = new ArrayList<Integer>();
+				
+				for (String idStr : uniqueCompoundIdStr) {
+					uniqueCompoundId.add(Integer.parseInt(idStr));
+				}
+				
+				System.out.println(uniquePkId);
+				System.out.println(uniqueCompoundId);
+				
 				query = localEm.createQuery(strQuery);
 				query.setParameter("ids", uniquePkId);
 				query.setParameter("compoundIds", uniqueCompoundId);
@@ -161,6 +170,9 @@ public class SyncDatabasesService implements IService {
 		IndexProcessor processor = new IndexProcessor();
 
 		for(IndexableEntity indexable : indexables){
+			
+			System.out.println(indexable.getFullClassName());
+			
 			MainFrame.getInstance().setMensagem("Sincronizando " + indexable.getShortClassName());
 			log.debug("-> " + indexable.getFullClassName());
 
@@ -168,9 +180,10 @@ public class SyncDatabasesService implements IService {
 			atualizarProgressBar(0, 1);
 
 			Query query  = createQuery(processor, indexable);
+			
 			List<IndexableEntity> resultList = query.getResultList();
 
-			log.debug("ResultList: " + resultList.size());
+			//log.debug("ResultList: " + resultList.size());
 			if (resultList.size() > 0){
 				sync(processor, resultList);
 

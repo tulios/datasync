@@ -24,7 +24,7 @@ public class TblInformacaoCondutorContrato extends IndexableEntity {
 	@Column(name = "TipoPagamento")
 	private String tipoPagamento;
 	@Column(name = "Pagamento")
-	private int pagamento;
+	private String pagamento;
 	@Column(name = "QuaisOutros")
 	private String quaisOutros;
 	
@@ -91,11 +91,11 @@ public class TblInformacaoCondutorContrato extends IndexableEntity {
 		this.tipoPagamento = tipoPagamento;
 	}
 
-	public int getPagamento() {
+	public String getPagamento() {
 		return pagamento;
 	}
 
-	public void setPagamento(int pagamento) {
+	public void setPagamento(String pagamento) {
 		this.pagamento = pagamento;
 	}
 

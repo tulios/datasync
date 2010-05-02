@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import com.datasync.models.custo.TestTblCabecalhoCondutor;
+import com.datasync.models.custo.TesteTblCabecalhoCondutor;
 import com.datasync.models.custo.TestTblCabecalhoEmbarcacao;
 import com.datasync.models.custo.TestTblCabecalhoMecanico;
 import com.datasync.models.custo.TestTblCabecalhoMonitor;
@@ -21,7 +21,7 @@ import com.datasync.models.custo.embarcado.TesteTblsobedesce;
 @RunWith(value=Suite.class)
 @SuiteClasses({  
 	//Custo
-	TestTblCabecalhoCondutor.class,
+	TesteTblCabecalhoCondutor.class,
 	TestTblCabecalhoEmbarcacao.class,
 	TestTblCabecalhoMecanico.class,
 	TestTblCabecalhoMonitor.class,
