@@ -38,6 +38,16 @@ public class TblDadosParada extends IndexableEntity {
 		return getIdFormulario()+"#"+getIdTipoParada();
 	}
 
+	@Override
+    public boolean isCompoundKey() {
+    	return true;
+    }
+    
+    @Override
+    public String getCompoundIdColumnName() {
+    	return "idTipoParada";
+    }
+	
 	public String getIdFormulario() {
 		return idFormulario;
 	}

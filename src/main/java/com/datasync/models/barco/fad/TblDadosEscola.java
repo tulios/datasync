@@ -35,6 +35,16 @@ public class TblDadosEscola extends IndexableEntity {
 	public String getIdFormulario() {
 		return idFormulario;
 	}
+	
+	@Override
+    public boolean isCompoundKey() {
+    	return true;
+    }
+    
+    @Override
+    public String getCompoundIdColumnName() {
+    	return "idTipoParada";
+    }
 
 	public void setIdFormulario(String idFormulario) {
 		this.idFormulario = idFormulario;
