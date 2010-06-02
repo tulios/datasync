@@ -1,4 +1,4 @@
-package com.datasync.models.bicicleta;
+package com.datasync.models.bicicleta.aluno;
 
 import java.sql.Timestamp;
 
@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.IndexableWithDifferentName;
 
-@Entity(name="com.datasync.models.bicicleta.Tblcabecalhoaluno")
+@Entity(name="com.datasync.models.bicicleta.aluno.Tblcabecalhoaluno")
 @Table(name = "tblCabecalhoAluno")
 @SuppressWarnings("serial")
 public class Tblcabecalhoaluno extends IndexableEntity implements IndexableWithDifferentName {
@@ -31,7 +31,7 @@ public class Tblcabecalhoaluno extends IndexableEntity implements IndexableWithD
 
     @Override
     public String getDifferentName() {
-    	return "com.datasync.models.bicicleta.Tblcabecalhoaluno";
+    	return "com.datasync.models.bicicleta.aluno.Tblcabecalhoaluno";
     }
     
     @Override

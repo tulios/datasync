@@ -1,4 +1,4 @@
-package com.datasync.models.bicicleta;
+package com.datasync.models.bicicleta.aluno;
 
 import static org.junit.Assert.assertEquals;
 
@@ -25,10 +25,10 @@ public class TesteTblcabecalhoaluno extends TesteBicicleta {
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
         indexables.add(new Tblcabecalhoaluno());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.bicicleta.Tblcabecalhoaluno t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.bicicleta.aluno.Tblcabecalhoaluno t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.bicicleta.Tblcabecalhoaluno t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.bicicleta.aluno.Tblcabecalhoaluno t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblcabecalhoaluno var = new Tblcabecalhoaluno();
@@ -40,7 +40,7 @@ public class TesteTblcabecalhoaluno extends TesteBicicleta {
         var.setData(new Timestamp(new Date().getTime()));
         getLocalEm().persist(var);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.bicicleta.Tblcabecalhoaluno t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.bicicleta.aluno.Tblcabecalhoaluno t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
@@ -55,7 +55,7 @@ public class TesteTblcabecalhoaluno extends TesteBicicleta {
         assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.bicicleta.Tblcabecalhoaluno t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.bicicleta.aluno.Tblcabecalhoaluno t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }
