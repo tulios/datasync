@@ -5,6 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import com.datasync.models.bicicleta.aluno.TesteTblacidenteescola;
+import com.datasync.models.bicicleta.aluno.TesteTblacompanhanteescola;
 import com.datasync.models.bicicleta.aluno.TesteTblatividade;
 import com.datasync.models.bicicleta.aluno.TesteTblcabecalhoaluno;
 
@@ -12,7 +13,8 @@ import com.datasync.models.bicicleta.aluno.TesteTblcabecalhoaluno;
 @SuiteClasses({ 
 	TesteTblcabecalhoaluno.class,
 	TesteTblatividade.class,
-	TesteTblacidenteescola.class
+	TesteTblacidenteescola.class,
+	TesteTblacompanhanteescola.class
 })
 public class TodosBicicleta {
 }
