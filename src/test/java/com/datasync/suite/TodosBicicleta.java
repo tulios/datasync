@@ -8,6 +8,7 @@ import com.datasync.models.bicicleta.aluno.TesteTblacidenteescola;
 import com.datasync.models.bicicleta.aluno.TesteTblacompanhanteescola;
 import com.datasync.models.bicicleta.aluno.TesteTblatividade;
 import com.datasync.models.bicicleta.aluno.TesteTblcabecalhoaluno;
+import com.datasync.models.bicicleta.aluno.TesteTblcalcado;
 import com.datasync.models.bicicleta.aluno.TesteTbldefeitobicicleta;
 import com.datasync.models.bicicleta.aluno.TesteTblmelhoria;
 
@@ -18,7 +19,8 @@ import com.datasync.models.bicicleta.aluno.TesteTblmelhoria;
 	TesteTblacidenteescola.class,
 	TesteTblacompanhanteescola.class,
 	TesteTbldefeitobicicleta.class,
-	TesteTblmelhoria.class
+	TesteTblmelhoria.class,
+	TesteTblcalcado.class
 })
 public class TodosBicicleta {
 }
