@@ -19,6 +19,7 @@ public class TesteBicicleta extends Teste {
 	private void clearBicicleta(){
 		String[] tabelas = new String[]{
 			//aluno
+			"tblEquipamentoProtecao",
 			"tblCuidadoBicicleta",
 			"tblConsertaBicicleta",
 			"tblCalcado",
@@ -38,7 +39,8 @@ public class TesteBicicleta extends Teste {
 			"tblTipoBicicleta",
 			"tblTipoCalcado",
 			"tblTipoConsertaBicicleta",
-			"tblTipoCuidadoBicicleta"
+			"tblTipoCuidadoBicicleta",
+			"tblTipoEquipamentoProtecao"
 		};
 		
 		for(String tabela : tabelas){
@@ -57,7 +59,8 @@ public class TesteBicicleta extends Teste {
 				"insert into tblTipoBicicleta values (1, 'marchas');",
 				"insert into tblTipoCalcado values (1, 'nenhum');",
 				"insert into tblTipoConsertaBicicleta values (1, 'Amigo');",
-				"insert into tblTipoCuidadoBicicleta values (1, 'Calibra os pneus');"
+				"insert into tblTipoCuidadoBicicleta values (1, 'Calibra os pneus');",
+				"insert into tblTipoEquipamentoProtecao values (1, 'capacete');"
 		};
 	
 		for (String insert : inserts){
