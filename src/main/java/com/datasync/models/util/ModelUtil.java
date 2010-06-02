@@ -168,7 +168,7 @@ public class ModelUtil {
 	}
 
 	private static void registerBicicleta(List<IndexableEntity> indexables) {
-		
+		indexables.add(new com.datasync.models.bicicleta.Tblcabecalhoaluno());
 	}
 	
 	private static void registerBarco(List<IndexableEntity> indexables) {

@@ -30,6 +30,7 @@
 	<!-- 
 		Configuração Pedro
 	 -->
+	 <!-- 
 	  	<persistence-unit name="datasync-local" transaction-type="RESOURCE_LOCAL">
 			<properties>
 				<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.0.0.100:1433/BD_BARCO" />
@@ -51,13 +52,13 @@
 				<property name="hibernate.show_sql" value="true" />
 			</properties>
 		</persistence-unit>
+	 -->
 	<!-- 
 		Configuração Tulio
 	-->	
-	<!-- 
 	<persistence-unit name="datasync-local" transaction-type="RESOURCE_LOCAL">
 		<properties>
-			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.211.55.3:1433/BD_BARCO" />
+			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.211.55.3:1433/BICICLETA" />
 			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
 			<property name="hibernate.connection.username" value="datasync_user" />
@@ -67,12 +68,11 @@
 	
 	<persistence-unit name="datasync-server" transaction-type="RESOURCE_LOCAL">
 		<properties>
-			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.211.55.3:1433/BD_BARCO2" />
+			<property name="hibernate.connection.url" value="jdbc:jtds:sqlserver://10.211.55.3:1433/BICICLETA2" />
 			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
 			<property name="hibernate.connection.username" value="datasync_user" />
 			<property name="hibernate.connection.password" value="123456" />
 		</properties>
 	</persistence-unit>
-	 -->
 </persistence>

@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 import com.datasync.models.IndexableEntity;
 
-@Entity
+@Entity(name="com.datasync.models.barco.aluno.Tblcabecalhoaluno")
 @Table(name = "tblCabecalhoAluno")
 @SuppressWarnings("serial")
 public class Tblcabecalhoaluno extends IndexableEntity{

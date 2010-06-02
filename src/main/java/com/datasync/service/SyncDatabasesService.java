@@ -15,6 +15,7 @@ import org.apache.log4j.Logger;
 
 import com.datasync.Main;
 import com.datasync.models.IndexableEntity;
+import com.datasync.models.IndexableWithDifferentName;
 import com.datasync.processor.IndexProcessor;
 import com.datasync.ui.MainFrame;
 
@@ -43,10 +44,18 @@ public class SyncDatabasesService implements IService {
 		this.remoteEm = remoteEm;
 	}
 
+	private String getEntityName(IndexableEntity indexable){
+		if (indexable instanceof IndexableWithDifferentName) {
+			return ((IndexableWithDifferentName) indexable).getDifferentName();
+		}
+		return indexable.getShortClassName();
+	}
+	
 	private Query createQuery(IndexProcessor processor, IndexableEntity indexable){
 		// pegar id list pela classe
 		List<String> ids = processor.getIdsList(indexable.getFullClassName());
-		String entityName = indexable.getShortClassName();
+		
+		String entityName = getEntityName(indexable);
 		String columnName = indexable.getIdColumnName();
 
 		Query query  = null;
@@ -106,7 +115,7 @@ public class SyncDatabasesService implements IService {
 		int index = 0;
 		for(IndexableEntity entity: resultList){
 
-			String entityName = entity.getShortClassName();
+			String entityName = getEntityName(entity);
 			String columnName = entity.getIdColumnName();
 
 			//Verifica se ja existe no outro banco
