@@ -21,6 +21,7 @@ import com.datasync.models.bicicleta.aluno.TesteTblmelhoria;
 import com.datasync.models.bicicleta.aluno.TesteTblmotivoutilizacao;
 import com.datasync.models.bicicleta.aluno.TesteTblobstaculotransito;
 import com.datasync.models.bicicleta.aluno.TesteTbloutrotransporte;
+import com.datasync.models.bicicleta.aluno.TesteTblprotecaochuva;
 
 @RunWith(value=Suite.class)
 @SuiteClasses({ 
@@ -40,7 +41,8 @@ import com.datasync.models.bicicleta.aluno.TesteTbloutrotransporte;
 	TesteTbllocalestacionamentoescola.class,
 	TesteTblmotivoutilizacao.class,
 	TesteTblobstaculotransito.class,
-	TesteTbloutrotransporte.class
+	TesteTbloutrotransporte.class,
+	TesteTblprotecaochuva.class
 })
 public class TodosBicicleta {
 }
