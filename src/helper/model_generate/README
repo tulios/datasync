@@ -13,3 +13,5 @@ jruby -S rake model:generate['com.datasync.models.barco.secretario','/Users/tuli
 jruby -S rake model:generate['com.datasync.models.barco.pais','/Users/tulios/Desktop/models/pais','TesteBarco']
 
 jruby -S rake model:generate['com.datasync.models.custo.embarcado','/Users/tulios/Desktop/models/custo','TesteCusto']
+
+jruby -S rake model:generate['com.datasync.models.bicicleta','/Users/tulios/Desktop/bicicleta','TesteBicicleta']

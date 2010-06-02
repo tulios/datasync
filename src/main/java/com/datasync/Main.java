@@ -85,7 +85,7 @@ public class Main {
 			
 			str.append("###########################################################################\n");
 			str.append("# Esta opcao define o grupo de tabelas que serao sincronizadas\n");
-			str.append("# Os valores possiveis sao: custo, barco\n");
+			str.append("# Os valores possiveis sao: custo, barco ou bicicleta\n");
 			str.append("modelo=custo\n\n");
 			
 			str.append("###########################################################################\n");
