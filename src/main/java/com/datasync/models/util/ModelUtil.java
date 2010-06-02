@@ -133,6 +133,7 @@ import com.datasync.models.bicicleta.aluno.Tblacompanhanteescola;
 import com.datasync.models.bicicleta.aluno.Tblatividade;
 import com.datasync.models.bicicleta.aluno.Tblcalcado;
 import com.datasync.models.bicicleta.aluno.Tblconsertabicicleta;
+import com.datasync.models.bicicleta.aluno.Tblcuidadobicicleta;
 import com.datasync.models.bicicleta.aluno.Tbldefeitobicicleta;
 import com.datasync.models.bicicleta.aluno.Tblmelhoria;
 import com.datasync.models.custo.TblCabecalhoCondutor;
@@ -184,6 +185,7 @@ public class ModelUtil {
 		indexables.add(new Tblmelhoria());
 		indexables.add(new Tblcalcado());
 		indexables.add(new Tblconsertabicicleta());
+		indexables.add(new Tblcuidadobicicleta());
 	}
 	
 	private static void registerBarco(List<IndexableEntity> indexables) {
