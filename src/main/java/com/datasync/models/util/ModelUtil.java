@@ -188,6 +188,7 @@ public class ModelUtil {
 		indexables.add(new Tblconsertabicicleta());
 		indexables.add(new Tblcuidadobicicleta());
 		indexables.add(new Tblequipamentoprotecao());
+		indexables.add(new Tblidentificacaoaluno());
 	}
 	
 	private static void registerBarco(List<IndexableEntity> indexables) {
