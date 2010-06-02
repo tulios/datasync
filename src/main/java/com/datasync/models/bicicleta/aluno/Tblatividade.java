@@ -21,13 +21,18 @@ public class Tblatividade extends IndexableEntity{
     private String qualoutroatividade;
 
     @Override
+    public boolean isCompoundKey() {
+    	return true;
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }
 
     @Override
     public String getIndexId() {
-        return getIdformulario();
+        return getIdformulario()+"#"+getIdtipoatividade();
     }
 
     public void setIdformulario(String idformulario){
