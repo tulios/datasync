@@ -19,6 +19,7 @@ public class TesteBicicleta extends Teste {
 	private void clearBicicleta(){
 		String[] tabelas = new String[]{
 			//aluno
+			"tblLocalEstacionamentoEmbarcacao",
 			"tblLocalEstacionamentoCasa",
 			"tblIdentificacaoAluno",
 			"tblEquipamentoProtecao",
