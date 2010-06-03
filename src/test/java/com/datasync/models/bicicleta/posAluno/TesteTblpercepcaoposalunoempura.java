@@ -16,19 +16,19 @@ import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
 import com.datasync.service.runner.SyncServiceRunner;
 
-public class TesteTblpercepcaoposaluno extends TesteBicicleta {
+public class TesteTblpercepcaoposalunoempura extends TesteBicicleta {
 
     @Test
     public void verificaSincronismo() throws Exception{
         open();
 
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
-        indexables.add(new Tblpercepcaoposaluno());
+        indexables.add(new Tblpercepcaoposalunoempura());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblpercepcaoposaluno t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblpercepcaoposalunoempura t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblpercepcaoposaluno t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblpercepcaoposalunoempura t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblidentificacaoposaluno ident = new Tblidentificacaoposaluno();
@@ -64,12 +64,19 @@ public class TesteTblpercepcaoposaluno extends TesteBicicleta {
         perc.setPorqueimportantemarchas("1");
         perc.setObservacao("1");
         getLocalEm().persist(perc);
+        getServerEm().persist(perc);
+        
+        Tblpercepcaoposalunoempura var = new Tblpercepcaoposalunoempura();
+        var.setIdformulario("1");
+        var.setIdtipoempurra(1);
+        var.setQuaisoutros("1");
+        getLocalEm().persist(var);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblpercepcaoposaluno t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblpercepcaoposalunoempura t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
-        assertEquals(0, processor.getIdsList(perc.getFullClassName()).size());
+        assertEquals(0, processor.getIdsList(var.getFullClassName()).size());
 
         close();
 
@@ -77,10 +84,10 @@ public class TesteTblpercepcaoposaluno extends TesteBicicleta {
         runner.run(new SyncDatabasesService(indexables));
 
         processor = new IndexProcessor();
-        assertEquals(1, processor.getIdsList(perc.getFullClassName()).size());
+        assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblpercepcaoposaluno t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblpercepcaoposalunoempura t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }

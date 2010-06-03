@@ -53,6 +53,8 @@ public class TesteBicicleta extends Teste {
 			"tblCabecalhoAlunoNaoUtilizaBike",
 			
 			//pos aluno
+			"tblPercepcaoPosAlunoSujou",
+			"tblPercepcaoPosAlunoEmpura",
 			"tblPercepcaoPosAluno",
 			"tblIdentificacaoPosAluno",
 			
@@ -72,7 +74,9 @@ public class TesteBicicleta extends Teste {
 			"tblTipoMotivoUtilizacao",
 			"tblTipoObstaculoTransito",
 			"tblTipoOutroTransporte",
-			"tblTipoProtecao"
+			"tblTipoProtecao",
+			"tblTipoEmpurra",
+			"tblTipoSujou"
 		};
 		
 		for(String tabela : tabelas){
@@ -98,7 +102,9 @@ public class TesteBicicleta extends Teste {
 				"insert into tblTipoMotivoUtilizacao values (1, 'É a única opção');",
 				"insert into tblTipoObstaculoTransito values (1, 'chuva');",
 				"insert into tblTipoOutroTransporte values (1, 'moto');",
-				"insert into tblTipoProtecao values (1, 'capa de chuva');"
+				"insert into tblTipoProtecao values (1, 'capa de chuva');",
+				"insert into tblTipoEmpurra values (1, 'Lamaçal');",
+				"insert into tblTipoSujou values (1, 'pes');"
 		};
 	
 		for (String insert : inserts){
