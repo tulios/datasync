@@ -10,7 +10,7 @@
 development:
   adapter: jdbc
   #Tulio
-  url: jdbc:jtds:sqlserver://10.211.55.3:1433/BICICLETA
+  url: jdbc:jtds:sqlserver://10.211.55.3:1433/BICICLETA_MODELO
   #Pedro
   #url: jdbc:jtds:sqlserver://10.0.0.104:1433/TESTE
   driver: net.sourceforge.jtds.jdbc.Driver

@@ -32,3 +32,10 @@
       ModelUtil.java
       TodosBarco | TodosCusto (Dependendo do banco)
       TesteBarco | TodosCusto (Dependendo do banco)
+      
+      
+== Gerando os inserts para as tabelas tipo
+
+jruby -S rake tipo:generate TABLE_NAMES='tblTipoAcidenteEscola, tblTipoAcompanhanteEscola, tblTipoAtividade, tblTipoBicicleta, tblTipoCalcado, tblTipoComoVaoEscola, tblTipoConsertaBicicleta, tblTipoCuidadoBicicleta, tblTipoDeslocamento, tblTipoEmpurra, tblTipoEquipamentoProtecao, tblTipoEscolaridade, tblTipoGuardaBicicleta, tblTipoLocalEstacionamento, tblTipoMotivoUtilizacao, tblTipoObstaculoTransito, tblTipoOutroTransporte, tblTipoProblemasTransito, tblTipoProtecao, tblTipoProtecaoContraChuva, tblTipoSujou'  >> insertTipos.sql
+
+no o final (>> insertTipos.sql), esse comando exibe no terminal, a saida eh redirecionada para o arquivo.
