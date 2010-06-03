@@ -28,6 +28,7 @@ import com.datasync.models.bicicleta.aluno.TesteTblprotecaosol;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblcabecalhoalunonaoutilizabike;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblidentificacaoalunonaoutilizabike;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblmotivonaoutilizacao;
+import com.datasync.models.bicicleta.alunoSemBike.TesteTblobstaculotransitonaobicicleta;
 
 @RunWith(value=Suite.class)
 @SuiteClasses({ 
@@ -57,7 +58,8 @@ import com.datasync.models.bicicleta.alunoSemBike.TesteTblmotivonaoutilizacao;
 	//aluno sem bike
 	TesteTblcabecalhoalunonaoutilizabike.class,
 	TesteTblidentificacaoalunonaoutilizabike.class,
-	TesteTblmotivonaoutilizacao.class
+	TesteTblmotivonaoutilizacao.class,
+	TesteTblobstaculotransitonaobicicleta.class
 })
 public class TodosBicicleta {
 }
