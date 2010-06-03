@@ -151,6 +151,7 @@ import com.datasync.models.bicicleta.alunoSemBike.Tblcabecalhoalunonaoutilizabik
 import com.datasync.models.bicicleta.alunoSemBike.Tblidentificacaoalunonaoutilizabike;
 import com.datasync.models.bicicleta.alunoSemBike.Tblmotivonaoutilizacao;
 import com.datasync.models.bicicleta.alunoSemBike.Tblobstaculotransitonaobicicleta;
+import com.datasync.models.bicicleta.alunoSemBike.Tblprotecaochuvanaobicicleta;
 import com.datasync.models.bicicleta.alunoSemBike.Tblprotecaosolnaobicicleta;
 import com.datasync.models.bicicleta.alunoSemBike.Tbltransporteescolar;
 import com.datasync.models.bicicleta.alunoSemBike.Tblvaiescola;
@@ -225,6 +226,7 @@ public class ModelUtil {
 		indexables.add(new Tbltransporteescolar());
 		indexables.add(new Tblvaiescola());
 		indexables.add(new Tblprotecaosolnaobicicleta());
+		indexables.add(new Tblprotecaochuvanaobicicleta());
 	}
 	
 	private static void registerBarco(List<IndexableEntity> indexables) {

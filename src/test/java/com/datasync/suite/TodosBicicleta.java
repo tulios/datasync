@@ -29,6 +29,7 @@ import com.datasync.models.bicicleta.alunoSemBike.TesteTblcabecalhoalunonaoutili
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblidentificacaoalunonaoutilizabike;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblmotivonaoutilizacao;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblobstaculotransitonaobicicleta;
+import com.datasync.models.bicicleta.alunoSemBike.TesteTblprotecaochuvanaobicicleta;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblprotecaosolnaobicicleta;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTbltransporteescolar;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblvaiescola;
@@ -65,7 +66,8 @@ import com.datasync.models.bicicleta.alunoSemBike.TesteTblvaiescola;
 	TesteTblobstaculotransitonaobicicleta.class,
 	TesteTbltransporteescolar.class,
 	TesteTblvaiescola.class,
-	TesteTblprotecaosolnaobicicleta.class
+	TesteTblprotecaosolnaobicicleta.class,
+	TesteTblprotecaochuvanaobicicleta.class
 })
 public class TodosBicicleta {
 }
