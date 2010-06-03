@@ -43,6 +43,7 @@ public class TesteBicicleta extends Teste {
 			
 			//aluno sem bike
 			"tblCabecalhoAlunoNaoUtilizaBike",
+			"tblIdentificacaoAlunoNaoUtilizaBike",
 				
 			//Tabelas comuns
 			"tblEscola",

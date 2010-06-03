@@ -16,19 +16,19 @@ import com.datasync.service.SyncDatabasesService;
 import com.datasync.service.runner.ServiceRunner;
 import com.datasync.service.runner.SyncServiceRunner;
 
-public class TesteTblcabecalhoalunonaoutilizabike extends TesteBicicleta {
+public class TesteTblidentificacaoalunonaoutilizabike extends TesteBicicleta {
 
     @Test
     public void verificaSincronismo() throws Exception{
         open();
 
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
-        indexables.add(new Tblcabecalhoalunonaoutilizabike());
+        indexables.add(new Tblidentificacaoalunonaoutilizabike());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhoalunonaoutilizabike t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaoalunonaoutilizabike t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblcabecalhoalunonaoutilizabike t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblidentificacaoalunonaoutilizabike t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblcabecalhoalunonaoutilizabike cabecalho = new Tblcabecalhoalunonaoutilizabike();
@@ -39,12 +39,21 @@ public class TesteTblcabecalhoalunonaoutilizabike extends TesteBicicleta {
         cabecalho.setPesquisador("Tulio");
         cabecalho.setData(new Timestamp(new Date().getTime()));
         getLocalEm().persist(cabecalho);
+        getServerEm().persist(cabecalho);
+        
+        Tblidentificacaoalunonaoutilizabike var = new Tblidentificacaoalunonaoutilizabike();
+        var.setIdformulario("1");
+        var.setIdtipoescolaridade(1);
+        var.setSexo("M");
+        var.setIdade(1);
+        var.setTurno(1);
+        getLocalEm().persist(var);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhoalunonaoutilizabike t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaoalunonaoutilizabike t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
-        assertEquals(0, processor.getIdsList(cabecalho.getFullClassName()).size());
+        assertEquals(0, processor.getIdsList(var.getFullClassName()).size());
 
         close();
 
@@ -52,10 +61,10 @@ public class TesteTblcabecalhoalunonaoutilizabike extends TesteBicicleta {
         runner.run(new SyncDatabasesService(indexables));
 
         processor = new IndexProcessor();
-        assertEquals(1, processor.getIdsList(cabecalho.getFullClassName()).size());
+        assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblcabecalhoalunonaoutilizabike t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblidentificacaoalunonaoutilizabike t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }
