@@ -51,7 +51,11 @@ public class TesteBicicleta extends Teste {
 			"tblMotivoNaoUtilizacao",
 			"tblIdentificacaoAlunoNaoUtilizaBike",
 			"tblCabecalhoAlunoNaoUtilizaBike",
-				
+			
+			//pos aluno
+			"tblPercepcaoPosAluno",
+			"tblIdentificacaoPosAluno",
+			
 			//Tabelas comuns
 			"tblEscola",
 			"tblMunicipio",
