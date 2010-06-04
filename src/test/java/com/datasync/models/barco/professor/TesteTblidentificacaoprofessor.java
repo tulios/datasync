@@ -25,10 +25,10 @@ public class TesteTblidentificacaoprofessor extends TesteBarco {
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
         indexables.add(new Tblidentificacaoprofessor());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaoprofessor t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.professor.Tblidentificacaoprofessor t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblidentificacaoprofessor t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.professor.Tblidentificacaoprofessor t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblcabecalhoprofessor cab = new Tblcabecalhoprofessor();
@@ -71,7 +71,7 @@ public class TesteTblidentificacaoprofessor extends TesteBarco {
         var.setQuaisGrupos("Outros");
         getLocalEm().persist(var);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaoprofessor t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.professor.Tblidentificacaoprofessor t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
@@ -86,7 +86,7 @@ public class TesteTblidentificacaoprofessor extends TesteBarco {
         assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblidentificacaoprofessor t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.professor.Tblidentificacaoprofessor t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }

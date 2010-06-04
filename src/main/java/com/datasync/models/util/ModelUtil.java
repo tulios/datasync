@@ -111,7 +111,6 @@ import com.datasync.models.barco.prefeito.Tblinformacaoprefeitoreage;
 import com.datasync.models.barco.prefeito.Tblinformacaoprefeitoresponsaveltransporescolar;
 import com.datasync.models.barco.professor.Tblcabecalhoprofessor;
 import com.datasync.models.barco.professor.Tblcaracterizacaoprofessor;
-import com.datasync.models.barco.professor.Tblidentificacaoprofessor;
 import com.datasync.models.barco.professor.Tblpercepcaoprofessoralunoescola;
 import com.datasync.models.barco.professor.Tblpercepcaoprofessoralunonaoescola;
 import com.datasync.models.barco.professor.Tblpercepcaoprofessoralunoreclama;
@@ -273,6 +272,7 @@ public class ModelUtil {
 		
 		//professor
 		indexables.add(new com.datasync.models.bicicleta.professor.Tblcabecalhoprofessor());
+		indexables.add(new com.datasync.models.bicicleta.professor.Tblidentificacaoprofessor());
 	}
 	
 	private static void registerBarco(List<IndexableEntity> indexables) {
@@ -320,7 +320,7 @@ public class ModelUtil {
 		//Professor
 		indexables.add(new Tblcabecalhoprofessor());
 		indexables.add(new Tblcaracterizacaoprofessor());
-		indexables.add(new Tblidentificacaoprofessor());
+		indexables.add(new com.datasync.models.barco.professor.Tblidentificacaoprofessor());
 		indexables.add(new Tblpercepcaoprofessoralunoescola());
 		indexables.add(new Tblpercepcaoprofessoralunonaoescola());
 		indexables.add(new Tblpercepcaoprofessoralunoreclama());
