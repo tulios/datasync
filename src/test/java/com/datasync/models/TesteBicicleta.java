@@ -53,6 +53,7 @@ public class TesteBicicleta extends Teste {
 			"tblCabecalhoAlunoNaoUtilizaBike",
 			
 			//pos aluno
+			"tblPercepcaoPosAlunoAtividade",
 			"tblPercepcaoPosAlunoSujou",
 			"tblPercepcaoPosAlunoEmpura",
 			"tblPercepcaoPosAluno",

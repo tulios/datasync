@@ -36,6 +36,7 @@ import com.datasync.models.bicicleta.alunoSemBike.TesteTbltransporteescolar;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblvaiescola;
 import com.datasync.models.bicicleta.posAluno.TesteTblidentificacaoposaluno;
 import com.datasync.models.bicicleta.posAluno.TesteTblpercepcaoposaluno;
+import com.datasync.models.bicicleta.posAluno.TesteTblpercepcaoposalunoatividade;
 import com.datasync.models.bicicleta.posAluno.TesteTblpercepcaoposalunoempura;
 import com.datasync.models.bicicleta.posAluno.TesteTblpercepcaoposalunosujou;
 
@@ -79,7 +80,8 @@ import com.datasync.models.bicicleta.posAluno.TesteTblpercepcaoposalunosujou;
 	TesteTblidentificacaoposaluno.class,
 	TesteTblpercepcaoposaluno.class,
 	TesteTblpercepcaoposalunoempura.class,
-	TesteTblpercepcaoposalunosujou.class
+	TesteTblpercepcaoposalunosujou.class,
+	TesteTblpercepcaoposalunoatividade.class
 })
 public class TodosBicicleta {
 }

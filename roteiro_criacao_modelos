@@ -24,9 +24,35 @@
         return getIdformulario()+"#"+getIdtipocombustivel();
       }
       
+6.1 - Caso o modelo tenha o mesmo nome de um em outro dominio, por exemplo, tblCabecalhoAluno em barco
+	  e bicicleta, faça da seguinte forma:
+	  
+	  No modelo:
+	  
+	  Coloque o name no @Entity incluindo o nome do pacote
+	  @Entity(name="com.datasync.models.barco.aluno.Tblcabecalhoaluno")
+	  
+	  Implemente IndexableWithDifferentName
+	  public class Tblcabecalhoaluno extends IndexableEntity implements IndexableWithDifferentName {
+	  
+	  Sobrescreva o método getDifferentName retornando o nome definido no @Entity
+	  @Override
+	  public String getDifferentName() {
+	  	return "com.datasync.models.barco.aluno.Tblcabecalhoaluno";
+	  }
+	  
+	  No ModelUtil:
+	  
+	  Registre o modelo utilizando o nome completo do pacote. Faça isso para os 2 modelos
+	  indexables.add(new com.datasync.models.bicicleta.aluno.Tblidentificacaoaluno());
+	  
 7 - Adicionar o teste no pacote correto. Popular os dados do objeto para teste. 
     Instancia e salvar, no servidor local e remoto, uma possível dependência 
     do objeto. 
+    
+7.1 - Lembre-se, se o teste for para um modelo que implemente IndexableWithDifferentName, altere o nome
+	  da tabela no jpaql de Tblcabecalhoaluno para com.datasync.models.barco.aluno.Tblcabecalhoaluno,
+	  ou seja, utilizando o nome do @Entity
   
 8 - Adicionar a classe e o seu teste nas classes:
       ModelUtil.java
