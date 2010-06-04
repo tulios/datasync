@@ -50,6 +50,7 @@ import com.datasync.models.bicicleta.professor.TesteTblidentificacaoprofessor;
 import com.datasync.models.bicicleta.professor.TesteTblidentificacaoprofessortransporte;
 import com.datasync.models.bicicleta.professor.TesteTblprofessorcomoalunosvaoescola;
 import com.datasync.models.bicicleta.professor.TesteTblprofessorguardabicicleta;
+import com.datasync.models.bicicleta.professor.TesteTblprofessorproblemastransito;
 import com.datasync.models.bicicleta.responsavel.TesteTblcabecalhoresponsavel;
 import com.datasync.models.bicicleta.responsavel.TesteTbldeslocamento;
 import com.datasync.models.bicicleta.responsavel.TesteTblidentificacaoresponsavel;
@@ -123,7 +124,8 @@ import com.datasync.models.bicicleta.responsavel.TesteTblresponsavelproblemastra
 	TesteTblidentificacaoprofessor.class,
 	TesteTblidentificacaoprofessortransporte.class,
 	TesteTblprofessorcomoalunosvaoescola.class,
-	TesteTblprofessorguardabicicleta.class
+	TesteTblprofessorguardabicicleta.class,
+	TesteTblprofessorproblemastransito.class
 })
 public class TodosBicicleta {
 }
