@@ -69,6 +69,7 @@ public class TesteBicicleta extends Teste {
 			"tblCabecalhoResponsavel",
 			
 			//diretor
+			"tblComoAlunosVaoEscola",
 			"tblGuardaBicicleta",
 			"tblProblemasTransito",
 			"tblIdentificacaoDiretor",
@@ -97,7 +98,8 @@ public class TesteBicicleta extends Teste {
 			"tblTipoProtecaoContraChuva",
 			"tblTipoDeslocamento",
 			"tblTipoProblemasTransito",
-			"tblTipoGuardaBicicleta"
+			"tblTipoGuardaBicicleta",
+			"tblTipoComoVaoEscola"
 		};
 		
 		for(String tabela : tabelas){
@@ -129,7 +131,8 @@ public class TesteBicicleta extends Teste {
 				"insert into tblTipoProtecaoContraChuva values (1, 'Não sai na chuva');",
 				"insert into tblTipoDeslocamento values (1, 'Atividade física');",
 				"insert into tblTipoProblemasTransito values (1, 'Chuva');",
-				"insert into tblTipoGuardaBicicleta values (1, 'Na rua');"
+				"insert into tblTipoGuardaBicicleta values (1, 'Na rua');",
+				"insert into tblTipoComoVaoEscola values (1, 'A pé');"
 		};
 	
 		for (String insert : inserts){
