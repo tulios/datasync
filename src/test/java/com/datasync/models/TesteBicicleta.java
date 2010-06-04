@@ -69,6 +69,7 @@ public class TesteBicicleta extends Teste {
 			"tblCabecalhoResponsavel",
 			
 			//diretor
+			"tblIdentificacaoTransporte",
 			"tblCabecalhoDiretor",
 			
 			//Tabelas comuns
