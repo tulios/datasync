@@ -44,6 +44,7 @@ import com.datasync.models.bicicleta.responsavel.TesteTbldeslocamento;
 import com.datasync.models.bicicleta.responsavel.TesteTblidentificacaoresponsavel;
 import com.datasync.models.bicicleta.responsavel.TesteTblinformacoesbicicleta;
 import com.datasync.models.bicicleta.responsavel.TesteTblprotecaocontrachuva;
+import com.datasync.models.bicicleta.responsavel.TesteTblresponsavelproblemastransitoperspectiva;
 
 @RunWith(value=Suite.class)
 @SuiteClasses({ 
@@ -93,7 +94,8 @@ import com.datasync.models.bicicleta.responsavel.TesteTblprotecaocontrachuva;
 	TesteTblinformacoesbicicleta.class,
 	TesteTblidentificacaoresponsavel.class,
 	TesteTblprotecaocontrachuva.class,
-	TesteTbldeslocamento.class
+	TesteTbldeslocamento.class,
+	TesteTblresponsavelproblemastransitoperspectiva.class
 })
 public class TodosBicicleta {
 }
