@@ -3,12 +3,12 @@ package com.datasync.models.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.datasync.models.IndexableEntity;
-import com.datasync.models.barco.aluno.Tblcabecalhoaluno;
 import com.datasync.models.barco.aluno.Tblcaracterizacaofamiliaaluno;
 import com.datasync.models.barco.aluno.Tblcaracterizacaofamiliaalunoauxilio;
 import com.datasync.models.barco.aluno.Tblcaracterizacaofamiliaalunotrabalho;
-import com.datasync.models.barco.aluno.Tblidentificacaoaluno;
 import com.datasync.models.barco.aluno.Tblpercepcaoalunomelhoria;
 import com.datasync.models.barco.aluno.Tblpercepcaoalunorota;
 import com.datasync.models.barco.aluno.Tblpercepcaoalunorotaajudabarqueiro;
@@ -176,26 +176,29 @@ import com.datasync.models.custo.embarcado.Tblsobedesce;
 
 public class ModelUtil {
 
+	private static Logger log = Logger.getLogger(ModelUtil.class);
+	
 	public static final String CUSTO = "custo";
 	public static final String BARCO = "barco";
 	public static final String BICICLETA = "bicicleta";
-	
+											
 	public static List<IndexableEntity> getIndexables(String packageName){
 		List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
 
 		if (packageName.equalsIgnoreCase(CUSTO)){
+			log.debug("Custo selecionado");
 			registerCusto(indexables);
-			return indexables;
 			
 		} else if (packageName.equalsIgnoreCase(BARCO)){
+			log.debug("barco selecionado");
 			registerBarco(indexables);
-			return indexables;
 			
 		} else if (packageName.equalsIgnoreCase(BICICLETA)) {
+			log.debug("Bicicleta selecionada");
 			registerBicicleta(indexables);
-			return indexables;
 		}
 		
+		log.debug(indexables.size() + " indexables registrados!");
 		return indexables;
 	}
 
@@ -211,7 +214,7 @@ public class ModelUtil {
 		indexables.add(new Tblconsertabicicleta());
 		indexables.add(new Tblcuidadobicicleta());
 		indexables.add(new Tblequipamentoprotecao());
-		indexables.add(new Tblidentificacaoaluno());
+		indexables.add(new com.datasync.models.bicicleta.aluno.Tblidentificacaoaluno());
 		indexables.add(new Tbllocalestacionamentocasa());
 		indexables.add(new Tbllocalestacionamentoembarcacao());
 		indexables.add(new Tbllocalestacionamentoescola());
@@ -268,11 +271,11 @@ public class ModelUtil {
 		indexables.add(new TblNovaLanchaCondutor());
 		
 		//Aluno
-		indexables.add(new Tblcabecalhoaluno());
+		indexables.add(new com.datasync.models.barco.aluno.Tblcabecalhoaluno());
 		indexables.add(new Tblcaracterizacaofamiliaaluno());
 		indexables.add(new Tblcaracterizacaofamiliaalunoauxilio());
 		indexables.add(new Tblcaracterizacaofamiliaalunotrabalho());
-		indexables.add(new Tblidentificacaoaluno());
+		indexables.add(new com.datasync.models.barco.aluno.Tblidentificacaoaluno());
 		indexables.add(new Tblpercepcaoalunomelhoria());
 		indexables.add(new Tblpercepcaoalunorota());
 		indexables.add(new Tblpercepcaoalunorotaajudabarqueiro());

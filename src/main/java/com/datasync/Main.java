@@ -120,7 +120,7 @@ public class Main {
 			str.append("\n");
 			str.append("# Este grupo de opcoes configuram o acesso ao banco de dados remoto\n");
 			str.append("ip_server=\n");
-			str.append("porta_server=\n");
+			str.append("porta_server=1433\n");
 			str.append("banco_server=\n");
 			str.append("usuario_server=\n");
 			str.append("senha_server=\n");

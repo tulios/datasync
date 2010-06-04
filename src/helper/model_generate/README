@@ -21,3 +21,5 @@ jruby -S rake model:generate['com.datasync.models.bicicleta','/Users/tulios/Desk
 Gera os inserts para as tabelas tipo
 
 jruby -S rake tipo:generate TABLE_NAMES='tblTipoAcidenteEscola, tblTipoAcompanhanteEscola, tblTipoAtividade, tblTipoBicicleta, tblTipoCalcado, tblTipoComoVaoEscola, tblTipoConsertaBicicleta, tblTipoCuidadoBicicleta, tblTipoDeslocamento, tblTipoEmpurra, tblTipoEquipamentoProtecao, tblTipoEscolaridade, tblTipoGuardaBicicleta, tblTipoLocalEstacionamento, tblTipoMotivoUtilizacao, tblTipoObstaculoTransito, tblTipoOutroTransporte, tblTipoProblemasTransito, tblTipoProtecao, tblTipoProtecaoContraChuva, tblTipoSujou'  >> insertTipos.sql
+
+jruby -S rake tipo:generate TABLE_NAMES='tblEscola, tblMunicipio'  >> insertTipos.sql

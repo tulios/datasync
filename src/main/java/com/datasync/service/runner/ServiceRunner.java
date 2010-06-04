@@ -21,7 +21,7 @@ public abstract class ServiceRunner {
 	
 	public abstract boolean run(IService service) throws Exception;
 	
-	protected void conectToLocalServer() throws Exception {
+	protected void connectToLocalServer() throws Exception {
 		try{
 			MainFrame.getInstance().setMensagem("Iniciando conexão com servidor local...");
 			
@@ -36,11 +36,12 @@ public abstract class ServiceRunner {
 			MainFrame.getInstance().apresentarErro("Erro de conexão com o servidor local. " +
 				"Por favor, vefifique as configurações de conexão e tente novamente.\n\n");
 			
+			log.error("Local Connection: " + e.getMessage());
 			throw e;
 		}
 	}
 	
-	protected void conectToRemoteServer() throws Exception{
+	protected void connectToRemoteServer() throws Exception{
 		try{
 			MainFrame.getInstance().setMensagem("Iniciando conexão com o servidor remoto...");
 			
@@ -55,6 +56,7 @@ public abstract class ServiceRunner {
 			MainFrame.getInstance().apresentarErro("Erro de conexão com o servidor remoto." +
 				"Por favor, vefifique as configurações de conexão e tente novamente.\n\n");
 			
+			log.error("Remote Connection: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -68,6 +70,7 @@ public abstract class ServiceRunner {
 		}
 		catch (Exception e) {
 			MainFrame.getInstance().apresentarErro("Erro ao executar operação.\n");
+			log.error("Execute: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -79,6 +82,7 @@ public abstract class ServiceRunner {
 		}
 		catch (Exception e) {
 			MainFrame.getInstance().apresentarErro("Erro ao executar operação no servidor local.\n");
+			log.error("commitLocalExecution: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -90,6 +94,7 @@ public abstract class ServiceRunner {
 		}
 		catch (Exception e) {
 			MainFrame.getInstance().apresentarErro("Erro ao executar operação no servidor remoto.\n");
+			log.error("commitRemoteExecution: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -105,6 +110,7 @@ public abstract class ServiceRunner {
 		}
 		catch (Exception e) {
 			MainFrame.getInstance().apresentarErro("Erro ao executar operação no servidor remoto.\n");
+			log.error("executeServiceOnRemoteServer: " + e.getMessage());
 			throw e;
 		}
 	}

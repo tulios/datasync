@@ -2,6 +2,8 @@ package com.datasync;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.datasync.jpa.Config;
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.util.ModelUtil;
@@ -12,9 +14,11 @@ import com.datasync.ui.Processar;
 
 public final class ProcessarSincronizacao extends Processar {
 
+	private static Logger log = Logger.getLogger(ProcessarSincronizacao.class);
 	private List<IndexableEntity> indexables;
 
 	public ProcessarSincronizacao() {
+		log.info("Modelo configurado: " + Config.getInstance().getModelo());
 		indexables = ModelUtil.getIndexables(Config.getInstance().getModelo());
 		service = new SyncDatabasesService(indexables);
 	}

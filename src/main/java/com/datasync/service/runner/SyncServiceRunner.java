@@ -7,8 +7,8 @@ public class SyncServiceRunner extends ServiceRunner {
 	
 	public boolean run(IService service) throws Exception {
 		try{
-			conectToLocalServer();
-			conectToRemoteServer();
+			connectToLocalServer();
+			connectToRemoteServer();
 			
 			this.execute(service);
 			
@@ -16,7 +16,7 @@ public class SyncServiceRunner extends ServiceRunner {
 			commitRemoteExecution();
 
 		} catch (Exception e) {
-			log.error(e.getMessage());
+			log.error("SyncServiceRunner#run: "+ e.getMessage());
 			e.printStackTrace();
 			return false;
 		}

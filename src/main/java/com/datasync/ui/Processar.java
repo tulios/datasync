@@ -44,7 +44,7 @@ public abstract class Processar extends Thread {
 			
 			MainFrame.getInstance().setTitle("Data Sync");
 			
-			String mensagem;
+			String mensagem = null;
 			
 			if(res){
 				mensagem = "Tarefa concluida! Tempo gasto: " + formatTime(time);

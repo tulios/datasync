@@ -7,7 +7,7 @@ public class BackupServiceRunner extends ServiceRunner {
 	
 	public boolean run(IService service) throws Exception {
 		try{
-			conectToLocalServer();
+			connectToLocalServer();
 			execute(service);
 			commitLocalExecution();
 
