@@ -25,10 +25,10 @@ public class TesteTblidentificacaodiretor extends TesteBarco {
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
         indexables.add(new Tblidentificacaodiretor());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaodiretor t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.diretor.Tblidentificacaodiretor t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblidentificacaodiretor t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.diretor.Tblidentificacaodiretor t").getSingleResult();
         assertEquals(0, server.intValue());
         
         Tblcabecalhodiretor cabecalho = new Tblcabecalhodiretor();
@@ -64,7 +64,7 @@ public class TesteTblidentificacaodiretor extends TesteBarco {
         var.setQuaisGrupos("Outros");
         getLocalEm().persist(var);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaodiretor t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.diretor.Tblidentificacaodiretor t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
@@ -79,7 +79,7 @@ public class TesteTblidentificacaodiretor extends TesteBarco {
         assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblidentificacaodiretor t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.diretor.Tblidentificacaodiretor t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }

@@ -25,10 +25,10 @@ public class TesteTblcabecalhodiretor extends TesteBarco {
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
         indexables.add(new Tblcabecalhodiretor());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhodiretor t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.diretor.Tblcabecalhodiretor t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblcabecalhodiretor t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.diretor.Tblcabecalhodiretor t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblcabecalhodiretor var = new Tblcabecalhodiretor();
@@ -44,7 +44,7 @@ public class TesteTblcabecalhodiretor extends TesteBarco {
         var.setNomeEscola("nome");
         getLocalEm().persist(var);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhodiretor t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.diretor.Tblcabecalhodiretor t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
@@ -59,7 +59,7 @@ public class TesteTblcabecalhodiretor extends TesteBarco {
         assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblcabecalhodiretor t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.diretor.Tblcabecalhodiretor t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }

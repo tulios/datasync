@@ -25,10 +25,10 @@ public class TesteTblidentificacaoaluno extends TesteBarco {
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
         indexables.add(new Tblidentificacaoaluno());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaoaluno t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.aluno.Tblidentificacaoaluno t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblidentificacaoaluno t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.aluno.Tblidentificacaoaluno t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblcabecalhoaluno cabecalho = new Tblcabecalhoaluno();
@@ -65,7 +65,7 @@ public class TesteTblidentificacaoaluno extends TesteBarco {
         var.setQuaisGrupos("Outros!");
         getLocalEm().persist(var);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblidentificacaoaluno t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.aluno.Tblidentificacaoaluno t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
@@ -80,7 +80,7 @@ public class TesteTblidentificacaoaluno extends TesteBarco {
         assertEquals(1, processor.getIdsList(var.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblidentificacaoaluno t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.aluno.Tblidentificacaoaluno t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }

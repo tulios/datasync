@@ -43,7 +43,6 @@ import com.datasync.models.barco.condutor.TblInformacaoCondutorTrocaBarco;
 import com.datasync.models.barco.condutor.TblNovaLanchaCondutor;
 import com.datasync.models.barco.diretor.Tblcaracterizacaodiretor;
 import com.datasync.models.barco.diretor.Tblcaracterizacaodiretoroutraexperiencia;
-import com.datasync.models.barco.diretor.Tblidentificacaodiretor;
 import com.datasync.models.barco.diretor.Tblidentificacaoescola;
 import com.datasync.models.barco.diretor.Tblidentificacaoescolaatendeturno;
 import com.datasync.models.barco.diretor.Tblidentificacaoescolaplanejamentorota;
@@ -264,6 +263,7 @@ public class ModelUtil {
 		//diretor
 		indexables.add(new com.datasync.models.bicicleta.diretor.Tblcabecalhodiretor());
 		indexables.add(new Tblidentificacaotransporte());
+		indexables.add(new com.datasync.models.bicicleta.diretor.Tblidentificacaodiretor());
 	}
 	
 	private static void registerBarco(List<IndexableEntity> indexables) {
@@ -322,7 +322,7 @@ public class ModelUtil {
 		indexables.add(new com.datasync.models.barco.diretor.Tblcabecalhodiretor());
 		indexables.add(new Tblcaracterizacaodiretor());
 		indexables.add(new Tblcaracterizacaodiretoroutraexperiencia());
-		indexables.add(new Tblidentificacaodiretor());
+		indexables.add(new com.datasync.models.barco.diretor.Tblidentificacaodiretor());
 		indexables.add(new Tblidentificacaoescola());
 		indexables.add(new Tblidentificacaoescolaatendeturno());
 		indexables.add(new Tblidentificacaoescolaplanejamentorota());

@@ -25,10 +25,10 @@ public class TesteTblcabecalhoaluno extends TesteBarco {
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
         indexables.add(new Tblcabecalhoaluno());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhoaluno t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.aluno.Tblcabecalhoaluno t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblcabecalhoaluno t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.aluno.Tblcabecalhoaluno t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblcabecalhoaluno cabecalho = new Tblcabecalhoaluno();
@@ -45,7 +45,7 @@ public class TesteTblcabecalhoaluno extends TesteBarco {
         cabecalho.setNomeEscola("nome");
         getLocalEm().persist(cabecalho);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhoaluno t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.aluno.Tblcabecalhoaluno t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
@@ -60,7 +60,7 @@ public class TesteTblcabecalhoaluno extends TesteBarco {
         assertEquals(1, processor.getIdsList(cabecalho.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblcabecalhoaluno t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.aluno.Tblcabecalhoaluno t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }
