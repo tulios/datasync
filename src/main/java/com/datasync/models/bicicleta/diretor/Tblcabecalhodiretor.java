@@ -1,4 +1,4 @@
-package com.datasync.models.barco.diretor;
+package com.datasync.models.bicicleta.diretor;
 
 import java.sql.Timestamp;
 
@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import com.datasync.models.IndexableEntity;
 import com.datasync.models.IndexableWithDifferentName;
 
-@Entity(name = "com.datasync.models.barco.diretor.Tblcabecalhodiretor")
+@Entity(name = "com.datasync.models.bicicleta.diretor.Tblcabecalhodiretor")
 @Table(name = "tblCabecalhoDiretor")
 @SuppressWarnings("serial")
 public class Tblcabecalhodiretor extends IndexableEntity implements IndexableWithDifferentName{
@@ -20,26 +20,22 @@ public class Tblcabecalhodiretor extends IndexableEntity implements IndexableWit
     private String idformulario;
     @Column(name = "Pesquisador")
     private String pesquisador;
+    @Column(name = "Data")
+    private Timestamp data;
     @Column(name = "IdMunicipio")
     private Integer idmunicipio;
     @Column(name = "IdINEP")
     private Integer idinep;
-    @Column(name = "DataColeta")
-    private Timestamp datacoleta;
-    @Column(name = "Foto")
-    private String foto;
-    @Column(name = "TempoInicio")
-    private String tempoinicio;
-    @Column(name = "TempoTermino")
-    private String tempotermino;
+    @Column(name = "NomeEscola")
+    private String nomeescola;
+    @Column(name = "LocalEscola")
+    private Integer localescola;
     @Column(name = "Observacao")
     private String observacao;
-    @Column(name = "NomeEscola")
-    private String NomeEscola;
 
     @Override
     public String getDifferentName() {
-    	return "com.datasync.models.barco.diretor.Tblcabecalhodiretor";
+    	return "com.datasync.models.bicicleta.diretor.Tblcabecalhodiretor";
     }
     
     @Override
@@ -68,6 +64,14 @@ public class Tblcabecalhodiretor extends IndexableEntity implements IndexableWit
         return pesquisador;
     }
 
+    public void setData(Timestamp data){
+        this.data = data;
+    }
+
+    public Timestamp getData(){
+        return data;
+    }
+
     public void setIdmunicipio(Integer idmunicipio){
         this.idmunicipio = idmunicipio;
     }
@@ -84,52 +88,29 @@ public class Tblcabecalhodiretor extends IndexableEntity implements IndexableWit
         return idinep;
     }
 
-    public void setDatacoleta(Timestamp datacoleta){
-        this.datacoleta = datacoleta;
+    public void setNomeescola(String nomeescola){
+        this.nomeescola = nomeescola;
     }
 
-    public Timestamp getDatacoleta(){
-        return datacoleta;
+    public String getNomeescola(){
+        return nomeescola;
     }
 
-    public void setFoto(String foto){
-        this.foto = foto;
+    public void setLocalescola(Integer localescola){
+        this.localescola = localescola;
     }
 
-    public String getFoto(){
-        return foto;
+    public Integer getLocalescola(){
+        return localescola;
     }
 
-    public void setTempoinicio(String tempoinicio){
-        this.tempoinicio = tempoinicio;
+    public void setObservacao(String observacao){
+        this.observacao = observacao;
     }
 
-    public String getTempoinicio(){
-        return tempoinicio;
+    public String getObservacao(){
+        return observacao;
     }
 
-    public void setTempotermino(String tempotermino){
-        this.tempotermino = tempotermino;
-    }
 
-    public String getTempotermino(){
-        return tempotermino;
-    }
-
-	public String getObservacao() {
-		return observacao;
-	}
-
-	public void setObservacao(String observacao) {
-		this.observacao = observacao;
-	}
-
-	public String getNomeEscola() {
-		return NomeEscola;
-	}
-
-	public void setNomeEscola(String nomeEscola) {
-		NomeEscola = nomeEscola;
-	}
-	
 }

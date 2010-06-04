@@ -34,6 +34,7 @@ import com.datasync.models.bicicleta.alunoSemBike.TesteTblprotecaochuvanaobicicl
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblprotecaosolnaobicicleta;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTbltransporteescolar;
 import com.datasync.models.bicicleta.alunoSemBike.TesteTblvaiescola;
+import com.datasync.models.bicicleta.diretor.TesteTblcabecalhodiretor;
 import com.datasync.models.bicicleta.posAluno.TesteTblidentificacaoposaluno;
 import com.datasync.models.bicicleta.posAluno.TesteTblpercepcaoposaluno;
 import com.datasync.models.bicicleta.posAluno.TesteTblpercepcaoposalunoatividade;
@@ -44,6 +45,7 @@ import com.datasync.models.bicicleta.responsavel.TesteTbldeslocamento;
 import com.datasync.models.bicicleta.responsavel.TesteTblidentificacaoresponsavel;
 import com.datasync.models.bicicleta.responsavel.TesteTblinformacoesbicicleta;
 import com.datasync.models.bicicleta.responsavel.TesteTblprotecaocontrachuva;
+import com.datasync.models.bicicleta.responsavel.TesteTblresponsavelproblemastransito;
 import com.datasync.models.bicicleta.responsavel.TesteTblresponsavelproblemastransitoperspectiva;
 
 @RunWith(value=Suite.class)
@@ -95,7 +97,11 @@ import com.datasync.models.bicicleta.responsavel.TesteTblresponsavelproblemastra
 	TesteTblidentificacaoresponsavel.class,
 	TesteTblprotecaocontrachuva.class,
 	TesteTbldeslocamento.class,
-	TesteTblresponsavelproblemastransitoperspectiva.class
+	TesteTblresponsavelproblemastransitoperspectiva.class,
+	TesteTblresponsavelproblemastransito.class,
+	
+	//diretor
+	TesteTblcabecalhodiretor.class
 })
 public class TodosBicicleta {
 }

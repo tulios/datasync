@@ -60,12 +60,16 @@ public class TesteBicicleta extends Teste {
 			"tblIdentificacaoPosAluno",
 			
 			//responsavel
+			"tblResponsavelProblemasTransito",
 			"tblResponsavelProblemasTransitoPerspectiva",
 			"tblDeslocamento",
 			"tblProtecaoContraChuva",
 			"tblIdentificacaoResponsavel",
 			"tblInformacoesBicicleta",
 			"tblCabecalhoResponsavel",
+			
+			//diretor
+			"tblCabecalhoDiretor",
 			
 			//Tabelas comuns
 			"tblEscola",

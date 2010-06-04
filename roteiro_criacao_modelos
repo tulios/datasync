@@ -53,6 +53,8 @@
 7.1 - Lembre-se, se o teste for para um modelo que implemente IndexableWithDifferentName, altere o nome
 	  da tabela no jpaql de Tblcabecalhoaluno para com.datasync.models.barco.aluno.Tblcabecalhoaluno,
 	  ou seja, utilizando o nome do @Entity
+	  
+	  ex: "select count(t.idformulario) from com.datasync.models.bicicleta.diretor.Tblcabecalhodiretor t"
   
 8 - Adicionar a classe e o seu teste nas classes:
       ModelUtil.java

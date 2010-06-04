@@ -41,7 +41,6 @@ import com.datasync.models.barco.condutor.TblInformacaoCondutorTrabalhaRota;
 import com.datasync.models.barco.condutor.TblInformacaoCondutorTransportaOutro;
 import com.datasync.models.barco.condutor.TblInformacaoCondutorTrocaBarco;
 import com.datasync.models.barco.condutor.TblNovaLanchaCondutor;
-import com.datasync.models.barco.diretor.Tblcabecalhodiretor;
 import com.datasync.models.barco.diretor.Tblcaracterizacaodiretor;
 import com.datasync.models.barco.diretor.Tblcaracterizacaodiretoroutraexperiencia;
 import com.datasync.models.barco.diretor.Tblidentificacaodiretor;
@@ -166,6 +165,7 @@ import com.datasync.models.bicicleta.responsavel.Tbldeslocamento;
 import com.datasync.models.bicicleta.responsavel.Tblidentificacaoresponsavel;
 import com.datasync.models.bicicleta.responsavel.Tblinformacoesbicicleta;
 import com.datasync.models.bicicleta.responsavel.Tblprotecaocontrachuva;
+import com.datasync.models.bicicleta.responsavel.Tblresponsavelproblemastransito;
 import com.datasync.models.bicicleta.responsavel.Tblresponsavelproblemastransitoperspectiva;
 import com.datasync.models.custo.TblCabecalhoCondutor;
 import com.datasync.models.custo.TblCabecalhoEmbarcacao;
@@ -258,6 +258,10 @@ public class ModelUtil {
 		indexables.add(new Tblprotecaocontrachuva());
 		indexables.add(new Tbldeslocamento());
 		indexables.add(new Tblresponsavelproblemastransitoperspectiva());
+		indexables.add(new Tblresponsavelproblemastransito());
+		
+		//diretor
+		indexables.add(new com.datasync.models.bicicleta.diretor.Tblcabecalhodiretor());
 	}
 	
 	private static void registerBarco(List<IndexableEntity> indexables) {
@@ -313,7 +317,7 @@ public class ModelUtil {
 		indexables.add(new Tblpercepcaoprofessorprovidencia());
 		
 		//Diretor
-		indexables.add(new Tblcabecalhodiretor());
+		indexables.add(new com.datasync.models.barco.diretor.Tblcabecalhodiretor());
 		indexables.add(new Tblcaracterizacaodiretor());
 		indexables.add(new Tblcaracterizacaodiretoroutraexperiencia());
 		indexables.add(new Tblidentificacaodiretor());
