@@ -25,10 +25,10 @@ public class TesteTblcabecalhoprofessor extends TesteBarco {
         List<IndexableEntity> indexables = new ArrayList<IndexableEntity>();
         indexables.add(new Tblcabecalhoprofessor());
 
-        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhoprofessor t").getSingleResult();
+        Number local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.professor.Tblcabecalhoprofessor t").getSingleResult();
         assertEquals(0, local.intValue());
 
-        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblcabecalhoprofessor t").getSingleResult();
+        Number server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.professor.Tblcabecalhoprofessor t").getSingleResult();
         assertEquals(0, server.intValue());
 
         Tblcabecalhoprofessor cab = new Tblcabecalhoprofessor();
@@ -46,7 +46,7 @@ public class TesteTblcabecalhoprofessor extends TesteBarco {
         cab.setNomeEscola("nome");
         getLocalEm().persist(cab);
 
-        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from Tblcabecalhoprofessor t").getSingleResult();
+        local = (Number) getLocalEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.professor.Tblcabecalhoprofessor t").getSingleResult();
         assertEquals(1, local.intValue());
 
         IndexProcessor processor = new IndexProcessor();
@@ -61,7 +61,7 @@ public class TesteTblcabecalhoprofessor extends TesteBarco {
         assertEquals(1, processor.getIdsList(cab.getFullClassName()).size());
 
         open();
-        server = (Number) getServerEm().createQuery("select count(t.idformulario) from Tblcabecalhoprofessor t").getSingleResult();
+        server = (Number) getServerEm().createQuery("select count(t.idformulario) from com.datasync.models.barco.professor.Tblcabecalhoprofessor t").getSingleResult();
         assertEquals(1, server.intValue());
         close();
     }

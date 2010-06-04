@@ -8,11 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.datasync.models.IndexableEntity;
+import com.datasync.models.IndexableWithDifferentName;
 
-@Entity
+@Entity(name = "com.datasync.models.barco.professor.Tblcabecalhoprofessor")
 @Table(name = "tblCabecalhoProfessor")
 @SuppressWarnings("serial")
-public class Tblcabecalhoprofessor extends IndexableEntity{
+public class Tblcabecalhoprofessor extends IndexableEntity implements IndexableWithDifferentName{
 
     @Id
     @Column(name = "IdFormulario")
@@ -40,6 +41,11 @@ public class Tblcabecalhoprofessor extends IndexableEntity{
     @Column(name = "NomeEscola")
     private String nomeEscola;
 
+    @Override
+    public String getDifferentName() {
+    	return "com.datasync.models.barco.professor.Tblcabecalhoprofessor";
+    }
+    
     @Override
     public String getIdColumnName() {
         return "idformulario";

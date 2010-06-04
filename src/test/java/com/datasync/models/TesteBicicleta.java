@@ -76,6 +76,9 @@ public class TesteBicicleta extends Teste {
 			"tblIdentificacaoTransporte",
 			"tblCabecalhoDiretor",
 			
+			//professor
+			"tblCabecalhoProfessor",
+			
 			//Tabelas comuns
 			"tblEscola",
 			"tblMunicipio",

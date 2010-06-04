@@ -270,6 +270,9 @@ public class ModelUtil {
 		indexables.add(new Tblproblemastransito());
 		indexables.add(new Tblguardabicicleta());
 		indexables.add(new Tblcomoalunosvaoescola());
+		
+		//professor
+		indexables.add(new com.datasync.models.bicicleta.professor.Tblcabecalhoprofessor());
 	}
 	
 	private static void registerBarco(List<IndexableEntity> indexables) {
