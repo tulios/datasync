@@ -18,7 +18,7 @@ public final class ProcessarSincronizacao extends Processar {
 	private List<IndexableEntity> indexables;
 
 	public ProcessarSincronizacao() {
-		log.info("Modelo configurado: " + Config.getInstance().getModelo());
+		log.debug("Modelo configurado: " + Config.getInstance().getModelo());
 		indexables = ModelUtil.getIndexables(Config.getInstance().getModelo());
 		service = new SyncDatabasesService(indexables);
 	}

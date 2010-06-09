@@ -26,6 +26,11 @@ public class Tblprofessorguardabicicleta extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoOndeGuardaBicicleta";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

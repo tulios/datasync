@@ -26,6 +26,11 @@ public class Tblmelhoria extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoDefeitoBicicleta";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

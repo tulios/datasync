@@ -24,6 +24,11 @@
         return getIdformulario()+"#"+getIdtipocombustivel();
       }
       
+      @Override
+      public String getCompoundIdColumnName() {
+    	  return "IdTipoAcidenteEscola";
+      }
+      
 6.1 - Caso o modelo tenha o mesmo nome de um em outro dominio, por exemplo, tblCabecalhoAluno em barco
 	  e bicicleta, faça da seguinte forma:
 	  

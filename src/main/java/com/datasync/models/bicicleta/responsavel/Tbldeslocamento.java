@@ -26,6 +26,11 @@ public class Tbldeslocamento extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoAtividade";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

@@ -23,12 +23,6 @@ public class Tblpercepcaoposaluno extends IndexableEntity{
     private String porqueaparencia;
     @Column(name = "Frequencia")
     private Integer frequencia;
-    @Column(name = "Protecao")
-    private String protecao;
-    @Column(name = "PorqueProtecao")
-    private String porqueprotecao;
-    @Column(name = "Capacete")
-    private Integer capacete;
     @Column(name = "Selim")
     private String selim;
     @Column(name = "Guiar")
@@ -102,30 +96,6 @@ public class Tblpercepcaoposaluno extends IndexableEntity{
 
     public Integer getFrequencia(){
         return frequencia;
-    }
-
-    public void setProtecao(String protecao){
-        this.protecao = protecao;
-    }
-
-    public String getProtecao(){
-        return protecao;
-    }
-
-    public void setPorqueprotecao(String porqueprotecao){
-        this.porqueprotecao = porqueprotecao;
-    }
-
-    public String getPorqueprotecao(){
-        return porqueprotecao;
-    }
-
-    public void setCapacete(Integer capacete){
-        this.capacete = capacete;
-    }
-
-    public Integer getCapacete(){
-        return capacete;
     }
 
     public void setSelim(String selim){

@@ -26,6 +26,11 @@ public class Tblobstaculotransito extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoObstaculoTransito";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

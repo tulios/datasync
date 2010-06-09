@@ -26,6 +26,11 @@ public class Tblprotecaocontrachuva extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoProtecaoChuva";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

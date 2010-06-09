@@ -26,6 +26,11 @@ public class Tblpercepcaoposalunoempura extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoEmpurra";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

@@ -28,6 +28,11 @@ public class Tblacompanhanteescola extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoAcompanhanteEscola";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

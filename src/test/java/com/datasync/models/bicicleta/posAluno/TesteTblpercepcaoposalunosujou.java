@@ -48,9 +48,6 @@ public class TesteTblpercepcaoposalunosujou extends TesteBicicleta {
         perc.setAparencia(1);
         perc.setPorqueaparencia("1");
         perc.setFrequencia(1);
-        perc.setProtecao("1");
-        perc.setPorqueprotecao("1");
-        perc.setCapacete(1);
         perc.setSelim("1");
         perc.setGuiar("1");
         perc.setPorqueguiar("1");

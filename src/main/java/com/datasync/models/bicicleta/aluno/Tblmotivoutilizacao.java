@@ -26,6 +26,11 @@ public class Tblmotivoutilizacao extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoMotivoUtilizacao";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

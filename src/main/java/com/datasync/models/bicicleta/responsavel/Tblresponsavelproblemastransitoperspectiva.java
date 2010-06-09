@@ -26,6 +26,11 @@ public class Tblresponsavelproblemastransitoperspectiva extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoProblemasTransito";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

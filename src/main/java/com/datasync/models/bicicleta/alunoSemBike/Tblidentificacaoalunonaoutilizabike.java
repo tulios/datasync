@@ -30,6 +30,11 @@ public class Tblidentificacaoalunonaoutilizabike extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoEscolaridade";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

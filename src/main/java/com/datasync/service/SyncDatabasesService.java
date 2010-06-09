@@ -145,8 +145,10 @@ public class SyncDatabasesService implements IService {
 				search.setParameter("id", entity.getIndexId());
 			}
 			List<IndexableEntity> searchResult = search.getResultList();
+			log.debug("Resultado da pesquisa na base servidora: " + searchResult.size());
 
 			if (searchResult != null && searchResult.size() > 0){
+				// Somente atualiza o XML
 				processor.save(entity);
 
 			}else{
@@ -192,7 +194,7 @@ public class SyncDatabasesService implements IService {
 			
 			List<IndexableEntity> resultList = query.getResultList();
 
-			//log.debug("ResultList: " + resultList.size());
+			log.debug("Resultado da pesquisa na base local: " + resultList.size());
 			if (resultList.size() > 0){
 				sync(processor, resultList);
 

@@ -24,6 +24,11 @@ public class Tbltransporteescolar extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoOutroTransporte";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

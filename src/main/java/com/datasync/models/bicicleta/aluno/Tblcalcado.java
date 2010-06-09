@@ -24,6 +24,11 @@ public class Tblcalcado extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoCalcado";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

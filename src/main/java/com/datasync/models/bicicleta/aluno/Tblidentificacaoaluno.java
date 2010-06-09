@@ -38,6 +38,11 @@ public class Tblidentificacaoaluno extends IndexableEntity implements IndexableW
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoEscolaridade";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }

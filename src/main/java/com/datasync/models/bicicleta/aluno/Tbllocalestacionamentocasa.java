@@ -26,6 +26,11 @@ public class Tbllocalestacionamentocasa extends IndexableEntity{
     }
     
     @Override
+    public String getCompoundIdColumnName() {
+    	return "IdTipoLocalEstacionamento";
+    }
+    
+    @Override
     public String getIdColumnName() {
         return "idformulario";
     }
